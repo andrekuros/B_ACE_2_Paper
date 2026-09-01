@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.toc
+data/wez_*.json
+data/fsm_*.json
+data/marl_*.json
+data/*.csv
+data/*.png
