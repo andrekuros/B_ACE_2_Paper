@@ -1,0 +1,140 @@
+{
+  "recipe": "bench",
+  "profile": "default",
+  "cpu_count": 32,
+  "phy_fps": 20,
+  "action_repeat": 20,
+  "decision_hz_note": "1 Hz decisions in realtime (action_repeat=20, phy_fps=20)",
+  "scaling": [
+    {
+      "n_envs": 1,
+      "steps": 20000,
+      "wall_s": 0.323292424,
+      "decision_hz": 61863.49730236796,
+      "physics_hz": 1237269.9460473591,
+      "realtime_factor": 61863.49730236796,
+      "action_repeat": 20,
+      "phy_fps": 20,
+      "backend": "rust",
+      "efficiency": 61863.49730236796
+    },
+    {
+      "n_envs": 2,
+      "steps": 20000,
+      "wall_s": 0.931309157,
+      "decision_hz": 42950.29174721193,
+      "physics_hz": 859005.8349442385,
+      "realtime_factor": 42950.29174721192,
+      "action_repeat": 20,
+      "phy_fps": 20,
+      "backend": "rust",
+      "efficiency": 21475.14587360596
+    },
+    {
+      "n_envs": 4,
+      "steps": 20000,
+      "wall_s": 1.125421166,
+      "decision_hz": 71084.49922293358,
+      "physics_hz": 1421689.9844586716,
+      "realtime_factor": 71084.49922293358,
+      "action_repeat": 20,
+      "phy_fps": 20,
+      "backend": "rust",
+      "efficiency": 17771.124805733394
+    },
+    {
+      "n_envs": 8,
+      "steps": 20000,
+      "wall_s": 1.2780926830000001,
+      "decision_hz": 125186.53938651802,
+      "physics_hz": 2503730.7877303604,
+      "realtime_factor": 125186.53938651801,
+      "action_repeat": 20,
+      "phy_fps": 20,
+      "backend": "rust",
+      "efficiency": 15648.317423314751
+    },
+    {
+      "n_envs": 16,
+      "steps": 20000,
+      "wall_s": 1.379075593,
+      "decision_hz": 232039.4919787403,
+      "physics_hz": 4640789.839574805,
+      "realtime_factor": 232039.4919787403,
+      "action_repeat": 20,
+      "phy_fps": 20,
+      "backend": "rust",
+      "efficiency": 14502.468248671268
+    },
+    {
+      "n_envs": 32,
+      "steps": 20000,
+      "wall_s": 2.020846487,
+      "decision_hz": 316698.9695244476,
+      "physics_hz": 6333979.390488952,
+      "realtime_factor": 316698.9695244476,
+      "action_repeat": 20,
+      "phy_fps": 20,
+      "backend": "rust",
+      "efficiency": 9896.842797638987
+    }
+  ],
+  "pyo3_tax": {
+    "rust": {
+      "n_envs": 1,
+      "steps": 20000,
+      "wall_s": 0.324577504,
+      "decision_hz": 61618.56491446801,
+      "physics_hz": 1232371.29828936,
+      "realtime_factor": 61618.56491446801,
+      "action_repeat": 20,
+      "phy_fps": 20,
+      "backend": "rust"
+    },
+    "pyo3_vec": {
+      "n_envs": 1,
+      "steps": 20000,
+      "wall_s": 0.4645089879631996,
+      "decision_hz": 43056.217464589696,
+      "physics_hz": 861124.3492917939,
+      "realtime_factor": 43056.217464589696,
+      "backend": "pyo3_vec"
+    },
+    "bace_env": {
+      "n_envs": 1,
+      "steps": 20000,
+      "wall_s": 0.48445431189611554,
+      "decision_hz": 41283.56278164105,
+      "physics_hz": 825671.255632821,
+      "realtime_factor": 41283.56278164105,
+      "backend": "bace_env"
+    },
+    "vec_vs_rust": 1.4311188614082127,
+    "env_vs_rust": 1.4925689732832363
+  },
+  "wez_wall": [
+    {
+      "max_parallel": 1,
+      "wall_s": 0.18701130105182528,
+      "profile": "smoke"
+    },
+    {
+      "max_parallel": 8,
+      "wall_s": 0.035006529884412885,
+      "profile": "smoke"
+    }
+  ],
+  "fsm_wall": [
+    {
+      "max_parallel": 1,
+      "wall_s": 0.0025257680099457502,
+      "profile": "smoke"
+    },
+    {
+      "max_parallel": 8,
+      "wall_s": 0.006841955939307809,
+      "profile": "smoke"
+    }
+  ],
+  "stamp": "2026-09-01T03:23:07.152849+00:00"
+}

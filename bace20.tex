@@ -31,7 +31,7 @@ Angelo Passaro$^{2}$\\[0.6em]
 \small $^{2}$Institute for Advanced Studies (IEAv), S\~{a}o Jos\'{e} dos Campos, Brazil\\
 \small $^{3}$University of Central Florida, Orlando, FL, USA
 }
-\date{Working draft --- 31 August 2026}
+\date{Working draft --- 1 September 2026}
 
 \begin{document}
 \maketitle
@@ -42,7 +42,7 @@ Angelo Passaro$^{2}$\\[0.6em]
 B-ACE 1.0 showed that an open, lightweight beyond-visual-range (BVR) simulator can support multi-agent reinforcement learning (MARL) research without restricted military data.
 B-ACE~2.0 is a standalone rewrite of that environment: a Rust simulation core, in-process parallel rollouts, a PettingZoo Python API, and a local web dashboard.
 The same three study cases used to introduce B-ACE---weapon engagement zone (WEZ) sampling, finite-state-machine (FSM) search, and MARL---are first-class recipes (\texttt{python -m bace.experiment \ldots\ --profile paper}).
-This draft reports a dense WEZ grid with a polynomial/logistic envelope fit and missile time-of-flight traces; a 2-v-2 FSM search with mission-aware fitness, an evolving red pool, and 4-v-4 elite re-evaluation; and a MAPPO / MADDPG / IPPO comparison on 2-v-2 and 4-v-4 against duck and FSM opponents, plus striker-mission and shared-track ablations.
+This draft reports a dense WEZ grid with a polynomial/logistic envelope fit and missile time-of-flight traces; a 2-v-2 FSM search with mission-aware fitness, an evolving red pool, and 4-v-4 elite re-evaluation; Tianshou PPO that learns 1-v-1 vs duck (kill rate $1.0$ over 3 seeds, beating random and \texttt{fire\_once}); and a Rust \texttt{ParallelEnvs} throughput study.
 Public recipes cap force size at 4-v-4 with a 2$\times$2 box spawn.
 Source: \url{https://github.com/andrekuros/B-ACE} (1.0), \url{https://github.com/andrekuros/B-ACE-2.0} (framework), and \url{https://github.com/andrekuros/B_ACE_2_Paper} (this draft).
 \end{abstract}
@@ -59,7 +59,7 @@ Physics, radar geometry, missiles, rewards, and FSM policies run in Rust; Python
 Experiment mode is a typed batch runner with a shared episode-outcome schema (end condition, kills, deaths, mission flag, return, shots, hits).
 
 This document is a \textbf{working draft to share with co-authors}.
-WEZ and FSM use the paper CLI profile; MARL reports every completed seed in the core grid and names any jobs still running.
+WEZ and FSM use the paper CLI profile; MARL is a Tianshou PPO ladder (1-v-1 duck first) rather than the previous short numpy grid.
 Force size is capped at 4-v-4 in public recipes.
 
 \section{Related work}
@@ -200,40 +200,61 @@ Left: best fitness. Right: last-generation $K$ vs $D$ and clustered elites.}
 \label{fig:fsmocc}
 \end{figure}
 
-\section{Study case 3: MARL comparison}
+\section{Study case 3: MARL that can actually improve}
 
-\texttt{make\_env(opponent=..., agents=...)} returns a PettingZoo environment (duck, default baseline, or named/FSM elite), capped at 4-v-4.
-The core grid is MAPPO (shared on-policy), MADDPG (off-policy), and IPPO (independent) $\times$ $\{2,4\}$ $\times$ $\{\mathrm{duck},\mathrm{FSM}\}$ $\times$ 3 seeds, both teams DCA, \texttt{share\_tracks=true}.
-Training is Python on vectorized \texttt{BaceEnv}; the dashboard never loads Torch.
-\Cref{fig:marl} is mean$\pm$std learning curves; \Cref{fig:marleval} frozen eval.
+The previous numpy ``MAPPO'' grid ($\sim$2500 env steps, $\sim$12 episodes, no GAE or clipped objective) was a hook, not a learning result: frozen eval returns stayed large and negative, and team-sum return made 4-v-4 look $4\times$ worse than 2-v-2 for the same per-ship play.
+This draft retrains with \textbf{Tianshou PPO} on discrete \texttt{MultiDiscrete}$[2,5,5]$ (flattened to 50 bins), an RL reward preset that zeros \texttt{missile\_no\_fire} and shrinks \texttt{detect\_loss} to $-0.01$, and primary scores \textbf{kills, mission rate, shots/hit} (return secondary).
+Only blue is \texttt{external}. The dashboard never loads Torch.
 
-\paragraph{Ablations} (MAPPO, 3 seeds): (i)~red \texttt{striker} / blue DCA at 2-v-2 and 4-v-4; (ii)~\texttt{share\_tracks=false} at 2-v-2 vs duck and FSM.
-Tactical PNGs for hit, miss, 4-v-4 duck, 4-v-4 FSM, striker leak, and tracks-off live under \texttt{figures/tactical\_*.pdf}.
+\paragraph{Ladder.}
+(1)~1-v-1 vs duck, $2{\times}10^{5}$ env steps, 3 seeds, 50-episode eval against random and \texttt{fire\_once} on the same spawn.
+(2)~2-v-2 vs duck, then FSM, with shared-command PPO (same discrete action applied to every blue ship).
+TorchRL/BenchMARL \texttt{PettingZooWrapper} is wired in the framework; the MultiAgentMLP loc/scale split is not stable on torchrl~0.11, so 2-v-2 uses the Tianshou path rather than empty curves.
+(3)~4-v-4 only if 2-v-2 vs duck beats random; otherwise it is omitted (not a failed comparison).
 
-\paragraph{Result.}
-All \textbf{36} core jobs and \textbf{12} ablation jobs completed (3 seeds each; $\sim$12--15 episodes per 2500-step run, numpy MAPPO/MADDPG/IPPO on \texttt{make\_env}).
-Team return is the sum of blue agents, so 4-v-4 magnitudes are larger.
-At 2-v-2 vs duck, frozen eval return is highest for MADDPG ($0.08{\pm}24.8$), then MAPPO ($-14.1{\pm}17.4$) and IPPO ($-46.4{\pm}20.8$).
-Vs the FSM elite, IPPO and MADDPG are similar ($\sim{-}17$) and MAPPO is worse ($-30.8{\pm}21.8$).
-4-v-4 returns stay large and negative for every algorithm; mission rate is $1.0$ under DCA (red never scores \texttt{RedMission}).
-Tracks-off MAPPO at 2-v-2 is near zero eval (duck $-1.2$, FSM $-2.8$), i.e.\ not a large detect-loss collapse in this budget.
-Striker-red MAPPO matches the FSM-opponent core within seed noise at this horizon: red's striker flag does not by itself produce leaks against a fighting baseline.
+\paragraph{1-v-1 vs duck.}
+All three seeds reach eval kill rate $1.0$, mission rate $1.0$, one shot / one hit, return $\approx 13.3$ (hit $+3$ plus mission terminal).
+Random kill rate is $0.54$--$0.78$; \texttt{fire\_once} is $0$ at the default $\sim 60\,\mathrm{NM}$ opening (out of WEZ).
+\Cref{fig:marl} (left) is the per-epoch eval-kill curve; \Cref{fig:marleval} compares policy vs random vs FireOnce.
 
-These are short on-policy/off-policy loops, not a claim of a trained BVR policy.
-The contribution is a finished, seeded comparison grid on the same PettingZoo object, with the dashboard remaining Torch-free.
+\paragraph{2-v-2.}
+Shared-command PPO at $10^{5}$ steps does \emph{not} beat random: eval kills $1.0$--$1.44$ vs random $1.5$--$1.7$ (random already closes and shoots both ducks).
+FSM 2-v-2 and 4-v-4 are therefore not trained.
+That is the intended gate, not a hidden 4-v-4 table.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/marl_curve.pdf}
-\caption{MARL learning curves (mean $\pm$ std over seeds) for size $\times$ opponent.}
+\caption{Eval kill rate vs epoch (mean if multiple seeds). 1-v-1 PPO vs duck rises to $1.0$; 2-v-2 shared-command stays near random.}
 \label{fig:marl}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/marl_eval.pdf}
-\caption{Frozen eval return (mean $\pm$ std). Extra metrics (mission rate, kill ratio, shots/hit) are in the JSON artifact.}
+\caption{Frozen eval kills / episode (50 episodes) vs random and \texttt{fire\_once}.}
 \label{fig:marleval}
+\end{figure}
+
+\section{Performance}
+
+Physics runs at $20\,\mathrm{Hz}$ with \texttt{action\_repeat}$=20$ (1~Hz decisions).
+Realtime factor is $\mathrm{physics\_ticks}/(\mathrm{wall\_s}\cdot 20)$.
+\texttt{python -m bace.bench} steps \texttt{ParallelEnvs} with \texttt{record=false} (rayon) for $n\in\{1,2,4,8,16,32\}$ on a 32-core host, $2{\times}10^{4}$ decision steps.
+
+Single-env Rust throughput is $\sim 6.2{\times}10^{4}$ decisions/s ($\sim 6.2{\times}10^{4}\times$ realtime).
+At $n=32$, aggregate decision rate is $\sim 3.2{\times}10^{5}$/s (realtime factor $\sim 3.2{\times}10^{5}$, efficiency $\mathrm{speedup}/n$ drops from $6.2{\times}10^{4}$ to $\sim 9.9{\times}10^{3}$ because each step is cheap relative to rayon overhead).
+PyO3 \texttt{NativeVecEnv} is $\sim 1.43\times$ slower than the pure-Rust loop; the Python \texttt{BaceEnv} wrapper is $\sim 1.49\times$ slower.
+WEZ smoke wall-clock falls from $0.19\,\mathrm{s}$ at \texttt{max\_parallel}=1 to $0.035\,\mathrm{s}$ at 8.
+We do not invent a B-ACE~1.0 Godot/TCP number.
+
+\Cref{fig:bench} plots throughput and realtime factor vs $n$.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/bench_scaling.pdf}
+\caption{Rust \texttt{ParallelEnvs} scaling. Left: aggregate decision Hz. Right: realtime factor and efficiency (factor$/n$).}
+\label{fig:bench}
 \end{figure}
 
 \section{Reproducibility}
@@ -247,11 +268,11 @@ cargo test -p bace-core -p bace-vec
 pytest -q tests/python
 python -m bace.experiment wez --profile paper
 python -m bace.experiment fsm --profile paper
-python -m bace.experiment marl_core --profile paper
-python -m bace.experiment marl_striker --profile paper
-python -m bace.experiment marl_tracks --profile paper
+python -m bace.experiment marl --profile paper
+python -m bace.bench --steps 20000
+# copy runs/experiments/{bench,marl_ppo_1v1,marl_core}_*.json into B_ACE_2_Paper/data/
 
-# in B_ACE_2_Paper (bace installed)
+# in B_ACE_2_Paper (bace installed; does not re-run the 36-job numpy grid)
 python make_figures.py
 pdflatex bace20 && bibtex bace20 && pdflatex bace20 && pdflatex bace20
 \end{verbatim}
@@ -261,10 +282,11 @@ Visualizer tiles (including 4-ship formations and trails) are in the framework \
 
 \section{Conclusions}
 
-B-ACE~2.0 is a shareable Rust/Python BVR framework with paper-scale recipes for WEZ fitting, cooperative FSM search, and a MAPPO/MADDPG/IPPO comparison through 4-v-4.
+B-ACE~2.0 is a shareable Rust/Python BVR framework with paper-scale recipes for WEZ fitting, cooperative FSM search, and Tianshou PPO that learns 1-v-1 vs duck (kill rate $1.0$, above random).
 The WEZ study now reports an empirical envelope and missile traces, not only a hit-rate table.
 FSM search is no longer a 1-v-1 mutual-kill plateau.
-MARL is a multi-algorithm grid plus two named ablations; we report completed seeds only.
+2-v-2 shared-command PPO does not beat random at $10^{5}$ steps, so 4-v-4 is not reported as a failed MARL comparison.
+Rayon \texttt{ParallelEnvs} reach $\sim 3{\times}10^{5}$ decisions/s at $n=32$ ($\sim 3{\times}10^{5}\times$ realtime at 20~Hz physics).
 
 Out of scope for this draft: 8-v-8, red-as-learner, 3D Godot, and Torch on the dashboard.
 

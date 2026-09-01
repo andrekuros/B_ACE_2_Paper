@@ -29,18 +29,12 @@ maturin develop -m crates/bace-py/Cargo.toml
 Then, in this paper repo (with that environment active):
 
 ```bash
+# expects data/bench.json, data/marl_ppo_1v1.json, data/marl_core.json
+# copied from B-ACE-2.0 runs/experiments/
 python make_figures.py
 ```
 
-Paper-scale experiment profiles (`wez`, `fsm`, `marl_core`, `marl_striker`, `marl_tracks`) are defined in the framework under `configs/experiments/` and run as:
-
-```bash
-python -m bace.experiment wez --profile paper
-python -m bace.experiment fsm --profile paper
-python -m bace.experiment marl_core --profile paper
-```
-
-`make_figures.py` invokes those recipes itself.
+`make_figures.py` reads those artifacts plus cached WEZ/FSM numbers in `data/paper_results.json`. It does **not** re-run the old 36-job numpy MARL grid.
 
 ## Contents
 
@@ -49,7 +43,7 @@ python -m bace.experiment marl_core --profile paper
 | `bace20.tex` | Draft |
 | `refs.bib` | Bibliography |
 | `bace20.pdf` | Compiled draft |
-| `figures/*.pdf` | WEZ hit/fit/traces, FSM search/occupancy, MARL curves/eval, tactical 4v4 |
+| `figures/*.pdf` | WEZ, FSM, MARL kill curves, eval vs random, bench scaling, tactical |
 | `data/paper_results.json` | Numbers used in the text |
 | `make_figures.py` | Regenerates figures (requires `bace`) |
 

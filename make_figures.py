@@ -30,24 +30,60 @@ def binom_ci(p: float, n: int) -> float:
     return 1.96 * math.sqrt(max(p * (1.0 - p), 0.0) / n)
 
 
+def load_json(name: str) -> dict:
+    path = ROOT / "data" / name
+    if path.is_file():
+        return json.loads(path.read_text())
+    return {}
+
+
 def run_wez_paper() -> dict:
+    cached = load_json("paper_results.json")
+    if cached.get("wez_cells"):
+        return {
+            "cells": cached["wez_cells"],
+            "fits": cached.get("wez_fits", []),
+            "traces": cached.get("wez_traces", []),
+            "summary": cached.get("wez_summary"),
+            "aspect_summaries": cached.get("wez_aspect_summaries"),
+        }
     from bace.experiment import run_wez
 
     return run_wez(profile="paper", max_parallel=8, out_dir=ROOT / "data")
 
 
 def run_fsm_paper() -> dict:
+    cached = load_json("paper_results.json")
+    if cached.get("fsm_history"):
+        return {
+            "history": cached["fsm_history"],
+            "elites": cached.get("fsm_elites", []),
+            "summary": cached.get("fsm_summary"),
+            "params": cached.get("fsm_params"),
+            "last_generation": [],
+        }
     from bace.experiment import run_fsm
 
     return run_fsm(profile="paper", max_parallel=8, out_dir=ROOT / "data")
 
 
-def run_marl_paper() -> dict:
-    from bace.experiment import run_marl_core, run_marl_ablations
-
-    core = run_marl_core(profile="paper", out_dir=ROOT / "data")
-    ablations = run_marl_ablations(profile="paper", out_dir=ROOT / "data")
-    return {"core": core, "ablations": ablations}
+def load_marl_paper() -> dict:
+    ppo = load_json("marl_ppo_1v1.json")
+    core = load_json("marl_core.json")
+    jobs = list(ppo.get("jobs") or []) + list(core.get("jobs") or [])
+    cached = load_json("paper_results.json")
+    if not jobs:
+        jobs = list((cached.get("marl_core") or {}).get("jobs") or [])
+        core = {**core, **(cached.get("marl_core") or {})}
+    return {
+        "recipe": "marl_core",
+        "jobs": jobs,
+        "ppo": ppo,
+        "core": core,
+        "n_jobs": len(jobs),
+        "duck_2v2_learned": core.get("duck_2v2_learned"),
+        "note": core.get("note") or ppo.get("note") or (cached.get("marl_core") or {}).get("note"),
+    }
 
 
 def plot_wez(report: dict) -> None:
@@ -247,49 +283,43 @@ def plot_marl(report: dict) -> None:
     jobs = report.get("jobs") or report.get("core", {}).get("jobs") or []
     if not jobs and report.get("returns"):
         jobs = [report]
-    sizes = sorted({int(j.get("agents", 0)) for j in jobs}) or [2]
-    opps = []
+    groups = []
     for j in jobs:
-        o = str(j.get("opponent", "duck"))
-        if o not in opps:
-            opps.append(o)
-    if not opps:
-        opps = ["duck"]
-    fig, axes = plt.subplots(len(sizes), len(opps), figsize=(4.2 * len(opps), 3.1 * max(1, len(sizes))), squeeze=False)
-    algos = ["mappo", "maddpg", "ippo"]
-    colors = {"mappo": "#1f77b4", "maddpg": "#ff7f0e", "ippo": "#2ca02c"}
-    for i, sz in enumerate(sizes):
-        for j, opp in enumerate(opps):
-            ax = axes[i][j]
-            for algo in algos:
-                series = [
-                    jj
-                    for jj in jobs
-                    if int(jj.get("agents", 0)) == sz
-                    and str(jj.get("opponent")) == opp
-                    and str(jj.get("algo")) == algo
-                ]
-                if not series:
-                    continue
-                curves = [np.asarray(s.get("returns", []), dtype=float) for s in series if s.get("returns")]
-                if not curves:
-                    continue
-                mlen = min(len(c) for c in curves)
-                if mlen < 2:
-                    continue
-                stacked = np.stack([c[:mlen] for c in curves])
-                mu = stacked.mean(axis=0)
-                sd = stacked.std(axis=0)
-                xs = np.arange(1, mlen + 1)
-                ax.plot(xs, mu, color=colors[algo], lw=1.6, label=algo)
-                ax.fill_between(xs, mu - sd, mu + sd, color=colors[algo], alpha=0.15)
-            ax.set_title(f"{sz}v{sz} vs {opp}")
-            ax.grid(True, alpha=0.3)
-            if i == len(sizes) - 1:
-                ax.set_xlabel("Episode")
-            if j == 0:
-                ax.set_ylabel("Return")
-    axes[0][-1].legend(frameon=False, fontsize=8)
+        key = (int(j.get("agents", 1)), str(j.get("opponent", "duck")), str(j.get("algo", "ppo")))
+        if key not in groups:
+            groups.append(key)
+    if not groups:
+        return
+    n = len(groups)
+    cols = min(3, n)
+    rows = (n + cols - 1) // cols
+    fig, axes = plt.subplots(rows, cols, figsize=(4.4 * cols, 3.2 * rows), squeeze=False)
+    for i, key in enumerate(groups):
+        ax = axes[i // cols][i % cols]
+        sz, opp, algo = key
+        series = [
+            jj
+            for jj in jobs
+            if int(jj.get("agents", 0)) == sz
+            and str(jj.get("opponent")) == opp
+            and str(jj.get("algo")) == algo
+        ]
+        kill_curves = [np.asarray(s.get("kills_curve") or [c.get("kills", 0) for c in s.get("curve") or []], dtype=float) for s in series]
+        kill_curves = [c for c in kill_curves if len(c) >= 2]
+        if kill_curves:
+            mlen = min(len(c) for c in kill_curves)
+            stacked = np.stack([c[:mlen] for c in kill_curves])
+            mu, sd = stacked.mean(0), stacked.std(0)
+            xs = np.arange(1, mlen + 1)
+            ax.plot(xs, mu, color="#1f77b4", lw=1.6, label="eval kills")
+            ax.fill_between(xs, mu - sd, mu + sd, color="#1f77b4", alpha=0.15)
+        ax.set_title(f"{algo} {sz}v{sz} vs {opp}")
+        ax.set_ylabel("Eval kills / episode")
+        ax.set_xlabel("Epoch")
+        ax.grid(True, alpha=0.3)
+        ax.legend(frameon=False, fontsize=8)
+    for j in range(i + 1, rows * cols):
+        axes[j // cols][j % cols].axis("off")
     fig.tight_layout()
     fig.savefig(FIG / "marl_curve.pdf")
     fig.savefig(FIG / "marl_curve.png", dpi=160)
@@ -302,38 +332,64 @@ def plot_marl_eval(report: dict) -> None:
     jobs = report.get("jobs") or report.get("core", {}).get("jobs") or []
     if not jobs:
         return
-    fig, ax = plt.subplots(figsize=(7.2, 3.5))
     labels = []
-    means = []
-    stds = []
-    for sz in sorted({int(j.get("agents", 0)) for j in jobs}):
-        for opp in ("duck", "fsm"):
-            for algo in ("mappo", "maddpg", "ippo"):
-                vals = [
-                    float((j.get("eval") or {}).get("return", j.get("last_mean", 0)))
-                    for j in jobs
-                    if int(j.get("agents", 0)) == sz
-                    and str(j.get("opponent")) == opp
-                    and str(j.get("algo")) == algo
-                ]
-                if not vals:
-                    continue
-                labels.append(f"{algo}\n{sz}v{sz}/{opp}")
-                means.append(float(np.mean(vals)))
-                stds.append(float(np.std(vals)))
-    if not labels:
-        return
-    ax.bar(range(len(labels)), means, yerr=stds, capsize=3, color="#1f77b4")
-    ax.set_xticks(range(len(labels)))
+    kills, rnd, fire, ret = [], [], [], []
+    for j in jobs:
+        sz = int(j.get("agents", 1))
+        opp = str(j.get("opponent", "duck"))
+        algo = str(j.get("algo", "ppo"))
+        seed = j.get("seed")
+        ev = j.get("eval") or {}
+        labels.append(f"{algo}\n{sz}v{sz}/{opp}\ns{seed}")
+        kills.append(float(ev.get("kills", 0)))
+        rnd.append(float((j.get("eval_random") or {}).get("kills", 0)))
+        fire.append(float((j.get("eval_fire_once") or {}).get("kills", 0)))
+        ret.append(float(ev.get("return", 0)))
+    x = np.arange(len(labels))
+    w = 0.25
+    fig, ax = plt.subplots(figsize=(max(7.0, 0.7 * len(labels)), 3.8))
+    ax.bar(x - w, kills, w, label="policy kills", color="#1f77b4")
+    ax.bar(x, rnd, w, label="random kills", color="#ff7f0e")
+    ax.bar(x + w, fire, w, label="fire_once kills", color="#2ca02c")
+    ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=7)
-    ax.set_ylabel("Eval return")
-    ax.set_title("Frozen eval (mean ± std over seeds)")
+    ax.set_ylabel("Kills / episode (50 eval)")
+    ax.set_title("Frozen eval vs random and FireOnce")
+    ax.legend(frameon=False, fontsize=8)
     ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(FIG / "marl_eval.pdf")
     fig.savefig(FIG / "marl_eval.png", dpi=160)
     plt.close(fig)
 
+
+def plot_bench(report: dict) -> None:
+    import matplotlib.pyplot as plt
+
+    scaling = report.get("scaling") or []
+    if not scaling:
+        return
+    ns = [r["n_envs"] for r in scaling]
+    hz = [r["decision_hz"] for r in scaling]
+    rt = [r["realtime_factor"] for r in scaling]
+    eff = [r.get("efficiency", r["realtime_factor"] / max(r["n_envs"], 1)) for r in scaling]
+    fig, axes = plt.subplots(1, 2, figsize=(8.8, 3.4))
+    axes[0].plot(ns, hz, "o-", color="#1f77b4")
+    axes[0].set_xlabel(r"$n$ envs")
+    axes[0].set_ylabel("Decision Hz (all envs)")
+    axes[0].set_title("Throughput vs $n$")
+    axes[0].grid(True, alpha=0.3)
+    axes[1].plot(ns, rt, "o-", color="#1f77b4", label="realtime factor")
+    axes[1].plot(ns, eff, "s--", color="#ff7f0e", label="factor / $n$")
+    axes[1].set_xlabel(r"$n$ envs")
+    axes[1].set_ylabel("Speedup vs 20 Hz physics")
+    axes[1].set_title("Realtime factor")
+    axes[1].legend(frameon=False, fontsize=8)
+    axes[1].grid(True, alpha=0.3)
+    fig.tight_layout()
+    fig.savefig(FIG / "bench_scaling.pdf")
+    fig.savefig(FIG / "bench_scaling.png", dpi=160)
+    plt.close(fig)
 
 def roll_episode(config: dict, max_steps: int = 200) -> list[dict]:
     from bace import BaceEnv
@@ -677,11 +733,15 @@ def main() -> None:
     print(fsm.get("summary"))
 
     print("MARL…")
-    marl = run_marl_paper()
-    core = marl.get("core", marl)
-    plot_marl(core)
-    plot_marl_eval(core)
-    print("marl jobs", core.get("n_jobs"), "ablations", len(marl.get("ablations", {}).get("jobs", [])))
+    marl = load_marl_paper()
+    plot_marl(marl)
+    plot_marl_eval(marl)
+    print("marl jobs", marl.get("n_jobs"), "duck_2v2", marl.get("duck_2v2_learned"))
+
+    print("Bench…")
+    bench = load_json("bench.json")
+    plot_bench(bench)
+    print("bench n", len(bench.get("scaling") or []))
 
     print("Visualizer views…")
     views = plot_visualizer_views()
@@ -697,6 +757,10 @@ def main() -> None:
             "first_mean": j.get("first_mean"),
             "last_mean": j.get("last_mean"),
             "eval": j.get("eval"),
+            "eval_random": j.get("eval_random"),
+            "eval_fire_once": j.get("eval_fire_once"),
+            "beat_random": j.get("beat_random"),
+            "kills_curve": j.get("kills_curve"),
             "share_tracks": j.get("share_tracks"),
             "red_mission": j.get("red_mission"),
         }
@@ -722,13 +786,17 @@ def main() -> None:
         "fsm_elites": fsm.get("elites"),
         "fsm_params": fsm.get("params"),
         "marl_core": {
-            "n_jobs": core.get("n_jobs"),
-            "profile": core.get("profile"),
-            "jobs": [slim_job(j) for j in core.get("jobs", [])],
+            "n_jobs": marl.get("n_jobs"),
+            "jobs": [slim_job(j) for j in marl.get("jobs", [])],
+            "duck_2v2_learned": marl.get("duck_2v2_learned"),
+            "note": marl.get("note"),
         },
-        "marl_ablations": {
-            "n_jobs": marl.get("ablations", {}).get("n_jobs"),
-            "jobs": [slim_job(j) for j in marl.get("ablations", {}).get("jobs", [])],
+        "bench": {
+            "cpu_count": bench.get("cpu_count"),
+            "scaling": bench.get("scaling"),
+            "pyo3_tax": bench.get("pyo3_tax"),
+            "wez_wall": bench.get("wez_wall"),
+            "fsm_wall": bench.get("fsm_wall"),
         },
         "views": views,
         "behavior": dumps,
