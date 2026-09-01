@@ -21,8 +21,7 @@
 }
 
 \title{\textbf{B-ACE 2.0}: A Rust-Native Open Framework\\
-for Beyond-Visual-Range Air Combat\\
-Multi-Agent Learning}
+for Beyond-Visual-Range Air Combat}
 \author{
 Andre R.\ Kuroswiski$^{1,2}$ \and
 Annie S.\ Wu$^{3}$ \and
@@ -31,7 +30,7 @@ Angelo Passaro$^{2}$\\[0.6em]
 \small $^{2}$Institute for Advanced Studies (IEAv), S\~{a}o Jos\'{e} dos Campos, Brazil\\
 \small $^{3}$University of Central Florida, Orlando, FL, USA
 }
-\date{Working draft --- 1 September 2026}
+\date{1 September 2026}
 
 \begin{document}
 \maketitle
@@ -39,216 +38,277 @@ Angelo Passaro$^{2}$\\[0.6em]
 
 \begin{abstract}
 \noindent
-B-ACE 1.0 showed that an open, lightweight beyond-visual-range (BVR) simulator can support multi-agent reinforcement learning (MARL) research without restricted military data.
-B-ACE~2.0 is a standalone rewrite of that environment: a Rust simulation core, in-process parallel rollouts, a PettingZoo Python API, and a local web dashboard.
-The same three study cases used to introduce B-ACE---weapon engagement zone (WEZ) sampling, finite-state-machine (FSM) search, and MARL---are first-class recipes (\texttt{python -m bace.experiment \ldots\ --profile paper}).
-This draft reports a dense WEZ grid with a polynomial/logistic envelope fit and missile time-of-flight traces; a 2-v-2 FSM search with mission-aware fitness, an evolving red pool, and 4-v-4 elite re-evaluation; Tianshou PPO that learns 1-v-1 vs duck (kill rate $1.0$ over 3 seeds, beating random and \texttt{fire\_once}); and a Rust \texttt{ParallelEnvs} throughput study.
-Public recipes cap force size at 4-v-4 with a 2$\times$2 box spawn.
-Source: \url{https://github.com/andrekuros/B-ACE} (1.0), \url{https://github.com/andrekuros/B-ACE-2.0} (framework), and \url{https://github.com/andrekuros/B_ACE_2_Paper} (this draft).
+B-ACE~2.0 is an open, fast, inspectable beyond-visual-range (BVR) environment: a Rust simulation core, in-process vectorized rollouts, a PettingZoo Python API, and a local web dashboard with no Torch on the server.
+It is a standalone rewrite of B-ACE~1.0 (Godot + TCP), not a drop-in clone of that engine's engagement model.
+Three recipes characterize the environment rather than claim an operational tactics result: a dense weapon-engagement-zone (WEZ) grid with a \emph{corrected} closing-speed envelope; a 2-v-2 finite-state-machine (FSM) search scored on a frozen default-red test set; and independent PPO (IPPO, shared weights) on \texttt{NativeVecEnv}.
+1-v-1 vs a non-maneuvering duck is a unit test of learning, not a MARL study.
+Public recipes cap force size at 4-v-4.
+Source: \url{https://github.com/andrekuros/B-ACE} (1.0), \url{https://github.com/andrekuros/B-ACE-2.0} (framework), \url{https://github.com/andrekuros/B_ACE_2_Paper} (this draft).
 \end{abstract}
 
 \section{Introduction}
 
-Open BVR research is still limited by access: many air-combat simulators used for learning are government or industry systems that cannot be shared~\cite{gorton2024survey,kuroswiski2024bace}.
-B-ACE was introduced to fill that gap with a Godot-based environment, Gymnasium/PettingZoo interfaces, and three practical study cases~\cite{kuroswiski2024bace}.
-Those cases---WEZ model support~\cite{dantas2021wez}, FSM baselines~\cite{kuroswiski2023beyond}, and MARL against duck and FSM opponents---remain the right demonstration for a \emph{framework} paper: they show analysis, optimization, and learning on the same scenario object.
+Open BVR research is limited by access: many air-combat simulators used for learning are government or industry systems that cannot be shared~\cite{gorton2024survey,kuroswiski2024bace}.
+B-ACE filled that gap with a Godot-based environment, Gymnasium/PettingZoo interfaces, and three practical study cases~\cite{kuroswiski2024bace}.
+Those cases---WEZ support~\cite{dantas2021wez}, FSM baselines~\cite{kuroswiski2023beyond}, and learning against duck and FSM opponents---remain the right demonstration for an \emph{environment} paper: analysis, optimization, and a learning unit test on the same scenario object.
 
 B-ACE~2.0 keeps that scientific story and changes the engineering contract.
-The sim no longer depends on a game-engine process and a TCP/JSON bridge.
-Physics, radar geometry, missiles, rewards, and FSM policies run in Rust; Python sees a PettingZoo \texttt{ParallelEnv}; a dashboard streams live jobs and replays recorded episodes.
-Experiment mode is a typed batch runner with a shared episode-outcome schema (end condition, kills, deaths, mission flag, return, shots, hits).
-
-This document is a \textbf{working draft to share with co-authors}.
-WEZ and FSM use the paper CLI profile; MARL is a Tianshou PPO ladder (1-v-1 duck first) rather than the previous short numpy grid.
-Force size is capped at 4-v-4 in public recipes.
+Physics, radar geometry, missiles, rewards, and FSM policies run in Rust; Python sees a PettingZoo \texttt{ParallelEnv} and a rayon \texttt{NativeVecEnv}; a dashboard streams live jobs and replays recorded episodes.
+Blue-only \texttt{external} control and a 4-v-4 cap are explicit public limits, not unfinished items.
 
 \section{Related work}
 
 Restricted platforms (NGTS, AFSIM, TACSI, ASA, WUKONG) dominate applied air-combat ML~\cite{gorton2024survey}.
 Open alternatives include JSBSim-based stacks and BVR Gym, which targets lower-level aircraft control~\cite{scukins2024bvrgym}.
 B-ACE sits at a higher decision layer: heading, altitude, load factor, and fire, assuming an inner-loop controller~\cite{kuroswiski2024bace,hu2021bvr}.
-Standard MARL interfaces~\cite{terry2021pettingzoo,towers2023gymnasium} and libraries~\cite{bettini2023benchmarl,weng2022tianshou} are the intended consumers.
-Godot remains a strong choice for 3D inspection~\cite{godot2024}; 2.0 moves the \emph{learning loop} out of the engine so throughput and packaging match a Python framework release.
+Standard MARL interfaces~\cite{terry2021pettingzoo,towers2023gymnasium} and libraries~\cite{weng2022tianshou,bettini2023benchmarl} are the intended consumers.
+Godot remains useful for 3D inspection~\cite{godot2024}; 2.0 moves the \emph{learning loop} out of the engine.
+
+\Cref{tab:cmp} places 2.0 next to 1.0 and BVR Gym.
+We do not invent a B-ACE~1.0 Godot/TCP throughput number.
+
+\begin{table}[t]
+\centering
+\caption{Open BVR learning environments (public descriptions).}
+\label{tab:cmp}
+\scriptsize
+\begin{tabular}{@{}lllll@{}}
+\toprule
+ & Engine & API & Decision layer & Learner / cap \\
+\midrule
+B-ACE 1.0 & Godot + TCP & Gym / PZ & 1~Hz BVR cmds & blue \\
+BVR Gym & JSBSim & Gymnasium & inner-loop control & single-agent \\
+B-ACE 2.0 & Rust in-process & PZ + NativeVecEnv & 1~Hz (20~Hz phys.) & blue; 4-v-4 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \section{B-ACE 2.0}
 
 \subsection{Architecture}
 
-\Cref{fig:arch} summarizes the crate layout.
+\Cref{fig:arch} is the crate layout.
+\texttt{bace-core} integrates fighters at $20\,\mathrm{Hz}$ with action repeat $20$ (1~Hz decisions).
+Observations are a flat vector: own ship (9) + each enemy (13) + each ally (6).
+Continuous actions are $(\Delta h, \Delta z, G, \mathrm{fire})\in[-1,1]^4$; discrete actions use \texttt{MultiDiscrete}$[2,5,5]$ (fire, altitude bin, turn bin).
+Only blue is \texttt{external} in this release.
+Behaviors: \texttt{external}, \texttt{baseline1} (WEZ-gated FSM), \texttt{duck}, and \texttt{fire\_once}.
 
 \begin{figure}[t]
 \centering
-\fbox{\parbox{0.92\linewidth}{\centering\small
-\texttt{bace-core} (kinematics, radar, WEZ, missiles, FSM, rewards)\\
-$\downarrow$\\
-\texttt{bace-vec} parallel envs + \texttt{run\_experiment} recipes
-\hfill
-\texttt{bace-record} episode JSON\\
-$\downarrow$\hspace{4em}$\downarrow$\\
-\texttt{bace-py} / PettingZoo
-\hfill
-\texttt{bace-server} HTTP/WS dashboard
-}}
-\caption{B-ACE~2.0 layout. Blue agents may be \texttt{external} (RL); red uses scripted behaviors in this release.}
+\includegraphics[width=\linewidth]{figures/architecture.pdf}
+\caption{B-ACE~2.0 layout. Training uses \texttt{NativeVecEnv}; the dashboard never loads Torch.}
 \label{fig:arch}
 \end{figure}
-
-\texttt{bace-core} integrates fighters at $20\,\mathrm{Hz}$ with action repeat $20$ (1~Hz decisions), matching B-ACE~1.0 timing.
-Observations are a flat vector: own ship (9) + each enemy (13) + each ally (6).
-Continuous actions are $(\Delta h, \Delta z, G, \mathrm{fire})\in[-1,1]^4$; optional discrete actions map through a small \texttt{MultiDiscrete} table.
-Only the blue team is \texttt{external} in this release.
-
-Behaviors: \texttt{external}, \texttt{baseline1} (WEZ-gated FSM: search / engage / missile-support / evade), \texttt{duck} (straight to a target), and \texttt{fire\_once} (one shot when a track is in aspect, then support).
 
 \subsection{Experiment recipes}
 
 A scenario is one JSON object.
-Batch runs go through \texttt{bace.run\_experiment}
-or the CLI \texttt{python -m bace.experiment} with recipe
-\texttt{wez}, \texttt{fsm}, or \texttt{marl}.
-Each finished episode yields an \texttt{EpisodeOutcome}: seed, steps, end condition, alive counts, kills/deaths, mission success, return, missiles fired/hits.
-Dashboard experiment tab runs \texttt{wez} and \texttt{fsm} only (no Torch on the server).
+Batch runs go through \texttt{python -m bace.experiment} with recipe \texttt{wez}, \texttt{fsm}, or \texttt{marl\_core}.
+Each episode yields an \texttt{EpisodeOutcome}: seed, steps, end condition, kills/deaths, mission flag, return, shots/hits.
+The dashboard experiment tab runs \texttt{wez} and \texttt{fsm} only.
 
 \section{Visualizer}
 
 The dashboard draws a north-up tactical plot from live WebSocket snapshots or recorded \texttt{episode.json} files.
 \Cref{fig:viz} is generated from the same simulation state the UI consumes (trails, $50\,\mathrm{NM}$ / $\pm 60^\circ$ radar wedges, missiles).
-Four showcase episodes are exported for this draft:
-
-\begin{itemize}
-\item \textbf{WEZ 16~NM head-on}: \texttt{fire\_once} vs duck ends \texttt{red\_killed} (39 steps).
-\item \textbf{WEZ 40~NM head-on}: missile still in flight at \texttt{max\_cycles} (miss under the protocol).
-\item \textbf{2$\times$2 baseline vs duck}: four ships, overlapping search volumes.
-\item \textbf{1-v-1 baseline vs baseline}: near-axis closing fight; this seed ends \texttt{blue\_killed}.
-\end{itemize}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/visualizer_views.pdf}
-\caption{Tactical views exported from B-ACE~2.0 episodes (north-up, NM).
-Radar wedges are the geometric $50\,\mathrm{NM}$ / $60^\circ$ sensor model, not the WEZ.
-Yellow/purple markers are missiles (pitbull vs uplink).
-The 4-v-4 panel uses the 2$\times$2 box spawn (4~NM).}
+\caption{Tactical views (north-up, NM). Radar wedges are the geometric sensor model, not the WEZ.
+The 4-v-4 panel uses the $2{\times}2$ box spawn (4~NM ally spacing is a spawn box, not a flown formation).}
 \label{fig:viz}
 \end{figure}
 
-\section{Study case 1: WEZ validation}
+\section{Study case 1: WEZ characterization}
 
-The analytic WEZ in 2.0 is a geometric envelope (altitude, aspect, angle-off), not the Godot polynomial of 1.0.
-We treat it as a \emph{hypothesis} and test it with \texttt{FireOnce} vs duck on a dense grid:
-range $\{6,8,\ldots,40\}$~NM $\times$ altitude $\{10,25,40\}$~kft $\times$ aspect $\{\mathrm{head},\mathrm{beam},\mathrm{tail}\}$, $n{\ge}30$ seeds per cell (paper profile; $\sim 5\times 10^{3}$ episodes in \texttt{bace-vec}).
+The analytic WEZ is a geometric envelope (altitude, aspect, angle-off), not the Godot polynomial of 1.0.
+We treat it as an in-sim envelope to \emph{characterize}, not as validation against live-fire data.
+The protocol is \texttt{FireOnce} vs duck on
+range $\{6,8,\ldots,40\}$~NM $\times$ altitude $\{10,25,40\}$~kft $\times$ aspect $\{\mathrm{head},\mathrm{beam},\mathrm{tail}\}$, $n{=}30$ per cell.
 
-\Cref{fig:wez} plots hit rate versus launch range with a 4th-degree polynomial overlay per aspect; dashed vertical lines are analytic $R_{\max}$.
-\Cref{fig:wezfit} compares fitted empirical $R_{\max}$ (0.5-crossing of the polynomial) to the analytic formula at $25\,\mathrm{kft}$.
-\Cref{fig:weztr} shows missile time-of-flight for hits vs misses at $16$ and $40\,\mathrm{NM}$, with miss cause (timeout vs lost support).
+An earlier draft used an angle-off penalty that made head-on the \emph{shortest} analytic $R_{\max}$ while empirics were the opposite.
+The closed form now uses reciprocal headings as a closing-speed proxy so $R_{\max}$ increases from tail to beam to head.
+Live FSM gating calls the same \texttt{evaluate} as the recipe analytic arguments (\texttt{aspect}${}=0$, \texttt{angle-off}${}\in\{180,90,0\}$).
+
+\Cref{fig:wez} plots hit rate versus launch range with binomial CIs and a logistic overlay; dashed lines are analytic $R_{\max}$.
+Primary empirical range is an isotonic (PAVA) $P_{50}$, not a 4th-degree polynomial crossing.
+\Cref{fig:wezfit} compares that $P_{50}$ to analytic $R_{\max}$ at $25\,\mathrm{kft}$.
 
 \paragraph{Result.}
-Empirical lethality still orders as \textbf{head $>$ beam $>$ tail} at $25\,\mathrm{kft}$: interpolated $P_{50}$ is $40$ / $15$ / $9\,\mathrm{NM}$ (head / beam / tail).
-Polynomial $R_{\max}$ (0.5-crossing) is $40$ / $15.1$ / $8.6\,\mathrm{NM}$ versus analytic $22.5$ / $28.2$ / $33.8\,\mathrm{NM}$---the closed form has the opposite aspect order because it uses angle-off, not closing speed.
-At $16$ and $40\,\mathrm{NM}$, misses are overwhelmingly timeout (not lost support): $150$ timeouts vs $120$ hits at $16\,\mathrm{NM}$ pooled over the three aspects and altitudes, and $180$ vs $90$ at $40\,\mathrm{NM}$.
+At $25\,\mathrm{kft}$, empirical $P_{50}$ orders \textbf{head $>$ beam $>$ tail}: $40$ / $15$ / $9\,\mathrm{NM}$.
+Analytic $R_{\max}$ is $40.0$ / $16.8$ / $9.0\,\mathrm{NM}$ (same order, within a few NM of the isotonic $P_{50}$).
+Head-on $P_{50}{=}40$ is censored at the grid maximum: hit rate remains $\ge 0.5$ at $40\,\mathrm{NM}$.
+This is a corrected in-sim envelope under FireOnce-vs-duck, not an operational WEZ.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/wez_hitrate.pdf}
-\caption{Missile hit rate vs launch range ($n{\ge}30$ per point) with polynomial overlay (dotted) and analytic $R_{\max}$ (dashed).}
+\caption{Hit rate vs launch range ($n{=}30$ per point, 95\% binomial CI) with logistic overlay (dotted) and analytic $R_{\max}$ (dashed).}
 \label{fig:wez}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.72\linewidth]{figures/wez_fit.pdf}
-\caption{Empirical (polynomial $P{=}0.5$ crossing) vs analytic $R_{\max}$ at $25\,\mathrm{kft}$.}
+\caption{Isotonic $P_{50}$ vs analytic $R_{\max}$ at $25\,\mathrm{kft}$ after the closing-speed rewrite.}
 \label{fig:wezfit}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/wez_traces.pdf}
-\caption{Missile time-of-flight at $16$ vs $40\,\mathrm{NM}$ (head-on, $25\,\mathrm{kft}$). Miss annotations give timeout vs lost-support counts.}
+\caption{Missile time-of-flight at $16$ vs $40\,\mathrm{NM}$.}
 \label{fig:weztr}
 \end{figure}
 
 \section{Study case 2: FSM search}
 
 \texttt{baseline1} gates fire on $d_{\mathrm{shot}}$ (range / $R_{\max}$), crank on $l_{\mathrm{crank}}$, and break on $l_{\mathrm{break}}$.
-The 1-v-1 $(kills-deaths)$ protocol was flat (mutual kill).
 Paper profile searches in \textbf{2-v-2} with fitness
-$0.5(\overline{K}-\overline{D})+\overline{M}-0.1\overline{S}$
-(mission success minus a shot penalty), a frozen default red plus an evolving enemy pool every 3 generations, population $32$, $40$ generations, $20$ evals, $400$ decision cycles.
-Elites are re-evaluated in \textbf{4-v-4}.
-\Cref{fig:fsm} shows search progress; \Cref{fig:fsmocc} state occupancy.
+$0.5(\overline{K}-\overline{D})+\overline{M}-0.1\overline{S}$,
+population $32$, $40$ generations, $20$ evals, $400$ decision cycles.
+Training fitness uses an evolving red pool (every 3 generations).
+Each generation also scores the current best on a \textbf{frozen} default-red set with a fixed seed schedule; \Cref{fig:fsm} (left) is that frozen curve.
+Elite labels are distinct genomes (aggressive / balanced / cautious); a duplicate label is dropped rather than reused.
+Elites are re-evaluated in 4-v-4 against default red.
+Ally spacing is set by the spawn box; a 2-v-2 champion is not required to win 4-v-4.
 
 \paragraph{Result.}
-Best fitness reaches $1.30$ by generation 40 (balanced/cautious elite: $\overline{K}{=}2$, $\overline{D}{=}1$, $\overline{M}{=}1$, $\overline{S}{=}2$), i.e.\ $0.5(2-1)+1-0.2$.
-The aggressive cluster instead trades both ships ($\overline{K}{=}\overline{D}{=}2$, $\overline{M}{=}0$, fitness $-0.2$).
-On 4-v-4 re-eval against the default red, the 2-v-2 champion pays more deaths ($\overline{K}{=}2$, $\overline{D}{=}3$) while the aggressive genome keeps $\overline{K}{=}\overline{D}{=}2$ and a higher search occupancy ($0.40$ vs $0.25$).
-Mean ally spacing is $\sim 2.3$--$2.8\,\mathrm{NM}$ (stacked 2$\times$2, not a split).
-Genomes: balanced/cautious $d_{\mathrm{shot}}{=}0.99$, $l_{\mathrm{crank}}{=}0.56$, $l_{\mathrm{break}}{=}1.26$; aggressive $1.17$ / $0.77$ / $1.28$.
+Frozen fitness starts at $1.30$ (generation 0) and ends at $0.80$ (generation 40): the evolving pool makes train fitness ($1.18$ at the last generation) non-comparable across gens, so we do not claim that search ``reaches $1.30$ by generation 40.''
+Last-generation elites are distinct:
+aggressive $(d_{\mathrm{shot}},l_{\mathrm{crank}},l_{\mathrm{break}})=(0.72,0.77,1.58)$,
+balanced $(0.73,0.55,1.58)$,
+cautious $(0.77,0.96,1.50)$.
+The 2-v-2 balanced genome has $\overline{K}{=}1.75$, $\overline{D}{=}1.00$, $\overline{M}{=}1$, $\overline{S}{=}2$ on the training pool.
+On 4-v-4 re-eval the same champion has $\overline{K}{=}1$, $\overline{D}{=}2$---a transfer limitation, not a 4-v-4 tactics result.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.98\linewidth]{figures/fsm_search.pdf}
-\caption{FSM GA, 2-v-2, mission-aware fitness, evolving red pool.
-Left: best fitness. Right: last-generation $K$ vs $D$ and clustered elites.}
+\caption{FSM GA, 2-v-2. Left: frozen default-red fitness (solid) vs train fitness on the evolving pool (dashed). Right: last generation and distinct elites.}
 \label{fig:fsm}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.72\linewidth]{figures/fsm_occupancy.pdf}
-\caption{Search/engage/support/evade occupancy for the three labeled elites.}
+\caption{Search/engage/support/evade occupancy for labeled elites.}
 \label{fig:fsmocc}
 \end{figure}
 
-\section{Study case 3: MARL that can actually improve}
+\section{Study case 3: IPPO as a learning unit test}
 
-The previous numpy ``MAPPO'' grid ($\sim$2500 env steps, $\sim$12 episodes, no GAE or clipped objective) was a hook, not a learning result: frozen eval returns stayed large and negative, and team-sum return made 4-v-4 look $4\times$ worse than 2-v-2 for the same per-ship play.
-This draft retrains with \textbf{Tianshou PPO} on discrete \texttt{MultiDiscrete}$[2,5,5]$ (flattened to 50 bins), an RL reward preset that zeros \texttt{missile\_no\_fire} and shrinks \texttt{detect\_loss} to $-0.01$, and primary scores \textbf{kills, mission rate, shots/hit} (return secondary).
-Only blue is \texttt{external}. The dashboard never loads Torch.
+We train \textbf{IPPO (shared weights)}: one discrete actor-critic, independent per-agent observations and actions, rollouts on \texttt{NativeVecEnv} (not a Python \texttt{DummyVectorEnv} of cloned processes, and not identical-command team sharing).
+1-v-1 vs duck tests that the stack can improve; it is not a multi-agent coordination result.
+We do not report MAPPO, MADDPG, or BenchMARL numbers unless that path actually trains.
 
-\paragraph{Ladder.}
-(1)~1-v-1 vs duck, $2{\times}10^{5}$ env steps, 3 seeds, 50-episode eval against random and \texttt{fire\_once} on the same spawn.
-(2)~2-v-2 vs duck, then FSM, with shared-command PPO (same discrete action applied to every blue ship).
-TorchRL/BenchMARL \texttt{PettingZooWrapper} is wired in the framework; the MultiAgentMLP loc/scale split is not stable on torchrl~0.11, so 2-v-2 uses the Tianshou path rather than empty curves.
-(3)~4-v-4 only if 2-v-2 vs duck beats random; otherwise it is omitted (not a failed comparison).
+\paragraph{Protocol.}
+Discrete map \texttt{MultiDiscrete}$[2,5,5]$ flattened to $50$ logits.
+Greedy eval decodes fire from \emph{marginal} $P(\mathrm{fire})$ so $25$ kinematic bins cannot hide the shot; kinematics take $\arg\max$ of the pooled $25$.
+Journal numbers are \textbf{greedy} 50-episode eval; stochastic eval is reported alongside.
+Baselines share the training spawn; \texttt{FireOnce} at default $\sim 60\,\mathrm{NM}$ is out of WEZ, so we also score \texttt{FireOnce} at the WEZ close cell (16~NM head-on).
+Failed seeds stay failed (no silent relabel).
+Ladder (3 seeds): 1-v-1 duck $\ge 2{\times}10^{5}$ steps; 1-v-1 FSM; 2-v-2 duck IPPO $\ge 10^{5}$.
+Train 2-v-2 FSM only if a 2-v-2 duck seed's greedy kill rate exceeds random; 4-v-4 remains gated.
 
-\paragraph{1-v-1 vs duck.}
-All three seeds reach eval kill rate $1.0$, mission rate $1.0$, one shot / one hit, return $\approx 13.3$ (hit $+3$ plus mission terminal).
-Random kill rate is $0.54$--$0.78$; \texttt{fire\_once} is $0$ at the default $\sim 60\,\mathrm{NM}$ opening (out of WEZ).
-\Cref{fig:marl} (left) is the per-epoch eval-kill curve; \Cref{fig:marleval} compares policy vs random vs FireOnce.
+\Cref{tab:hp} lists hyperparameters.
+Figures~\ref{fig:marl} and~\ref{fig:marleval} are built from the ladder artifact.
 
-\paragraph{2-v-2.}
-Shared-command PPO at $10^{5}$ steps does \emph{not} beat random: eval kills $1.0$--$1.44$ vs random $1.5$--$1.7$ (random already closes and shoots both ducks).
-FSM 2-v-2 and 4-v-4 are therefore not trained.
-That is the intended gate, not a hidden 4-v-4 table.
+\begin{table}[t]
+\centering
+\caption{IPPO hyperparameters (shared across the ladder).}
+\label{tab:hp}
+\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Item & Value \\
+\midrule
+Algorithm & IPPO, shared weights, independent actions \\
+Optimizer / lr & Adam $3{\times}10^{-4}$ \\
+GAE $\lambda$ / $\gamma$ / clip $\epsilon$ & $0.95$ / $0.99$ / $0.2$ \\
+Entropy / VF coef & $0.01$ / $0.5$ \\
+Hidden layers & $128{\times}128$ \\
+Parallel games & $8$ (\texttt{NativeVecEnv}) \\
+Update & 4 epochs, batch $256$ \\
+Reward preset & \texttt{rl} (\texttt{missile\_no\_fire}${}=0$, \texttt{detect\_loss}${}=-0.01$) \\
+Action & Discrete(50) flatten of MultiDiscrete$[2,5,5]$ \\
+Eval & 50 episodes, greedy (journal) and stochastic \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Results.}
+\Cref{tab:marl} reports greedy 50-episode eval (journal protocol) with stochastic eval in parentheses.
+\texttt{FireOnce} on the training spawn is $0$ in every row (opening $\sim 60\,\mathrm{NM}$, outside the WEZ).
+\texttt{FireOnce} at $16\,\mathrm{NM}$ head-on scores $1.0$ kill / episode in 1-v-1 (the WEZ close cell) and $1.0$ in 2-v-2 (one of two ducks).
+
+\textbf{1-v-1 vs duck} is the learning unit test: all three seeds reach greedy kill rate $1.0$, one shot / one hit, above random ($0.52$--$0.62$).
+Greedy and stochastic agree.
+
+\textbf{1-v-1 vs FSM.}
+Seeds 0 and 2 match the duck unit test (greedy $K{=}1$).
+Seed 1 is a failed greedy seed: $0$ shots, $K{=}0$; stochastic still reaches $K{=}0.78$ above random $0.58$.
+The seed is reported as seed 1, not relabeled.
+
+\textbf{2-v-2 vs duck} uses independent IPPO (shared weights, different obs).
+Seeds 0 and 1 greedy-kill both ducks ($K{=}2$) above random ($1.62$, $1.76$).
+Seed 2 again never fires under greedy ($K{=}0$) while stochastic keeps $K{=}2$.
+Mean greedy $K{=}1.33$ is below mean random $K{=}1.71$; two of three seeds nevertheless beat random, so 2-v-2 FSM was trained.
+4-v-4 is still omitted.
+
+\textbf{2-v-2 vs FSM} is mixed: only seed 1 greedy-beats random ($K{=}2$ vs $1.46$); seeds 0 and 2 do not.
+That is not a 2-v-2 tactics claim.
+
+\begin{table}[t]
+\centering
+\caption{IPPO greedy eval (50 episodes). Stochastic kills in parentheses. CI is $1.96\,\mathrm{SE}$ over episodes (zero when every episode matches).}
+\label{tab:marl}
+\scriptsize
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Setting (seed) & $K$ greedy (stoch.) & Random $K$ & $D$ & $M$ & Shots & FireOnce 16~NM \\
+\midrule
+1v1 duck 0 & $1.00$ ($1.00$) & $0.60$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 duck 1 & $1.00$ ($1.00$) & $0.52$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 duck 2 & $1.00$ ($1.00$) & $0.62$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 FSM 0 & $1.00$ ($0.96$) & $0.46$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 FSM 1 & $0.00$ ($0.78$) & $0.58$ & $0$ & $1.00$ & $0.0$ & $1.00$ \\
+1v1 FSM 2 & $1.00$ ($1.00$) & $0.48$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+2v2 duck 0 & $2.00$ ($2.00$) & $1.62$ & $0$ & $1.00$ & $3.0$ & $1.00$ \\
+2v2 duck 1 & $2.00$ ($1.92$) & $1.76$ & $0$ & $1.00$ & $12.0$ & $1.00$ \\
+2v2 duck 2 & $0.00$ ($2.00$) & $1.76$ & $0$ & $1.00$ & $0.0$ & $1.00$ \\
+2v2 FSM 0 & $1.00$ ($2.00$) & $1.60$ & $2.0$ & $1.00$ & $4.0$ & $1.00$ \\
+2v2 FSM 1 & $2.00$ ($2.00$) & $1.46$ & $0$ & $1.00$ & $12.0$ & $1.00$ \\
+2v2 FSM 2 & $0.00$ ($1.96$) & $1.42$ & $0$ & $1.00$ & $0.0$ & $1.00$ \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/marl_curve.pdf}
-\caption{Eval kill rate vs epoch (mean if multiple seeds). 1-v-1 PPO vs duck rises to $1.0$; 2-v-2 shared-command stays near random.}
+\caption{Greedy eval kills vs epoch (mean $\pm$ SD over seeds).}
 \label{fig:marl}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/marl_eval.pdf}
-\caption{Frozen eval kills / episode (50 episodes) vs random and \texttt{fire\_once}.}
+\caption{Greedy eval kills vs random, FireOnce on the training spawn, and FireOnce at 16~NM head-on.}
 \label{fig:marleval}
 \end{figure}
 
 \section{Performance}
 
-Physics runs at $20\,\mathrm{Hz}$ with \texttt{action\_repeat}$=20$ (1~Hz decisions).
-Realtime factor is $\mathrm{physics\_ticks}/(\mathrm{wall\_s}\cdot 20)$.
-\texttt{python -m bace.bench} steps \texttt{ParallelEnvs} with \texttt{record=false} (rayon) for $n\in\{1,2,4,8,16,32\}$ on a 32-core host, $2{\times}10^{4}$ decision steps.
-
-Single-env Rust throughput is $\sim 6.2{\times}10^{4}$ decisions/s ($\sim 6.2{\times}10^{4}\times$ realtime).
-At $n=32$, aggregate decision rate is $\sim 3.2{\times}10^{5}$/s (realtime factor $\sim 3.2{\times}10^{5}$, efficiency $\mathrm{speedup}/n$ drops from $6.2{\times}10^{4}$ to $\sim 9.9{\times}10^{3}$ because each step is cheap relative to rayon overhead).
-PyO3 \texttt{NativeVecEnv} is $\sim 1.43\times$ slower than the pure-Rust loop; the Python \texttt{BaceEnv} wrapper is $\sim 1.49\times$ slower.
-WEZ smoke wall-clock falls from $0.19\,\mathrm{s}$ at \texttt{max\_parallel}=1 to $0.035\,\mathrm{s}$ at 8.
+Physics runs at $20\,\mathrm{Hz}$ with \texttt{action\_repeat}$=20$.
+\texttt{python -m bace.bench} steps \texttt{ParallelEnvs} with \texttt{record=false} for $n\in\{1,2,4,8,16,32\}$ on a 32-core host, $2{\times}10^{4}$ decision steps.
+Single-env Rust throughput is $\sim 6.2{\times}10^{4}$ decisions/s.
+At $n=32$, aggregate decision rate is $\sim 3.2{\times}10^{5}$/s.
+PyO3 \texttt{NativeVecEnv} is $\sim 1.43\times$ slower than the pure-Rust loop.
+IPPO training in this draft uses that same \texttt{NativeVecEnv}, not only the bench path.
 We do not invent a B-ACE~1.0 Godot/TCP number.
-
-\Cref{fig:bench} plots throughput and realtime factor vs $n$.
 
 \begin{figure}[t]
 \centering
@@ -259,36 +319,35 @@ We do not invent a B-ACE~1.0 Godot/TCP number.
 
 \section{Reproducibility}
 
-Framework repository: \url{https://github.com/andrekuros/B-ACE-2.0}.
-Paper repository (this draft): \url{https://github.com/andrekuros/B_ACE_2_Paper}.
+Framework: \url{https://github.com/andrekuros/B-ACE-2.0}.
+Paper: \url{https://github.com/andrekuros/B_ACE_2_Paper}.
 
 \begin{verbatim}
 # in B-ACE-2.0
-cargo test -p bace-core -p bace-vec
+cargo test -p bace-core wez
+cargo test -p bace-vec
 pytest -q tests/python
 python -m bace.experiment wez --profile paper
 python -m bace.experiment fsm --profile paper
-python -m bace.experiment marl --profile paper
-python -m bace.bench --steps 20000
-# copy runs/experiments/{bench,marl_ppo_1v1,marl_core}_*.json into B_ACE_2_Paper/data/
+python -m bace.experiment marl_core --profile paper
+# copy wez_*.json, fsm_*.json, marl_core_*.json into B_ACE_2_Paper/data/
 
-# in B_ACE_2_Paper (bace installed; does not re-run the 36-job numpy grid)
+# in B_ACE_2_Paper (does not re-run MARL)
 python make_figures.py
 pdflatex bace20 && bibtex bace20 && pdflatex bace20 && pdflatex bace20
 \end{verbatim}
 
-Framework CI stays on \texttt{--smoke}. Recipe JSON lives under \texttt{configs/experiments/} in B-ACE-2.0.
-Visualizer tiles (including 4-ship formations and trails) are in the framework \texttt{web/dist/app.js}; paper tactical views are matplotlib north-up NM plots.
+Framework CI stays on \texttt{--smoke}.
 
 \section{Conclusions}
 
-B-ACE~2.0 is a shareable Rust/Python BVR framework with paper-scale recipes for WEZ fitting, cooperative FSM search, and Tianshou PPO that learns 1-v-1 vs duck (kill rate $1.0$, above random).
-The WEZ study now reports an empirical envelope and missile traces, not only a hit-rate table.
-FSM search is no longer a 1-v-1 mutual-kill plateau.
-2-v-2 shared-command PPO does not beat random at $10^{5}$ steps, so 4-v-4 is not reported as a failed MARL comparison.
-Rayon \texttt{ParallelEnvs} reach $\sim 3{\times}10^{5}$ decisions/s at $n=32$ ($\sim 3{\times}10^{5}\times$ realtime at 20~Hz physics).
+B-ACE~2.0 is a shareable Rust/Python BVR environment: inspectable recipes, a corrected in-sim WEZ envelope (head $>$ beam $>$ tail), an honest frozen FSM curve, and IPPO on \texttt{NativeVecEnv}.
+1-v-1 vs duck is a unit test of learning (kill rate $1.0$ on three seeds), not a MARL coordination claim.
+Two of three 2-v-2 duck seeds greedy-beat random; one greedy seed never fires, so mean 2-v-2 duck kills do not beat random.
+2-v-2 vs FSM is mixed. 4-v-4 MARL is omitted.
+Rayon \texttt{ParallelEnvs} reach $\sim 3{\times}10^{5}$ decisions/s at $n=32$.
 
-Out of scope for this draft: 8-v-8, red-as-learner, 3D Godot, and Torch on the dashboard.
+Out of scope: 8-v-8, red-as-learner, 3D Godot, and Torch on the dashboard.
 
 \section*{Acknowledgements}
 

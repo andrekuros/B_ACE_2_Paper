@@ -38,6 +38,10 @@ def load_json(name: str) -> dict:
 
 
 def run_wez_paper() -> dict:
+    for name in ("wez.json",):
+        data = load_json(name)
+        if data.get("cells"):
+            return data
     cached = load_json("paper_results.json")
     if cached.get("wez_cells"):
         return {
@@ -53,6 +57,10 @@ def run_wez_paper() -> dict:
 
 
 def run_fsm_paper() -> dict:
+    for name in ("fsm.json",):
+        data = load_json(name)
+        if data.get("history"):
+            return data
     cached = load_json("paper_results.json")
     if cached.get("fsm_history"):
         return {
@@ -68,9 +76,8 @@ def run_fsm_paper() -> dict:
 
 
 def load_marl_paper() -> dict:
-    ppo = load_json("marl_ppo_1v1.json")
     core = load_json("marl_core.json")
-    jobs = list(ppo.get("jobs") or []) + list(core.get("jobs") or [])
+    jobs = list(core.get("jobs") or [])
     cached = load_json("paper_results.json")
     if not jobs:
         jobs = list((cached.get("marl_core") or {}).get("jobs") or [])
@@ -78,11 +85,11 @@ def load_marl_paper() -> dict:
     return {
         "recipe": "marl_core",
         "jobs": jobs,
-        "ppo": ppo,
         "core": core,
         "n_jobs": len(jobs),
         "duck_2v2_learned": core.get("duck_2v2_learned"),
-        "note": core.get("note") or ppo.get("note") or (cached.get("marl_core") or {}).get("note"),
+        "algorithm": core.get("algorithm") or "IPPO (shared weights)",
+        "note": core.get("note") or (cached.get("marl_core") or {}).get("note"),
     }
 
 
@@ -115,11 +122,18 @@ def plot_wez(report: dict) -> None:
                 (f for f in fits if f["aspect"] == asp and abs(f["altitude_ft"] - alt) < 1),
                 None,
             )
-            if fit and fit.get("poly_coef"):
-                coef = fit["poly_coef"]
+            if fit and fit.get("logistic_k") is not None:
                 grid = np.linspace(min(xs), max(xs), 80)
-                poly = np.poly1d(coef)
-                ax.plot(grid, np.clip(poly(grid), 0, 1), color=colors[asp], ls=":", lw=1.3, alpha=0.9)
+                k = float(fit["logistic_k"])
+                r0 = float(fit.get("logistic_r0") or fit.get("logistic_p50_nm") or 0)
+                ax.plot(
+                    grid,
+                    1.0 / (1.0 + np.exp(k * (grid - r0))),
+                    color=colors[asp],
+                    ls=":",
+                    lw=1.3,
+                    alpha=0.9,
+                )
         ax.set_title(f"{int(alt/1000)} kft")
         ax.set_xlabel("Launch range (NM)")
         ax.set_xlim(6, 42)
@@ -143,12 +157,12 @@ def plot_wez_fit(report: dict) -> None:
     labels = [f["aspect"] for f in fits]
     x = np.arange(len(labels))
     w = 0.35
-    ax.bar(x - w / 2, [f["empirical_rmax_nm"] for f in fits], w, label=r"empirical $R_{\max}$", color="#1f77b4")
+    ax.bar(x - w / 2, [f.get("empirical_rmax_nm") or f.get("isotonic_p50_nm") for f in fits], w, label=r"isotonic $P_{50}$", color="#1f77b4")
     ax.bar(x + w / 2, [f["analytic_rmax_nm"] for f in fits], w, label=r"analytic $R_{\max}$", color="#ff7f0e")
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.set_ylabel("Range (NM)")
-    ax.set_title(r"Fitted vs analytic $R_{\max}$ at 25 kft")
+    ax.set_title(r"Isotonic $P_{50}$ vs analytic $R_{\max}$ at 25 kft")
     ax.legend(frameon=False)
     ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
@@ -204,12 +218,18 @@ def plot_fsm(report: dict) -> None:
     elites = {e["label"]: e for e in report.get("elites", [])}
     fig, axes = plt.subplots(1, 2, figsize=(9.4, 3.5))
     if hist:
-        axes[0].plot([h["generation"] for h in hist], [h["best_fitness"] for h in hist], "k-o", ms=4)
+        gens = [h["generation"] for h in hist]
+        frozen = [h.get("frozen_fitness", h.get("best_fitness", 0)) for h in hist]
+        train = [h.get("train_fitness", h.get("best_fitness", 0)) for h in hist]
+        axes[0].plot(gens, frozen, "k-o", ms=4, label="frozen (default red)")
+        if any(abs(a - b) > 1e-6 for a, b in zip(frozen, train)):
+            axes[0].plot(gens, train, color="#8aa0b5", ls="--", lw=1.1, label="train (evolving pool)")
+        axes[0].legend(frameon=False, fontsize=8)
     axes[0].set_xlabel("Generation")
-    axes[0].set_ylabel(r"Best fitness $0.5(K-D)+M-0.1S$")
+    axes[0].set_ylabel(r"Fitness $0.5(K-D)+M-0.1S$")
     axes[0].grid(True, alpha=0.3)
     n = (report.get("params") or {}).get("num_agents", "?")
-    axes[0].set_title(f"FSM search ({n}v{n})")
+    axes[0].set_title(f"FSM search ({n}v{n}), frozen eval")
     if last:
         axes[1].scatter(
             [r["mean_deaths"] for r in last],
@@ -280,7 +300,11 @@ def plot_fsm_occupancy(report: dict) -> None:
 def plot_marl(report: dict) -> None:
     import matplotlib.pyplot as plt
 
-    jobs = report.get("jobs") or report.get("core", {}).get("jobs") or []
+    jobs = [
+        j
+        for j in (report.get("jobs") or report.get("core", {}).get("jobs") or [])
+        if not j.get("skipped") and not j.get("gated")
+    ]
     if not jobs and report.get("returns"):
         jobs = [report]
     groups = []
@@ -329,37 +353,82 @@ def plot_marl(report: dict) -> None:
 def plot_marl_eval(report: dict) -> None:
     import matplotlib.pyplot as plt
 
-    jobs = report.get("jobs") or report.get("core", {}).get("jobs") or []
+    jobs = [
+        j
+        for j in (report.get("jobs") or report.get("core", {}).get("jobs") or [])
+        if not j.get("skipped") and not j.get("gated")
+    ]
     if not jobs:
         return
     labels = []
-    kills, rnd, fire, ret = [], [], [], []
+    kills, rnd, fire, fire16 = [], [], [], []
     for j in jobs:
         sz = int(j.get("agents", 1))
         opp = str(j.get("opponent", "duck"))
-        algo = str(j.get("algo", "ppo"))
+        algo = str(j.get("algo", "ippo"))
         seed = j.get("seed")
-        ev = j.get("eval") or {}
+        ev = j.get("eval") or j.get("eval_greedy") or {}
         labels.append(f"{algo}\n{sz}v{sz}/{opp}\ns{seed}")
         kills.append(float(ev.get("kills", 0)))
         rnd.append(float((j.get("eval_random") or {}).get("kills", 0)))
         fire.append(float((j.get("eval_fire_once") or {}).get("kills", 0)))
-        ret.append(float(ev.get("return", 0)))
+        fire16.append(float((j.get("eval_fire_once_16nm") or {}).get("kills", 0)))
     x = np.arange(len(labels))
-    w = 0.25
-    fig, ax = plt.subplots(figsize=(max(7.0, 0.7 * len(labels)), 3.8))
-    ax.bar(x - w, kills, w, label="policy kills", color="#1f77b4")
-    ax.bar(x, rnd, w, label="random kills", color="#ff7f0e")
-    ax.bar(x + w, fire, w, label="fire_once kills", color="#2ca02c")
+    w = 0.2
+    fig, ax = plt.subplots(figsize=(max(7.0, 0.85 * len(labels)), 3.8))
+    ax.bar(x - 1.5 * w, kills, w, label="IPPO greedy", color="#1f77b4")
+    ax.bar(x - 0.5 * w, rnd, w, label="random", color="#ff7f0e")
+    ax.bar(x + 0.5 * w, fire, w, label="FireOnce (train spawn)", color="#2ca02c")
+    ax.bar(x + 1.5 * w, fire16, w, label="FireOnce @16 NM", color="#d62728")
     ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=7)
     ax.set_ylabel("Kills / episode (50 eval)")
-    ax.set_title("Frozen eval vs random and FireOnce")
+    ax.set_title("Greedy eval vs random and FireOnce")
     ax.legend(frameon=False, fontsize=8)
     ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(FIG / "marl_eval.pdf")
     fig.savefig(FIG / "marl_eval.png", dpi=160)
+    plt.close(fig)
+
+
+def plot_architecture() -> None:
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import FancyBboxPatch
+
+    fig, ax = plt.subplots(figsize=(8.8, 3.6))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 4.2)
+    ax.axis("off")
+
+    def box(x, y, w, h, text, fc):
+        p = FancyBboxPatch(
+            (x, y),
+            w,
+            h,
+            boxstyle="round,pad=0.04,rounding_size=0.12",
+            linewidth=1.1,
+            edgecolor="#1b2838",
+            facecolor=fc,
+        )
+        ax.add_patch(p)
+        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=8.5, color="#102030")
+
+    box(0.3, 2.7, 4.4, 1.2, "Python: PettingZoo / Gymnasium\nIPPO on NativeVecEnv (Tianshou)", "#d6e8ff")
+    box(5.3, 2.7, 4.4, 1.2, "Dashboard: Axum HTTP/WS\nreplay + live tiles (no Torch)", "#ffe6cc")
+    box(0.3, 1.4, 9.4, 0.95, "bace-py (PyO3)   ·   NativeEnv / NativeVecEnv   ·   experiment recipes", "#e8f5e9")
+    box(0.3, 0.25, 3.0, 0.9, "bace-core\nphysics, radar,\nWEZ, FSM, rewards", "#f3e8ff")
+    box(3.5, 0.25, 3.0, 0.9, "bace-vec\nrayon ParallelEnvs\nWEZ / FSM recipes", "#fff3cd")
+    box(6.7, 0.25, 3.0, 0.9, "bace-record\nepisode JSON\ntrails, missiles", "#fde2e4")
+    ax.annotate("", xy=(2.5, 2.7), xytext=(2.5, 2.35), arrowprops=dict(arrowstyle="-|>", color="#334"))
+    ax.annotate("", xy=(7.5, 2.7), xytext=(7.5, 2.35), arrowprops=dict(arrowstyle="-|>", color="#334"))
+    ax.annotate("", xy=(1.8, 1.4), xytext=(1.8, 1.15), arrowprops=dict(arrowstyle="-|>", color="#334"))
+    ax.annotate("", xy=(5.0, 1.4), xytext=(5.0, 1.15), arrowprops=dict(arrowstyle="-|>", color="#334"))
+    ax.annotate("", xy=(8.2, 1.4), xytext=(8.2, 1.15), arrowprops=dict(arrowstyle="-|>", color="#334"))
+    ax.set_title("B-ACE 2.0 architecture", fontsize=11, pad=8)
+    fig.tight_layout()
+    fig.savefig(FIG / "architecture.pdf")
+    fig.savefig(FIG / "architecture.png", dpi=160)
     plt.close(fig)
 
 
@@ -736,6 +805,7 @@ def main() -> None:
     marl = load_marl_paper()
     plot_marl(marl)
     plot_marl_eval(marl)
+    plot_architecture()
     print("marl jobs", marl.get("n_jobs"), "duck_2v2", marl.get("duck_2v2_learned"))
 
     print("Bench…")
@@ -757,10 +827,18 @@ def main() -> None:
             "first_mean": j.get("first_mean"),
             "last_mean": j.get("last_mean"),
             "eval": j.get("eval"),
+            "eval_greedy": j.get("eval_greedy") or j.get("eval"),
+            "eval_stochastic": j.get("eval_stochastic"),
             "eval_random": j.get("eval_random"),
             "eval_fire_once": j.get("eval_fire_once"),
+            "eval_fire_once_16nm": j.get("eval_fire_once_16nm"),
             "beat_random": j.get("beat_random"),
             "kills_curve": j.get("kills_curve"),
+            "vec_env": j.get("vec_env"),
+            "hyper": j.get("hyper"),
+            "skipped": j.get("skipped"),
+            "gated": j.get("gated"),
+            "failed": j.get("failed"),
             "share_tracks": j.get("share_tracks"),
             "red_mission": j.get("red_mission"),
         }

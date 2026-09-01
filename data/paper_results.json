@@ -7,7 +7,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 8.0,
@@ -15,7 +15,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 10.0,
@@ -23,7 +23,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 12.0,
@@ -31,7 +31,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 14.0,
@@ -39,7 +39,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 16.0,
@@ -47,7 +47,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 18.0,
@@ -55,7 +55,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 20.0,
@@ -63,7 +63,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 22.0,
@@ -71,7 +71,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 24.0,
@@ -79,7 +79,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 26.0,
@@ -87,7 +87,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 28.0,
@@ -95,7 +95,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 30.0,
@@ -103,7 +103,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 32.0,
@@ -111,7 +111,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 34.0,
@@ -119,7 +119,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 36.0,
@@ -127,7 +127,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 38.0,
@@ -135,7 +135,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 40.0,
@@ -143,7 +143,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "range_nm": 6.0,
@@ -151,7 +151,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 8.0,
@@ -159,7 +159,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 10.0,
@@ -167,7 +167,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 12.0,
@@ -175,7 +175,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 14.0,
@@ -183,7 +183,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 16.0,
@@ -191,7 +191,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 18.0,
@@ -199,7 +199,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 20.0,
@@ -207,7 +207,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 22.0,
@@ -215,7 +215,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 24.0,
@@ -223,7 +223,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 26.0,
@@ -231,7 +231,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 28.0,
@@ -239,7 +239,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 30.0,
@@ -247,7 +247,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 32.0,
@@ -255,7 +255,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 34.0,
@@ -263,7 +263,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 36.0,
@@ -271,7 +271,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 38.0,
@@ -279,7 +279,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 40.0,
@@ -287,7 +287,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "range_nm": 6.0,
@@ -295,7 +295,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 8.0,
@@ -303,7 +303,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 10.0,
@@ -311,7 +311,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 12.0,
@@ -319,7 +319,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 14.0,
@@ -327,7 +327,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 16.0,
@@ -335,7 +335,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 18.0,
@@ -343,7 +343,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 20.0,
@@ -351,7 +351,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 22.0,
@@ -359,7 +359,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 24.0,
@@ -367,7 +367,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 26.0,
@@ -375,7 +375,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 28.0,
@@ -383,7 +383,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 30.0,
@@ -391,7 +391,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 32.0,
@@ -399,7 +399,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 34.0,
@@ -407,7 +407,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 36.0,
@@ -415,7 +415,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 38.0,
@@ -423,7 +423,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 40.0,
@@ -431,7 +431,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "range_nm": 6.0,
@@ -439,7 +439,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 8.0,
@@ -447,7 +447,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 10.0,
@@ -455,7 +455,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 12.0,
@@ -463,7 +463,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 14.0,
@@ -471,7 +471,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 16.0,
@@ -479,7 +479,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 18.0,
@@ -487,7 +487,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 20.0,
@@ -495,7 +495,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 22.0,
@@ -503,7 +503,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 24.0,
@@ -511,7 +511,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 26.0,
@@ -519,7 +519,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 28.0,
@@ -527,7 +527,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 30.0,
@@ -535,7 +535,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 32.0,
@@ -543,7 +543,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 34.0,
@@ -551,7 +551,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 36.0,
@@ -559,7 +559,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 38.0,
@@ -567,7 +567,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 40.0,
@@ -575,7 +575,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "range_nm": 6.0,
@@ -583,7 +583,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 8.0,
@@ -591,7 +591,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 10.0,
@@ -599,7 +599,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 12.0,
@@ -607,7 +607,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 14.0,
@@ -615,7 +615,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 16.0,
@@ -623,7 +623,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 18.0,
@@ -631,7 +631,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 20.0,
@@ -639,7 +639,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 22.0,
@@ -647,7 +647,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 24.0,
@@ -655,7 +655,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 26.0,
@@ -663,7 +663,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 28.0,
@@ -671,7 +671,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 30.0,
@@ -679,7 +679,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 32.0,
@@ -687,7 +687,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 34.0,
@@ -695,7 +695,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 36.0,
@@ -703,7 +703,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 38.0,
@@ -711,7 +711,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 40.0,
@@ -719,7 +719,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "range_nm": 6.0,
@@ -727,7 +727,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 8.0,
@@ -735,7 +735,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 10.0,
@@ -743,7 +743,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 12.0,
@@ -751,7 +751,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 14.0,
@@ -759,7 +759,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 16.0,
@@ -767,7 +767,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 18.0,
@@ -775,7 +775,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 20.0,
@@ -783,7 +783,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 22.0,
@@ -791,7 +791,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 24.0,
@@ -799,7 +799,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 26.0,
@@ -807,7 +807,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 28.0,
@@ -815,7 +815,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 30.0,
@@ -823,7 +823,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 32.0,
@@ -831,7 +831,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 34.0,
@@ -839,7 +839,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 36.0,
@@ -847,7 +847,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 38.0,
@@ -855,7 +855,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 40.0,
@@ -863,7 +863,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "range_nm": 6.0,
@@ -871,7 +871,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 8.0,
@@ -879,7 +879,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 10.0,
@@ -887,7 +887,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 12.0,
@@ -895,7 +895,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 14.0,
@@ -903,7 +903,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 16.0,
@@ -911,7 +911,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 18.0,
@@ -919,7 +919,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 20.0,
@@ -927,7 +927,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 22.0,
@@ -935,7 +935,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 24.0,
@@ -943,7 +943,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 26.0,
@@ -951,7 +951,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 28.0,
@@ -959,7 +959,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 30.0,
@@ -967,7 +967,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 32.0,
@@ -975,7 +975,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 34.0,
@@ -983,7 +983,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 36.0,
@@ -991,7 +991,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 38.0,
@@ -999,7 +999,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 40.0,
@@ -1007,7 +1007,7 @@
       "aspect": "head",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "range_nm": 6.0,
@@ -1015,7 +1015,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 8.0,
@@ -1023,7 +1023,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 10.0,
@@ -1031,7 +1031,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 1.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 12.0,
@@ -1039,7 +1039,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 14.0,
@@ -1047,7 +1047,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 16.0,
@@ -1055,7 +1055,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 18.0,
@@ -1063,7 +1063,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 20.0,
@@ -1071,7 +1071,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 22.0,
@@ -1079,7 +1079,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 24.0,
@@ -1087,7 +1087,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 26.0,
@@ -1095,7 +1095,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 28.0,
@@ -1103,7 +1103,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 30.0,
@@ -1111,7 +1111,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 32.0,
@@ -1119,7 +1119,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 34.0,
@@ -1127,7 +1127,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 36.0,
@@ -1135,7 +1135,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 38.0,
@@ -1143,7 +1143,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 40.0,
@@ -1151,7 +1151,7 @@
       "aspect": "beam",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "range_nm": 6.0,
@@ -1159,7 +1159,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 8.0,
@@ -1167,7 +1167,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 10.0,
@@ -1175,7 +1175,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 12.0,
@@ -1183,7 +1183,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 14.0,
@@ -1191,7 +1191,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 16.0,
@@ -1199,7 +1199,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 18.0,
@@ -1207,7 +1207,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 20.0,
@@ -1215,7 +1215,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 22.0,
@@ -1223,7 +1223,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 24.0,
@@ -1231,7 +1231,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 26.0,
@@ -1239,7 +1239,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 28.0,
@@ -1247,7 +1247,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 30.0,
@@ -1255,7 +1255,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 32.0,
@@ -1263,7 +1263,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 34.0,
@@ -1271,7 +1271,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 36.0,
@@ -1279,7 +1279,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 38.0,
@@ -1287,7 +1287,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     },
     {
       "range_nm": 40.0,
@@ -1295,7 +1295,7 @@
       "aspect": "tail",
       "n": 30,
       "hit_rate": 0.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     }
   ],
   "wez_aspect_summaries": [
@@ -1303,55 +1303,55 @@
       "aspect": "head",
       "altitude_ft": 10000.0,
       "empirical_p50_nm": 40.0,
-      "analytic_rmax_nm": 17.1304
+      "analytic_rmax_nm": 30.399999999999995
     },
     {
       "aspect": "beam",
       "altitude_ft": 10000.0,
       "empirical_p50_nm": 16.999999999,
-      "analytic_rmax_nm": 21.412999999999997
+      "analytic_rmax_nm": 12.73
     },
     {
       "aspect": "tail",
       "altitude_ft": 10000.0,
       "empirical_p50_nm": 10.999999999,
-      "analytic_rmax_nm": 25.6956
+      "analytic_rmax_nm": 6.84
     },
     {
       "aspect": "head",
       "altitude_ft": 25000.0,
       "empirical_p50_nm": 40.0,
-      "analytic_rmax_nm": 22.54
+      "analytic_rmax_nm": 40.0
     },
     {
       "aspect": "beam",
       "altitude_ft": 25000.0,
       "empirical_p50_nm": 14.999999999,
-      "analytic_rmax_nm": 28.174999999999997
+      "analytic_rmax_nm": 16.75
     },
     {
       "aspect": "tail",
       "altitude_ft": 25000.0,
       "empirical_p50_nm": 8.999999999,
-      "analytic_rmax_nm": 33.809999999999995
+      "analytic_rmax_nm": 9.0
     },
     {
       "aspect": "head",
       "altitude_ft": 40000.0,
       "empirical_p50_nm": 40.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "analytic_rmax_nm": 48.00000000000001
     },
     {
       "aspect": "beam",
       "altitude_ft": 40000.0,
       "empirical_p50_nm": 10.999999999,
-      "analytic_rmax_nm": 33.81
+      "analytic_rmax_nm": 20.1
     },
     {
       "aspect": "tail",
       "altitude_ft": 40000.0,
       "empirical_p50_nm": 6.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "analytic_rmax_nm": 10.8
     }
   ],
   "wez_fits": [
@@ -1365,11 +1365,14 @@
         6.308532855108143e-17,
         0.9999999999999991
       ],
-      "empirical_rmax_nm": 40.0,
-      "empirical_rnez_nm": 6.0,
       "logistic_k": 0.8,
       "logistic_r0": 40.0,
-      "analytic_rmax_nm": 17.1304
+      "logistic_p50_nm": 40.0,
+      "isotonic_p50_nm": 40.0,
+      "empirical_rmax_nm": 40.0,
+      "empirical_rnez_nm": 6.0,
+      "analytic_rmax_nm": 30.399999999999995,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 10000.0,
@@ -1381,11 +1384,14 @@
         0.5823814773118038,
         -1.028379772961745
       ],
-      "empirical_rmax_nm": 16.93467336683417,
-      "empirical_rnez_nm": 13.175879396984925,
       "logistic_k": 0.8,
       "logistic_r0": 17.333333333333332,
-      "analytic_rmax_nm": 21.412999999999997
+      "logistic_p50_nm": 17.333333333333332,
+      "isotonic_p50_nm": 16.999999999,
+      "empirical_rmax_nm": 16.999999999,
+      "empirical_rnez_nm": 18.0,
+      "analytic_rmax_nm": 12.73,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 10000.0,
@@ -1397,11 +1403,14 @@
         -0.3701469024611331,
         2.893188854489115
       ],
-      "empirical_rmax_nm": 10.271356783919597,
-      "empirical_rnez_nm": 7.708542713567839,
       "logistic_k": 0.8,
       "logistic_r0": 10.533333333333333,
-      "analytic_rmax_nm": 25.6956
+      "logistic_p50_nm": 10.533333333333333,
+      "isotonic_p50_nm": 10.999999999,
+      "empirical_rmax_nm": 10.999999999,
+      "empirical_rnez_nm": 12.0,
+      "analytic_rmax_nm": 6.84,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 25000.0,
@@ -1413,11 +1422,14 @@
         6.308532855108143e-17,
         0.9999999999999991
       ],
-      "empirical_rmax_nm": 40.0,
-      "empirical_rnez_nm": 6.0,
       "logistic_k": 0.8,
       "logistic_r0": 40.0,
-      "analytic_rmax_nm": 22.54
+      "logistic_p50_nm": 40.0,
+      "isotonic_p50_nm": 40.0,
+      "empirical_rmax_nm": 40.0,
+      "empirical_rnez_nm": 6.0,
+      "analytic_rmax_nm": 40.0,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 25000.0,
@@ -1429,11 +1441,14 @@
         0.3854782343559385,
         -0.12022703818365924
       ],
-      "empirical_rmax_nm": 15.055276381909547,
-      "empirical_rnez_nm": 11.125628140703517,
       "logistic_k": 0.8,
       "logistic_r0": 15.066666666666666,
-      "analytic_rmax_nm": 28.174999999999997
+      "logistic_p50_nm": 15.066666666666666,
+      "isotonic_p50_nm": 14.999999999,
+      "empirical_rmax_nm": 14.999999999,
+      "empirical_rnez_nm": 16.0,
+      "analytic_rmax_nm": 16.75,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 25000.0,
@@ -1445,11 +1460,14 @@
         -0.6894356360300545,
         3.943928448572358
       ],
-      "empirical_rmax_nm": 8.56281407035176,
-      "empirical_rnez_nm": 6.8542713567839195,
       "logistic_k": 0.8,
       "logistic_r0": 8.266666666666666,
-      "analytic_rmax_nm": 33.809999999999995
+      "logistic_p50_nm": 8.266666666666666,
+      "isotonic_p50_nm": 8.999999999,
+      "empirical_rmax_nm": 8.999999999,
+      "empirical_rnez_nm": 10.0,
+      "analytic_rmax_nm": 9.0,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 40000.0,
@@ -1461,11 +1479,14 @@
         6.308532855108143e-17,
         0.9999999999999991
       ],
-      "empirical_rmax_nm": 40.0,
-      "empirical_rnez_nm": 6.0,
       "logistic_k": 0.8,
       "logistic_r0": 40.0,
-      "analytic_rmax_nm": 27.048000000000005
+      "logistic_p50_nm": 40.0,
+      "isotonic_p50_nm": 40.0,
+      "empirical_rmax_nm": 40.0,
+      "empirical_rnez_nm": 6.0,
+      "analytic_rmax_nm": 48.00000000000001,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 40000.0,
@@ -1477,11 +1498,14 @@
         -0.3701469024611331,
         2.893188854489115
       ],
-      "empirical_rmax_nm": 10.271356783919597,
-      "empirical_rnez_nm": 7.708542713567839,
       "logistic_k": 0.8,
       "logistic_r0": 10.533333333333333,
-      "analytic_rmax_nm": 33.81
+      "logistic_p50_nm": 10.533333333333333,
+      "isotonic_p50_nm": 10.999999999,
+      "empirical_rmax_nm": 10.999999999,
+      "empirical_rnez_nm": 12.0,
+      "analytic_rmax_nm": 20.1,
+      "primary": "isotonic_p50"
     },
     {
       "altitude_ft": 40000.0,
@@ -1493,11 +1517,14 @@
         0.0,
         0.0
       ],
-      "empirical_rmax_nm": 40.0,
-      "empirical_rnez_nm": 6.0,
       "logistic_k": 0.8,
       "logistic_r0": 6.0,
-      "analytic_rmax_nm": 40.57200000000001
+      "logistic_p50_nm": 6.0,
+      "isotonic_p50_nm": 6.0,
+      "empirical_rmax_nm": 6.0,
+      "empirical_rnez_nm": 6.0,
+      "analytic_rmax_nm": 10.8,
+      "primary": "isotonic_p50"
     }
   ],
   "wez_traces": [
@@ -5822,405 +5849,485 @@
       "miss_cause": "timeout"
     }
   ],
-  "fsm_summary": "FSM search agents=2 gen=40 best_fit=1.300 K=2.00 D=1.00 mission=1.00 shots=2.00",
+  "fsm_summary": "FSM search agents=2 gen=40 frozen_fit=0.800 train_fit=1.175 K=1.75 D=1.00 mission=1.00 shots=2.00 elites=aggressive,balanced,cautious",
   "fsm_history": [
     {
       "generation": 0,
       "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1819713160808818,
-        "l_crank": 0.8838649274916285,
-        "l_break": 0.9567848689197221
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
       "pool_size": 1
     },
     {
       "generation": 1,
       "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1819713160808818,
-        "l_crank": 0.8838649274916285,
-        "l_break": 0.9567848689197221
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
       "pool_size": 1
     },
     {
       "generation": 2,
       "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1819713160808818,
-        "l_crank": 0.8838649274916285,
-        "l_break": 0.9567848689197221
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
       "pool_size": 1
     },
     {
       "generation": 3,
-      "best_fitness": 1.2,
+      "best_fitness": 1.3,
+      "train_fitness": 1.175,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1688402224661743,
-        "l_crank": 0.608968431079594,
-        "l_break": 0.8521295610768873
+        "d_shot": 0.9653558384496186,
+        "l_crank": 0.8039769749415626,
+        "l_break": 1.1870112679597091
       },
       "pool_size": 4
     },
     {
       "generation": 4,
-      "best_fitness": 1.2,
+      "best_fitness": 1.3,
+      "train_fitness": 1.175,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1688402224661743,
-        "l_crank": 0.608968431079594,
-        "l_break": 0.8521295610768873
+        "d_shot": 0.9653558384496186,
+        "l_crank": 0.8039769749415626,
+        "l_break": 1.1870112679597091
       },
       "pool_size": 4
     },
     {
       "generation": 5,
-      "best_fitness": 1.2,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1688402224661743,
-        "l_crank": 0.608968431079594,
-        "l_break": 0.8521295610768873
+        "d_shot": 0.8761411835690804,
+        "l_crank": 0.7195326408233557,
+        "l_break": 1.3477684244365458
       },
       "pool_size": 4
     },
     {
       "generation": 6,
-      "best_fitness": 1.08,
+      "best_fitness": 1.3,
+      "train_fitness": 1.175,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1688402224661743,
-        "l_crank": 0.608968431079594,
-        "l_break": 0.8521295610768873
+        "d_shot": 0.8761411835690804,
+        "l_crank": 0.7195326408233557,
+        "l_break": 1.3477684244365458
       },
       "pool_size": 7
     },
     {
       "generation": 7,
-      "best_fitness": 1.08,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1688402224661743,
-        "l_crank": 0.608968431079594,
-        "l_break": 0.8521295610768873
+        "d_shot": 0.8395100475435353,
+        "l_crank": 0.5722135028337785,
+        "l_break": 1.4198070516904837
       },
       "pool_size": 7
     },
     {
       "generation": 8,
-      "best_fitness": 1.08,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1688402224661743,
-        "l_crank": 0.608968431079594,
-        "l_break": 0.8521295610768873
+        "d_shot": 0.8395100475435353,
+        "l_crank": 0.5722135028337785,
+        "l_break": 1.4198070516904837
       },
       "pool_size": 7
     },
     {
       "generation": 9,
-      "best_fitness": 0.8500000000000001,
+      "best_fitness": 1.3,
+      "train_fitness": 1.25,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.0222565777402899,
-        "l_crank": 0.8177542044415271,
-        "l_break": 1.2430226142552034
+        "d_shot": 0.8395100475435353,
+        "l_crank": 0.5722135028337785,
+        "l_break": 1.4198070516904837
       },
       "pool_size": 8
     },
     {
       "generation": 10,
-      "best_fitness": 0.8500000000000001,
+      "best_fitness": 1.3,
+      "train_fitness": 1.25,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.0222565777402899,
-        "l_crank": 0.8177542044415271,
-        "l_break": 1.2430226142552034
+        "d_shot": 0.8395100475435353,
+        "l_crank": 0.5722135028337785,
+        "l_break": 1.4198070516904837
       },
       "pool_size": 8
     },
     {
       "generation": 11,
-      "best_fitness": 0.8500000000000001,
+      "best_fitness": 1.3,
+      "train_fitness": 1.25,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.0222565777402899,
-        "l_crank": 0.8177542044415271,
-        "l_break": 1.2430226142552034
+        "d_shot": 0.8395100475435353,
+        "l_crank": 0.5722135028337785,
+        "l_break": 1.4198070516904837
       },
       "pool_size": 8
     },
     {
       "generation": 12,
-      "best_fitness": 0.7749999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.25,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.0897774408390504,
-        "l_crank": 0.8318899788020507,
-        "l_break": 1.309930199122965
+        "d_shot": 0.8038482043481623,
+        "l_crank": 0.6386315696640612,
+        "l_break": 1.5198640995173591
       },
       "pool_size": 8
     },
     {
       "generation": 13,
-      "best_fitness": 0.7749999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.25,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.0897774408390504,
-        "l_crank": 0.8318899788020507,
-        "l_break": 1.309930199122965
+        "d_shot": 0.8038482043481623,
+        "l_crank": 0.6386315696640612,
+        "l_break": 1.5198640995173591
       },
       "pool_size": 8
     },
     {
       "generation": 14,
-      "best_fitness": 0.7749999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.25,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.0897774408390504,
-        "l_crank": 0.8318899788020507,
-        "l_break": 1.309930199122965
+        "d_shot": 0.8038482043481623,
+        "l_crank": 0.6386315696640612,
+        "l_break": 1.5198640995173591
       },
       "pool_size": 8
     },
     {
       "generation": 15,
-      "best_fitness": 0.6499999999999999,
+      "best_fitness": 1.3,
+      "train_fitness": 1.225,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 1.1544920369779463,
-        "l_crank": 0.7071793899835325,
-        "l_break": 1.0432117314658098
+        "d_shot": 0.7450949973500474,
+        "l_crank": 0.6627238966896567,
+        "l_break": 1.5631246078065368
       },
       "pool_size": 8
     },
     {
       "generation": 16,
-      "best_fitness": 0.6499999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.26,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.1544920369779463,
-        "l_crank": 0.7071793899835325,
-        "l_break": 1.0432117314658098
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 17,
-      "best_fitness": 0.6499999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.26,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.1544920369779463,
-        "l_crank": 0.7071793899835325,
-        "l_break": 1.0432117314658098
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 18,
-      "best_fitness": 0.825,
+      "best_fitness": 0.8,
+      "train_fitness": 1.0999999999999999,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.1004558537032623,
-        "l_crank": 0.8658081188478164,
-        "l_break": 1.292003890517022
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 19,
-      "best_fitness": 0.825,
+      "best_fitness": 0.8,
+      "train_fitness": 1.0999999999999999,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.1004558537032623,
-        "l_crank": 0.8658081188478164,
-        "l_break": 1.292003890517022
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 20,
-      "best_fitness": 0.825,
+      "best_fitness": 0.8,
+      "train_fitness": 1.0999999999999999,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.1004558537032623,
-        "l_crank": 0.8658081188478164,
-        "l_break": 1.292003890517022
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 21,
-      "best_fitness": 0.7250000000000001,
+      "best_fitness": 0.8,
+      "train_fitness": 0.9749999999999999,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.0997392917462572,
-        "l_crank": 0.8246828673107166,
-        "l_break": 1.139631907293179
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 22,
-      "best_fitness": 0.7250000000000001,
+      "best_fitness": 0.8,
+      "train_fitness": 0.9749999999999999,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.0997392917462572,
-        "l_crank": 0.8246828673107166,
-        "l_break": 1.139631907293179
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 23,
-      "best_fitness": 1.175,
+      "best_fitness": 0.8,
+      "train_fitness": 0.9749999999999999,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 1.0270608975029782,
-        "l_crank": 0.5668958397955998,
-        "l_break": 1.3089451035285216
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 24,
-      "best_fitness": 0.95,
+      "best_fitness": 0.9,
+      "train_fitness": 0.865,
+      "frozen_fitness": 0.9,
       "best": {
-        "d_shot": 1.0422791959384006,
-        "l_crank": 0.563364702789674,
-        "l_break": 1.397853811655136
+        "d_shot": 0.7163010683331366,
+        "l_crank": 0.7470821559708654,
+        "l_break": 1.5794475789216387
       },
       "pool_size": 8
     },
     {
       "generation": 25,
-      "best_fitness": 0.95,
+      "best_fitness": 0.9,
+      "train_fitness": 0.9400000000000001,
+      "frozen_fitness": 0.9,
       "best": {
-        "d_shot": 1.0422791959384006,
-        "l_crank": 0.563364702789674,
-        "l_break": 1.397853811655136
+        "d_shot": 0.7314630451143108,
+        "l_crank": 0.7502976958194885,
+        "l_break": 1.540895251562665
       },
       "pool_size": 8
     },
     {
       "generation": 26,
-      "best_fitness": 0.95,
+      "best_fitness": 0.9,
+      "train_fitness": 0.9400000000000001,
+      "frozen_fitness": 0.9,
       "best": {
-        "d_shot": 1.0422791959384006,
-        "l_crank": 0.563364702789674,
-        "l_break": 1.397853811655136
+        "d_shot": 0.7314630451143108,
+        "l_crank": 0.7502976958194885,
+        "l_break": 1.540895251562665
       },
       "pool_size": 8
     },
     {
       "generation": 27,
-      "best_fitness": 0.7,
+      "best_fitness": 0.8,
+      "train_fitness": 0.93,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 28,
-      "best_fitness": 0.7,
+      "best_fitness": 0.8,
+      "train_fitness": 0.93,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 29,
-      "best_fitness": 0.7,
+      "best_fitness": 0.8,
+      "train_fitness": 0.93,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 30,
-      "best_fitness": 0.7749999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.015,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 31,
-      "best_fitness": 0.7749999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.015,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 32,
-      "best_fitness": 0.7749999999999999,
+      "best_fitness": 0.8,
+      "train_fitness": 1.015,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 33,
-      "best_fitness": 0.925,
+      "best_fitness": 0.8,
+      "train_fitness": 1.05,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 34,
-      "best_fitness": 0.925,
+      "best_fitness": 0.8,
+      "train_fitness": 1.075,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7684552629499519,
+        "l_crank": 0.9634131244349974,
+        "l_break": 1.4994391108760723
       },
       "pool_size": 8
     },
     {
       "generation": 35,
-      "best_fitness": 0.925,
+      "best_fitness": 0.8,
+      "train_fitness": 1.075,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7684552629499519,
+        "l_crank": 0.9634131244349974,
+        "l_break": 1.4994391108760723
       },
       "pool_size": 8
     },
     {
       "generation": 36,
-      "best_fitness": 1.075,
+      "best_fitness": 0.8,
+      "train_fitness": 1.1,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 37,
-      "best_fitness": 1.075,
+      "best_fitness": 0.8,
+      "train_fitness": 1.1,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 38,
-      "best_fitness": 1.075,
+      "best_fitness": 0.8,
+      "train_fitness": 1.1,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     },
     {
       "generation": 39,
-      "best_fitness": 1.3,
+      "best_fitness": 0.8,
+      "train_fitness": 1.175,
+      "frozen_fitness": 0.8,
       "best": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
       },
       "pool_size": 8
     }
@@ -6229,91 +6336,91 @@
     {
       "label": "aggressive",
       "genome": {
-        "d_shot": 1.1655589436390819,
-        "l_crank": 0.7657480926589947,
-        "l_break": 1.2765323152630512
+        "d_shot": 0.7193347963449297,
+        "l_crank": 0.7687521863858118,
+        "l_break": 1.5829609828776263
       },
-      "fitness": -0.2,
-      "mean_kills": 2.0,
-      "mean_deaths": 2.0,
-      "mission_rate": 0.0,
+      "fitness": 1.085,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 1.65,
+      "eval_4v4": {
+        "genome": {
+          "d_shot": 0.7193347963449297,
+          "l_crank": 0.7687521863858118,
+          "l_break": 1.5829609828776263
+        },
+        "fitness": 0.3,
+        "mean_kills": 1.0,
+        "mean_deaths": 2.0,
+        "mission_rate": 1.0,
+        "mean_shots": 2.0,
+        "mean_ally_nm": 2.3859973684066516,
+        "fsm_search": 0.06807727690892364,
+        "fsm_engage": 0.24931002759889603,
+        "fsm_support": 0.010119595216191352,
+        "fsm_evade": 0.672493100275989
+      }
+    },
+    {
+      "label": "balanced",
+      "genome": {
+        "d_shot": 0.7285508531894536,
+        "l_crank": 0.5514411973905746,
+        "l_break": 1.5835895306859866
+      },
+      "fitness": 1.175,
+      "mean_kills": 1.75,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
       "mean_shots": 2.0,
       "eval_4v4": {
         "genome": {
-          "d_shot": 1.1655589436390819,
-          "l_crank": 0.7657480926589947,
-          "l_break": 1.2765323152630512
+          "d_shot": 0.7285508531894536,
+          "l_crank": 0.5514411973905746,
+          "l_break": 1.5835895306859866
+        },
+        "fitness": 0.09999999999999998,
+        "mean_kills": 1.0,
+        "mean_deaths": 2.0,
+        "mission_rate": 1.0,
+        "mean_shots": 4.0,
+        "mean_ally_nm": 1.490515256789727,
+        "fsm_search": 0.0625,
+        "fsm_engage": 0.24080882352941177,
+        "fsm_support": 0.02389705882352941,
+        "fsm_evade": 0.6727941176470589
+      }
+    },
+    {
+      "label": "cautious",
+      "genome": {
+        "d_shot": 0.7684552629499519,
+        "l_crank": 0.9634131244349974,
+        "l_break": 1.4994391108760723
+      },
+      "fitness": 1.0850000000000002,
+      "mean_kills": 1.0,
+      "mean_deaths": 0.55,
+      "mission_rate": 1.0,
+      "mean_shots": 1.4,
+      "eval_4v4": {
+        "genome": {
+          "d_shot": 0.7684552629499519,
+          "l_crank": 0.9634131244349974,
+          "l_break": 1.4994391108760723
         },
         "fitness": 0.6,
         "mean_kills": 2.0,
         "mean_deaths": 2.0,
         "mission_rate": 1.0,
         "mean_shots": 4.0,
-        "mean_ally_nm": 2.838001686743966,
-        "fsm_search": 0.40036563071297987,
-        "fsm_engage": 0.2623400365630713,
-        "fsm_support": 0.12431444241316271,
-        "fsm_evade": 0.2129798903107861
-      }
-    },
-    {
-      "label": "balanced",
-      "genome": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
-      },
-      "fitness": 1.3,
-      "mean_kills": 2.0,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 2.0,
-      "eval_4v4": {
-        "genome": {
-          "d_shot": 0.9907701098295675,
-          "l_crank": 0.5646717691917582,
-          "l_break": 1.2570308279609521
-        },
-        "fitness": 0.09999999999999998,
-        "mean_kills": 2.0,
-        "mean_deaths": 3.0,
-        "mission_rate": 1.0,
-        "mean_shots": 4.0,
-        "mean_ally_nm": 2.2787767804710106,
-        "fsm_search": 0.25302325581395346,
-        "fsm_engage": 0.3032558139534884,
-        "fsm_support": 0.03906976744186046,
-        "fsm_evade": 0.4046511627906977
-      }
-    },
-    {
-      "label": "cautious",
-      "genome": {
-        "d_shot": 0.9907701098295675,
-        "l_crank": 0.5646717691917582,
-        "l_break": 1.2570308279609521
-      },
-      "fitness": 1.3,
-      "mean_kills": 2.0,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 2.0,
-      "eval_4v4": {
-        "genome": {
-          "d_shot": 0.9907701098295675,
-          "l_crank": 0.5646717691917582,
-          "l_break": 1.2570308279609521
-        },
-        "fitness": 0.09999999999999998,
-        "mean_kills": 2.0,
-        "mean_deaths": 3.0,
-        "mission_rate": 1.0,
-        "mean_shots": 4.0,
-        "mean_ally_nm": 2.2787767804710106,
-        "fsm_search": 0.25302325581395346,
-        "fsm_engage": 0.3032558139534884,
-        "fsm_support": 0.03906976744186046,
-        "fsm_evade": 0.4046511627906977
+        "mean_ally_nm": 1.8333089988540578,
+        "fsm_search": 0.41582336706531736,
+        "fsm_engage": 0.23919043238270468,
+        "fsm_support": 0.06071757129714812,
+        "fsm_evade": 0.2842686292548298
       }
     }
   ],
@@ -6328,18 +6435,18 @@
     "pool_interval": 3
   },
   "marl_core": {
-    "n_jobs": 6,
+    "n_jobs": 12,
     "jobs": [
       {
-        "algo": "ppo",
+        "algo": "ippo",
         "opponent": "duck",
         "agents": 1,
         "seed": 0,
-        "episodes": 100,
-        "first_mean": 11.3568628828504,
-        "last_mean": 13.357592189693992,
+        "episodes": 101,
+        "first_mean": -0.29955881990981853,
+        "last_mean": 13.3636573953039,
         "eval": {
-          "return": 13.355601680451384,
+          "return": 13.363657395303902,
           "mission_rate": 1.0,
           "kills": 1.0,
           "deaths": 0.0,
@@ -6347,18 +6454,52 @@
           "shots": 1.0,
           "hits": 1.0,
           "hit_rate": 1.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.973799150320701e-16
+        },
+        "eval_greedy": {
+          "return": 13.363657395303902,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.973799150320701e-16
+        },
+        "eval_stochastic": {
+          "return": 13.326720396360999,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.022399271200973146
         },
         "eval_random": {
-          "return": 9.1077709170484,
+          "return": 7.787089787845091,
           "mission_rate": 1.0,
-          "kills": 0.7,
+          "kills": 0.6,
           "deaths": 0.0,
-          "kill_ratio": 700000.0,
-          "shots": 0.8,
-          "hits": 0.7,
-          "hit_rate": 0.8749999999999999,
-          "n": 50.0
+          "kill_ratio": 600000.0,
+          "shots": 0.68,
+          "hits": 0.6,
+          "hit_rate": 0.8823529411764705,
+          "n": 50.0,
+          "kills_ci": 0.13717142559585796,
+          "mission_ci": 0.0,
+          "return_ci": 1.7800352582097423
         },
         "eval_fire_once": {
           "return": 0.005229870934932737,
@@ -6369,51 +6510,292 @@
           "shots": 0.0,
           "hits": 0.0,
           "hit_rate": 0.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.857225732735059e-19
+        },
+        "eval_fire_once_16nm": {
+          "return": 13.078120714053414,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.973799150320701e-16
         },
         "beat_random": true,
         "kills_curve": [
-          0.875,
-          0.75,
-          0.625,
-          0.75,
-          0.75,
-          0.5,
-          0.5,
-          0.375,
-          0.75,
-          0.625,
-          0.75,
-          0.625,
-          0.625,
-          0.75,
-          0.75,
-          0.75,
-          0.75,
-          0.625,
-          1.0,
-          0.75,
-          0.875,
-          0.875,
-          0.875,
-          0.625,
-          0.875,
-          0.5,
-          1.0,
-          0.875,
-          1.0,
-          0.875,
-          1.0,
-          0.875,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
           1.0,
           1.0,
-          0.875,
-          0.875,
-          0.75,
           1.0,
           1.0,
-          0.875,
-          0.875,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
+        "share_tracks": true,
+        "red_mission": "dca"
+      },
+      {
+        "algo": "ippo",
+        "opponent": "duck",
+        "agents": 1,
+        "seed": 1,
+        "episodes": 101,
+        "first_mean": 13.355628310874883,
+        "last_mean": 13.25970030283385,
+        "eval": {
+          "return": 13.25970030283385,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_greedy": {
+          "return": 13.25970030283385,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_stochastic": {
+          "return": 13.324915189012962,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.008515072844405442
+        },
+        "eval_random": {
+          "return": 6.781672282915828,
+          "mission_rate": 1.0,
+          "kills": 0.52,
+          "deaths": 0.0,
+          "kill_ratio": 520000.00000000006,
+          "shots": 0.62,
+          "hits": 0.52,
+          "hit_rate": 0.8387096774193549,
+          "n": 50.0,
+          "kills_ci": 0.13988795516412414,
+          "mission_ci": 0.0,
+          "return_ci": 1.8269626319049868
+        },
+        "eval_fire_once": {
+          "return": 0.005229870934932737,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.857225732735059e-19
+        },
+        "eval_fire_once_16nm": {
+          "return": 13.078120714053414,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.973799150320701e-16
+        },
+        "beat_random": true,
+        "kills_curve": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
           1.0,
           1.0,
           1.0,
@@ -6474,19 +6856,43 @@
           1.0,
           1.0
         ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
         "share_tracks": true,
         "red_mission": "dca"
       },
       {
-        "algo": "ppo",
+        "algo": "ippo",
         "opponent": "duck",
         "agents": 1,
-        "seed": 1,
-        "episodes": 100,
-        "first_mean": 8.122716375896948,
-        "last_mean": 13.336308723027692,
+        "seed": 2,
+        "episodes": 101,
+        "first_mean": -0.1259877602264779,
+        "last_mean": 13.021570508646791,
         "eval": {
-          "return": 13.332558609784211,
+          "return": 13.021570508646795,
           "mission_rate": 1.0,
           "kills": 1.0,
           "deaths": 0.0,
@@ -6494,18 +6900,498 @@
           "shots": 1.0,
           "hits": 1.0,
           "hit_rate": 1.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 9.947598300641402e-16
+        },
+        "eval_greedy": {
+          "return": 13.021570508646795,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 9.947598300641402e-16
+        },
+        "eval_stochastic": {
+          "return": 13.344229647739137,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.009612154988527612
         },
         "eval_random": {
-          "return": 10.108319332599145,
+          "return": 8.041671575069289,
+          "mission_rate": 1.0,
+          "kills": 0.62,
+          "deaths": 0.0,
+          "kill_ratio": 620000.0,
+          "shots": 0.74,
+          "hits": 0.62,
+          "hit_rate": 0.8378378378378378,
+          "n": 50.0,
+          "kills_ci": 0.13590820431452988,
+          "mission_ci": 0.0,
+          "return_ci": 1.7601947018409956
+        },
+        "eval_fire_once": {
+          "return": 0.005229870934932737,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.857225732735059e-19
+        },
+        "eval_fire_once_16nm": {
+          "return": 13.078120714053414,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.973799150320701e-16
+        },
+        "beat_random": true,
+        "kills_curve": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
+        "share_tracks": true,
+        "red_mission": "dca"
+      },
+      {
+        "algo": "ippo",
+        "opponent": "fsm",
+        "agents": 1,
+        "seed": 0,
+        "episodes": 101,
+        "first_mean": 0.17601007872264468,
+        "last_mean": 13.267798848155724,
+        "eval": {
+          "return": 13.267798848155724,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_greedy": {
+          "return": 13.267798848155724,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_stochastic": {
+          "return": 12.790544496497645,
+          "mission_rate": 1.0,
+          "kills": 0.96,
+          "deaths": 0.0,
+          "kill_ratio": 960000.0,
+          "shots": 1.0,
+          "hits": 0.96,
+          "hit_rate": 0.96,
+          "n": 50.0,
+          "kills_ci": 0.054868570238343184,
+          "mission_ci": 0.0,
+          "return_ci": 0.7197836360383716
+        },
+        "eval_random": {
+          "return": 3.2331074420460943,
+          "mission_rate": 0.96,
+          "kills": 0.46,
+          "deaths": 0.08,
+          "kill_ratio": 5.75,
+          "shots": 0.88,
+          "hits": 0.46,
+          "hit_rate": 0.5227272727272727,
+          "n": 50.0,
+          "kills_ci": 0.13955128089702368,
+          "mission_ci": 0.054868570238343184,
+          "return_ci": 1.8715970350197921
+        },
+        "eval_fire_once": {
+          "return": 0.005229870934932737,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.857225732735059e-19
+        },
+        "eval_fire_once_16nm": {
+          "return": 13.0781208301016,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "beat_random": true,
+        "kills_curve": [
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
+        "share_tracks": true,
+        "red_mission": "dca"
+      },
+      {
+        "algo": "ippo",
+        "opponent": "fsm",
+        "agents": 1,
+        "seed": 1,
+        "episodes": 101,
+        "first_mean": 0.0020100289062716954,
+        "last_mean": 0.1880101296132228,
+        "eval": {
+          "return": 0.18801012961322283,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 7.771561172376095e-18
+        },
+        "eval_greedy": {
+          "return": 0.18801012961322283,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 7.771561172376095e-18
+        },
+        "eval_stochastic": {
+          "return": 9.831503468703582,
           "mission_rate": 1.0,
           "kills": 0.78,
           "deaths": 0.0,
           "kill_ratio": 780000.0000000001,
-          "shots": 0.86,
+          "shots": 1.0,
           "hits": 0.78,
-          "hit_rate": 0.9069767441860466,
-          "n": 50.0
+          "hit_rate": 0.78,
+          "n": 50.0,
+          "kills_ci": 0.11598896499236468,
+          "mission_ci": 0.0,
+          "return_ci": 1.5260967135887387
+        },
+        "eval_random": {
+          "return": 4.94956698119558,
+          "mission_rate": 0.94,
+          "kills": 0.58,
+          "deaths": 0.06,
+          "kill_ratio": 9.666666666666666,
+          "shots": 0.78,
+          "hits": 0.58,
+          "hit_rate": 0.7435897435897435,
+          "n": 50.0,
+          "kills_ci": 0.13819638200763434,
+          "mission_ci": 0.06649631568741234,
+          "return_ci": 2.091639115233679
         },
         "eval_fire_once": {
           "return": 0.005229870934932737,
@@ -6516,124 +7402,13 @@
           "shots": 0.0,
           "hits": 0.0,
           "hit_rate": 0.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.857225732735059e-19
         },
-        "beat_random": true,
-        "kills_curve": [
-          0.625,
-          0.75,
-          0.75,
-          0.5,
-          0.875,
-          0.75,
-          0.625,
-          0.875,
-          0.875,
-          0.375,
-          0.625,
-          0.75,
-          0.875,
-          0.75,
-          0.875,
-          0.375,
-          0.75,
-          0.75,
-          0.5,
-          0.875,
-          0.875,
-          0.75,
-          0.75,
-          0.875,
-          0.875,
-          0.875,
-          0.875,
-          1.0,
-          0.875,
-          0.875,
-          1.0,
-          0.875,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0,
-          1.0
-        ],
-        "share_tracks": true,
-        "red_mission": "dca"
-      },
-      {
-        "algo": "ppo",
-        "opponent": "duck",
-        "agents": 1,
-        "seed": 2,
-        "episodes": 100,
-        "first_mean": 12.982250169048223,
-        "last_mean": 13.339711194996287,
-        "eval": {
-          "return": 13.227906187035401,
+        "eval_fire_once_16nm": {
+          "return": 13.0781208301016,
           "mission_rate": 1.0,
           "kills": 1.0,
           "deaths": 0.0,
@@ -6641,18 +7416,205 @@
           "shots": 1.0,
           "hits": 1.0,
           "hit_rate": 1.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "beat_random": false,
+        "kills_curve": [
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
+        "share_tracks": true,
+        "red_mission": "dca"
+      },
+      {
+        "algo": "ippo",
+        "opponent": "fsm",
+        "agents": 1,
+        "seed": 2,
+        "episodes": 101,
+        "first_mean": -12.103984141604395,
+        "last_mean": 13.247767155144306,
+        "eval": {
+          "return": 13.247767155144304,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.973799150320701e-16
+        },
+        "eval_greedy": {
+          "return": 13.247767155144304,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.973799150320701e-16
+        },
+        "eval_stochastic": {
+          "return": 13.246467282551048,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0005224591272392903
         },
         "eval_random": {
-          "return": 6.983938922511889,
-          "mission_rate": 1.0,
-          "kills": 0.54,
-          "deaths": 0.0,
-          "kill_ratio": 540000.0000000001,
-          "shots": 0.72,
-          "hits": 0.54,
-          "hit_rate": 0.7500000000000001,
-          "n": 50.0
+          "return": 3.0233156030861736,
+          "mission_rate": 0.9,
+          "kills": 0.48,
+          "deaths": 0.1,
+          "kill_ratio": 4.8,
+          "shots": 0.8,
+          "hits": 0.48,
+          "hit_rate": 0.6,
+          "n": 50.0,
+          "kills_ci": 0.1398879551641241,
+          "mission_ci": 0.084,
+          "return_ci": 2.1695246108756994
         },
         "eval_fire_once": {
           "return": 0.005229870934932737,
@@ -6663,83 +7625,101 @@
           "shots": 0.0,
           "hits": 0.0,
           "hit_rate": 0.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 4.857225732735059e-19
+        },
+        "eval_fire_once_16nm": {
+          "return": 13.0781208301016,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 1.0,
+          "hits": 1.0,
+          "hit_rate": 1.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
         },
         "beat_random": true,
         "kills_curve": [
           1.0,
-          0.625,
-          0.875,
-          0.625,
-          0.625,
-          0.75,
-          0.75,
-          0.625,
-          0.625,
-          0.625,
-          0.625,
-          0.625,
-          0.5,
-          0.625,
-          0.625,
-          0.5,
-          0.75,
-          0.875,
-          0.875,
-          1.0,
-          0.5,
-          0.875,
-          0.875,
-          0.625,
-          0.875,
-          0.875,
-          0.875,
-          0.625,
-          1.0,
-          0.875,
-          0.875,
-          1.0,
-          0.625,
-          0.75,
-          0.75,
-          0.625,
-          1.0,
-          0.875,
-          0.875,
-          0.875,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
           1.0,
           1.0,
-          1.0,
-          0.875,
-          1.0,
-          0.875,
-          1.0,
-          0.875,
-          0.875,
-          1.0,
-          0.875,
-          1.0,
-          1.0,
-          0.875,
-          1.0,
-          0.875,
-          0.875,
-          1.0,
-          0.875,
-          0.875,
-          1.0,
-          0.875,
-          0.875,
-          1.0,
-          1.0,
-          0.875,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
           1.0,
           1.0,
           1.0,
           1.0,
           1.0,
           1.0,
-          0.75,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
           1.0,
           1.0,
           1.0,
@@ -6768,6 +7748,30 @@
           1.0,
           1.0
         ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
         "share_tracks": true,
         "red_mission": "dca"
       },
@@ -6777,29 +7781,63 @@
         "agents": 2,
         "seed": 0,
         "episodes": 51,
-        "first_mean": 10.493979438073367,
-        "last_mean": 2.3508372151141823,
+        "first_mean": -4.687979566819935,
+        "last_mean": 27.075638043705947,
         "eval": {
-          "return": 6.674258489558415,
+          "return": 27.07563804370595,
           "mission_rate": 1.0,
-          "kills": 1.4,
+          "kills": 2.0,
           "deaths": 0.0,
-          "kill_ratio": 1400000.0,
-          "shots": 2.72,
-          "hits": 1.4,
-          "hit_rate": 0.5147058823529411,
-          "n": 50.0
+          "kill_ratio": 2000000.0,
+          "shots": 3.0,
+          "hits": 2.0,
+          "hit_rate": 0.6666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 9.947598300641402e-16
+        },
+        "eval_greedy": {
+          "return": 27.07563804370595,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.0,
+          "kill_ratio": 2000000.0,
+          "shots": 3.0,
+          "hits": 2.0,
+          "hit_rate": 0.6666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 9.947598300641402e-16
+        },
+        "eval_stochastic": {
+          "return": 19.405342540861994,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.0,
+          "kill_ratio": 2000000.0,
+          "shots": 12.0,
+          "hits": 2.0,
+          "hit_rate": 0.16666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 1.5995851286746436
         },
         "eval_random": {
-          "return": 6.0806887957117555,
+          "return": 5.619622101574555,
           "mission_rate": 1.0,
-          "kills": 1.5,
+          "kills": 1.62,
           "deaths": 0.0,
-          "kill_ratio": 1500000.0,
-          "shots": 3.58,
-          "hits": 1.5,
-          "hit_rate": 0.41899441340782123,
-          "n": 50.0
+          "kill_ratio": 1620000.0000000002,
+          "shots": 4.74,
+          "hits": 1.64,
+          "hit_rate": 0.34599156118143454,
+          "n": 50.0,
+          "kills_ci": 0.17611087416738352,
+          "mission_ci": 0.0,
+          "return_ci": 2.852262692910001
         },
         "eval_fire_once": {
           "return": 0.010319405532616354,
@@ -6810,62 +7848,103 @@
           "shots": 0.0,
           "hits": 0.0,
           "hit_rate": 0.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
         },
-        "beat_random": false,
+        "eval_fire_once_16nm": {
+          "return": 3.2285488552482082,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 2.0,
+          "hits": 1.0,
+          "hit_rate": 0.5,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "beat_random": true,
         "kills_curve": [
-          1.75,
-          1.5,
-          1.75,
-          1.375,
-          1.25,
-          1.25,
-          1.25,
-          1.375,
-          1.375,
-          1.25,
-          1.375,
-          1.375,
-          1.25,
-          1.25,
-          1.25,
-          1.25,
-          1.5,
-          1.5,
-          1.375,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
           1.0,
-          1.375,
-          1.5,
-          1.625,
-          1.5,
-          1.375,
-          1.5,
-          1.125,
-          1.5,
-          1.5,
-          1.5,
-          1.125,
-          0.875,
-          0.875,
-          0.875,
-          1.625,
-          0.75,
-          1.25,
-          0.875,
-          1.375,
-          1.375,
-          1.5,
-          1.625,
-          1.125,
-          1.75,
-          1.375,
-          1.75,
-          1.375,
-          1.375,
-          1.625,
-          1.5,
-          0.875
+          1.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
         ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
         "share_tracks": true,
         "red_mission": "dca"
       },
@@ -6875,29 +7954,63 @@
         "agents": 2,
         "seed": 1,
         "episodes": 51,
-        "first_mean": 2.6326622784693434,
-        "last_mean": 1.4699855924402438,
+        "first_mean": 2.2600201562166893,
+        "last_mean": 21.578113408613866,
         "eval": {
-          "return": 1.4218981515901787,
+          "return": 21.578113408613866,
           "mission_rate": 1.0,
-          "kills": 1.0,
+          "kills": 2.0,
           "deaths": 0.0,
-          "kill_ratio": 1000000.0,
-          "shots": 3.16,
-          "hits": 1.0,
-          "hit_rate": 0.3164556962025316,
-          "n": 50.0
+          "kill_ratio": 2000000.0,
+          "shots": 12.0,
+          "hits": 2.0,
+          "hit_rate": 0.16666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_greedy": {
+          "return": 21.578113408613866,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.0,
+          "kill_ratio": 2000000.0,
+          "shots": 12.0,
+          "hits": 2.0,
+          "hit_rate": 0.16666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_stochastic": {
+          "return": 14.647343303886332,
+          "mission_rate": 1.0,
+          "kills": 1.92,
+          "deaths": 0.0,
+          "kill_ratio": 1920000.0,
+          "shots": 11.66,
+          "hits": 1.92,
+          "hit_rate": 0.16466552315608918,
+          "n": 50.0,
+          "kills_ci": 0.10973714047668637,
+          "mission_ci": 0.0,
+          "return_ci": 2.563249674278642
         },
         "eval_random": {
-          "return": 7.362821695713997,
+          "return": 6.563586780032937,
           "mission_rate": 1.0,
-          "kills": 1.7,
+          "kills": 1.76,
           "deaths": 0.0,
-          "kill_ratio": 1700000.0,
-          "shots": 3.74,
-          "hits": 1.7,
-          "hit_rate": 0.45454545454545453,
-          "n": 50.0
+          "kill_ratio": 1760000.0,
+          "shots": 5.84,
+          "hits": 1.78,
+          "hit_rate": 0.3047945205479452,
+          "n": 50.0,
+          "kills_ci": 0.15397454335051622,
+          "mission_ci": 0.0,
+          "return_ci": 2.7458121689047927
         },
         "eval_fire_once": {
           "return": 0.010319405532616354,
@@ -6908,62 +8021,103 @@
           "shots": 0.0,
           "hits": 0.0,
           "hit_rate": 0.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
         },
-        "beat_random": false,
+        "eval_fire_once_16nm": {
+          "return": 3.2285488552482082,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 2.0,
+          "hits": 1.0,
+          "hit_rate": 0.5,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "beat_random": true,
         "kills_curve": [
-          1.25,
+          1.0,
           2.0,
-          1.375,
-          1.875,
-          1.625,
-          1.625,
-          1.625,
-          1.0,
-          1.625,
-          1.5,
-          1.375,
-          1.125,
-          1.0,
-          0.625,
-          1.0,
-          0.875,
-          0.75,
-          0.75,
-          1.375,
-          1.0,
-          1.625,
-          0.75,
-          0.75,
-          0.625,
-          0.875,
-          1.0,
-          1.0,
-          1.5,
-          1.125,
-          1.5,
-          1.25,
-          1.25,
-          1.625,
-          0.75,
-          0.5,
-          1.125,
-          0.5,
-          0.875,
-          0.625,
-          1.25,
-          0.875,
-          1.375,
-          0.875,
-          1.25,
-          0.625,
-          1.125,
-          0.875,
-          1.125,
-          0.625,
-          0.5,
-          1.125
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
         ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
         "share_tracks": true,
         "red_mission": "dca"
       },
@@ -6973,29 +8127,63 @@
         "agents": 2,
         "seed": 2,
         "episodes": 51,
-        "first_mean": 8.161472052906053,
-        "last_mean": -2.2290970643456247,
+        "first_mean": -2.6059799181617724,
+        "last_mean": 0.004020047951059858,
         "eval": {
-          "return": 0.6351062901220281,
+          "return": 0.004020047951059858,
           "mission_rate": 1.0,
-          "kills": 1.44,
+          "kills": 0.0,
           "deaths": 0.0,
-          "kill_ratio": 1440000.0,
-          "shots": 4.48,
-          "hits": 1.44,
-          "hit_rate": 0.3214285714285714,
-          "n": 50.0
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_greedy": {
+          "return": 0.004020047951059858,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_stochastic": {
+          "return": 20.25011953094835,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.0,
+          "kill_ratio": 2000000.0,
+          "shots": 12.0,
+          "hits": 2.0,
+          "hit_rate": 0.16666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 1.2718680792166914
         },
         "eval_random": {
-          "return": 6.683543327285775,
+          "return": 7.657303621818347,
           "mission_rate": 1.0,
-          "kills": 1.54,
+          "kills": 1.76,
           "deaths": 0.0,
-          "kill_ratio": 1540000.0,
-          "shots": 3.46,
-          "hits": 1.54,
-          "hit_rate": 0.44508670520231214,
-          "n": 50.0
+          "kill_ratio": 1760000.0,
+          "shots": 5.64,
+          "hits": 1.76,
+          "hit_rate": 0.3120567375886525,
+          "n": 50.0,
+          "kills_ci": 0.16384187498927127,
+          "mission_ci": 0.0,
+          "return_ci": 2.947701816837262
         },
         "eval_fire_once": {
           "return": 0.010319405532616354,
@@ -7006,67 +8194,627 @@
           "shots": 0.0,
           "hits": 0.0,
           "hit_rate": 0.0,
-          "n": 50.0
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_fire_once_16nm": {
+          "return": 3.2285488552482082,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 2.0,
+          "hits": 1.0,
+          "hit_rate": 0.5,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
         },
         "beat_random": false,
         "kills_curve": [
-          1.375,
-          1.75,
-          1.625,
-          1.5,
-          1.625,
-          1.75,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
           2.0,
-          1.5,
-          1.125,
+          1.0,
           2.0,
-          1.625,
-          1.75,
-          1.625,
-          1.5,
-          1.5,
-          1.125,
-          0.625,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
           1.0,
-          0.625,
           1.0,
-          1.125,
-          1.625,
-          1.125,
-          1.25,
+          2.0,
           1.0,
-          1.125,
-          1.125,
-          1.25,
-          1.625,
-          1.125,
           1.0,
-          1.25,
-          1.25,
-          1.125,
-          1.625,
-          1.5,
-          1.375,
-          1.25,
-          1.0,
-          1.25,
-          1.25,
-          1.5,
-          1.0,
-          0.75,
-          1.25,
-          0.875,
-          1.5,
-          1.5,
-          1.375,
-          1.0,
-          1.125
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          0.0,
+          2.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
         ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
+        "share_tracks": true,
+        "red_mission": "dca"
+      },
+      {
+        "algo": "ippo",
+        "opponent": "fsm",
+        "agents": 2,
+        "seed": 0,
+        "episodes": 51,
+        "first_mean": -3.6459771631468443,
+        "last_mean": -5.482047062924275,
+        "eval": {
+          "return": -5.482047062924274,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 2.0,
+          "kill_ratio": 0.5,
+          "shots": 4.0,
+          "hits": 1.0,
+          "hit_rate": 0.25,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 2.4868995751603504e-16
+        },
+        "eval_greedy": {
+          "return": -5.482047062924274,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 2.0,
+          "kill_ratio": 0.5,
+          "shots": 4.0,
+          "hits": 1.0,
+          "hit_rate": 0.25,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 2.4868995751603504e-16
+        },
+        "eval_stochastic": {
+          "return": 1.9375977276210217,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.28,
+          "kill_ratio": 7.142857142857142,
+          "shots": 11.9,
+          "hits": 2.0,
+          "hit_rate": 0.1680672268907563,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 1.1142338727254832
+        },
+        "eval_random": {
+          "return": -0.10906897593543503,
+          "mission_rate": 1.0,
+          "kills": 1.6,
+          "deaths": 0.14,
+          "kill_ratio": 11.428571428571429,
+          "shots": 6.38,
+          "hits": 1.6,
+          "hit_rate": 0.25078369905956116,
+          "n": 50.0,
+          "kills_ci": 0.18573098825990236,
+          "mission_ci": 0.0,
+          "return_ci": 2.295632307831346
+        },
+        "eval_fire_once": {
+          "return": 0.010319405532616354,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_fire_once_16nm": {
+          "return": 3.2232432257634644,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 2.0,
+          "hits": 1.0,
+          "hit_rate": 0.5,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "beat_random": false,
+        "kills_curve": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
+        "share_tracks": true,
+        "red_mission": "dca"
+      },
+      {
+        "algo": "ippo",
+        "opponent": "fsm",
+        "agents": 2,
+        "seed": 1,
+        "episodes": 51,
+        "first_mean": -3.5229332395482236,
+        "last_mean": 5.564183452385121,
+        "eval": {
+          "return": 5.564183452385122,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.0,
+          "kill_ratio": 2000000.0,
+          "shots": 12.0,
+          "hits": 2.0,
+          "hit_rate": 0.16666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 2.4868995751603504e-16
+        },
+        "eval_greedy": {
+          "return": 5.564183452385122,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.0,
+          "kill_ratio": 2000000.0,
+          "shots": 12.0,
+          "hits": 2.0,
+          "hit_rate": 0.16666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 2.4868995751603504e-16
+        },
+        "eval_stochastic": {
+          "return": 4.0727343072411655,
+          "mission_rate": 1.0,
+          "kills": 2.0,
+          "deaths": 0.02,
+          "kill_ratio": 100.0,
+          "shots": 12.0,
+          "hits": 2.0,
+          "hit_rate": 0.16666666666666666,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.7736012624868399
+        },
+        "eval_random": {
+          "return": -0.27154561972627134,
+          "mission_rate": 1.0,
+          "kills": 1.46,
+          "deaths": 0.22,
+          "kill_ratio": 6.636363636363636,
+          "shots": 5.96,
+          "hits": 1.46,
+          "hit_rate": 0.24496644295302014,
+          "n": 50.0,
+          "kills_ci": 0.22546520795901082,
+          "mission_ci": 0.0,
+          "return_ci": 2.3759449419444185
+        },
+        "eval_fire_once": {
+          "return": 0.010319405532616354,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_fire_once_16nm": {
+          "return": 3.2232432257634644,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 2.0,
+          "hits": 1.0,
+          "hit_rate": 0.5,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "beat_random": true,
+        "kills_curve": [
+          1.0,
+          0.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          1.0,
+          0.0,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
+        "share_tracks": true,
+        "red_mission": "dca"
+      },
+      {
+        "algo": "ippo",
+        "opponent": "fsm",
+        "agents": 2,
+        "seed": 2,
+        "episodes": 51,
+        "first_mean": 1.4530597539332168,
+        "last_mean": 0.004020453632677832,
+        "eval": {
+          "return": 0.004020453632677833,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 2.4286128663675297e-19
+        },
+        "eval_greedy": {
+          "return": 0.004020453632677833,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 2.4286128663675297e-19
+        },
+        "eval_stochastic": {
+          "return": 10.426170230840007,
+          "mission_rate": 1.0,
+          "kills": 1.96,
+          "deaths": 0.2,
+          "kill_ratio": 9.799999999999999,
+          "shots": 11.94,
+          "hits": 1.96,
+          "hit_rate": 0.16415410385259632,
+          "n": 50.0,
+          "kills_ci": 0.07839999999999997,
+          "mission_ci": 0.0,
+          "return_ci": 2.8676776258836765
+        },
+        "eval_random": {
+          "return": 1.509983269999526,
+          "mission_rate": 1.0,
+          "kills": 1.42,
+          "deaths": 0.12,
+          "kill_ratio": 11.833333333333334,
+          "shots": 5.62,
+          "hits": 1.42,
+          "hit_rate": 0.25266903914590744,
+          "n": 50.0,
+          "kills_ci": 0.23818110756313143,
+          "mission_ci": 0.0,
+          "return_ci": 2.4704991167950916
+        },
+        "eval_fire_once": {
+          "return": 0.010319405532616354,
+          "mission_rate": 1.0,
+          "kills": 0.0,
+          "deaths": 0.0,
+          "kill_ratio": 0.0,
+          "shots": 0.0,
+          "hits": 0.0,
+          "hit_rate": 0.0,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "eval_fire_once_16nm": {
+          "return": 3.2232432257634644,
+          "mission_rate": 1.0,
+          "kills": 1.0,
+          "deaths": 0.0,
+          "kill_ratio": 1000000.0,
+          "shots": 2.0,
+          "hits": 1.0,
+          "hit_rate": 0.5,
+          "n": 50.0,
+          "kills_ci": 0.0,
+          "mission_ci": 0.0,
+          "return_ci": 0.0
+        },
+        "beat_random": false,
+        "kills_curve": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "vec_env": "NativeVecEnv",
+        "hyper": {
+          "lr": 0.0003,
+          "gae_lambda": 0.95,
+          "eps_clip": 0.2,
+          "gamma": 0.99,
+          "ent_coef": 0.01,
+          "vf_coef": 0.5,
+          "hidden": [
+            128,
+            128
+          ],
+          "update_repeat": 4,
+          "batch_size": 256,
+          "discrete_map": "MultiDiscrete([2,5,5]) flatten Discrete(50); greedy fire = marginal P(fire)",
+          "reward_preset": "rl",
+          "algorithm": "IPPO (shared weights, independent per-agent actions)",
+          "n_envs": 8,
+          "n_games": 8,
+          "max_cycles": 200
+        },
+        "skipped": false,
+        "gated": null,
+        "failed": null,
         "share_tracks": true,
         "red_mission": "dca"
       }
     ],
-    "duck_2v2_learned": false,
+    "duck_2v2_learned": true,
     "note": "2v2 uses shared-command Tianshou PPO (parameter sharing); TorchRL MAPPO wiring is present but unused"
   },
   "bench": {
@@ -7220,13 +8968,13 @@
       "steps": 141,
       "end": "max_cycles",
       "n_fighters": 8,
-      "n_missiles": 4
+      "n_missiles": 3
     },
     "fsm_2v2": {
-      "steps": 160,
-      "end": "blue_killed",
+      "steps": 161,
+      "end": "max_cycles",
       "n_fighters": 4,
-      "n_missiles": 0
+      "n_missiles": 2
     }
   },
   "behavior": {
@@ -7259,12 +9007,12 @@
     "4v4_duck": {
       "occupancy": {
         "Search": 0.1276595744680851,
-        "Engage": 0.5691489361702128,
-        "MissileSupport": 0.01950354609929078,
-        "Evade": 0.28368794326241137
+        "Engage": 0.22695035460992907,
+        "MissileSupport": 0.0726950354609929,
+        "Evade": 0.5726950354609929
       },
-      "mean_ally_nm": 4.392369786033344,
-      "mean_range_nm": 34.754758984327445,
+      "mean_ally_nm": 3.7956836633627478,
+      "mean_range_nm": 34.7876283349937,
       "fires": 4,
       "tracks_on": 1.0,
       "end": "max_cycles",
@@ -7272,13 +9020,13 @@
     },
     "4v4_fsm": {
       "occupancy": {
-        "Search": 0.11501597444089456,
-        "Engage": 0.5063897763578274,
-        "MissileSupport": 0.020766773162939296,
-        "Evade": 0.35782747603833864
+        "Search": 0.11783960720130933,
+        "Engage": 0.23404255319148937,
+        "MissileSupport": 0.031096563011456628,
+        "Evade": 0.6170212765957447
       },
-      "mean_ally_nm": 4.0870801143848645,
-      "mean_range_nm": 31.298298548313397,
+      "mean_ally_nm": 3.6582231376863583,
+      "mean_range_nm": 31.461884943162563,
       "fires": 8,
       "tracks_on": 1.0,
       "end": "max_cycles",
@@ -7286,27 +9034,27 @@
     },
     "striker_leak": {
       "occupancy": {
-        "Search": 0.18125,
-        "Engage": 0.46875,
-        "MissileSupport": 0.015625,
-        "Evade": 0.334375
+        "Search": 0.18012422360248448,
+        "Engage": 0.16770186335403728,
+        "MissileSupport": 0.059006211180124224,
+        "Evade": 0.593167701863354
       },
-      "mean_ally_nm": 3.3725300525248345,
-      "mean_range_nm": 31.513395664362196,
+      "mean_ally_nm": 2.4593046965591685,
+      "mean_range_nm": 31.187118695035018,
       "fires": 2,
-      "tracks_on": 0.99375,
-      "end": "red_killed",
-      "steps": 160
+      "tracks_on": 1.0,
+      "end": "max_cycles",
+      "steps": 161
     },
     "tracks_off": {
       "occupancy": {
         "Search": 0.20567375886524822,
-        "Engage": 0.5319148936170213,
-        "MissileSupport": 0.01773049645390071,
-        "Evade": 0.24468085106382978
+        "Engage": 0.19148936170212766,
+        "MissileSupport": 0.07092198581560284,
+        "Evade": 0.5319148936170213
       },
-      "mean_ally_nm": 3.561541888479931,
-      "mean_range_nm": 34.74662307044742,
+      "mean_ally_nm": 2.7812569591944305,
+      "mean_range_nm": 34.76596481598308,
       "fires": 2,
       "tracks_on": 1.0,
       "end": "max_cycles",
