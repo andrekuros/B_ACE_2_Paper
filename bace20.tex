@@ -40,7 +40,7 @@ Angelo Passaro$^{2}$\\[0.6em]
 \noindent
 B-ACE~2.0 is an open, fast, inspectable beyond-visual-range (BVR) environment: a Rust simulation core, in-process vectorized rollouts, a PettingZoo Python API, and a local web dashboard with no Torch on the server.
 It is a standalone rewrite of B-ACE~1.0 (Godot + TCP), not a drop-in clone of that engine's engagement model.
-Three recipes characterize the environment rather than claim an operational tactics result: a dense weapon-engagement-zone (WEZ) grid with a \emph{corrected} closing-speed envelope; a 2-v-2 finite-state-machine (FSM) search scored on a frozen default-red test set; and independent PPO (IPPO, shared weights) on \texttt{NativeVecEnv}.
+Three recipes characterize the environment rather than claim an operational tactics result: a dense weapon-engagement-zone (WEZ) grid with a \emph{corrected} closing-speed envelope; a 2-v-2 finite-state-machine (FSM) search scored on a frozen default-red test set; and independent PPO (IPPO, shared weights, factored fire/kinematics heads) on \texttt{NativeVecEnv}.
 1-v-1 vs a non-maneuvering duck is a unit test of learning, not a MARL study.
 Public recipes cap force size at 4-v-4.
 Source: \url{https://github.com/andrekuros/B-ACE} (1.0), \url{https://github.com/andrekuros/B-ACE-2.0} (framework), \url{https://github.com/andrekuros/B_ACE_2_Paper} (this draft).
@@ -169,25 +169,28 @@ This is a corrected in-sim envelope under FireOnce-vs-duck, not an operational W
 Paper profile searches in \textbf{2-v-2} with fitness
 $0.5(\overline{K}-\overline{D})+\overline{M}-0.1\overline{S}$,
 population $32$, $40$ generations, $20$ evals, $400$ decision cycles.
-Training fitness uses an evolving red pool (every 3 generations).
-Each generation also scores the current best on a \textbf{frozen} default-red set with a fixed seed schedule; \Cref{fig:fsm} (left) is that frozen curve.
-Elite labels are distinct genomes (aggressive / balanced / cautious); a duplicate label is dropped rather than reused.
+Generation 0 is seeded with the default red genome plus random genomes.
+Each individual's training episodes mix default red and an evolving pool (pool members are freeze-accepted genomes only; default red stays in the pool).
+Each generation freeze-evals the train-best on default red with a fixed seed schedule.
+The plotted curve is the \textbf{archived frozen champion}: the archive is replaced only when that frozen score strictly improves, so \Cref{fig:fsm} (left) is non-decreasing.
+Final elite labels (aggressive / balanced / cautious) are distinct genomes ranked on frozen scores of the archive plus the last generation's top train individuals; a duplicate genome is dropped.
 Elites are re-evaluated in 4-v-4 against default red.
 Ally spacing is set by the spawn box; a 2-v-2 champion is not required to win 4-v-4.
 
 \paragraph{Result.}
-Frozen fitness starts at $1.30$ (generation 0) and ends at $0.80$ (generation 40): the evolving pool makes train fitness ($1.18$ at the last generation) non-comparable across gens, so we do not claim that search ``reaches $1.30$ by generation 40.''
-Last-generation elites are distinct:
-aggressive $(d_{\mathrm{shot}},l_{\mathrm{crank}},l_{\mathrm{break}})=(0.72,0.77,1.58)$,
-balanced $(0.73,0.55,1.58)$,
-cautious $(0.77,0.96,1.50)$.
-The 2-v-2 balanced genome has $\overline{K}{=}1.75$, $\overline{D}{=}1.00$, $\overline{M}{=}1$, $\overline{S}{=}2$ on the training pool.
-On 4-v-4 re-eval the same champion has $\overline{K}{=}1$, $\overline{D}{=}2$---a transfer limitation, not a 4-v-4 tactics result.
+The archived frozen champion is $1.30$ from generation 0 through generation 40 (last does not exceed generation 0), so we do not claim that search improves on the seeded default.
+Last-generation train fitness stays at $1.30$ because training always includes default red.
+Labeled elites are distinct:
+aggressive $(d_{\mathrm{shot}},l_{\mathrm{crank}},l_{\mathrm{break}})=(0.95,1.04,1.19)$,
+balanced $(1.00,0.58,1.08)$,
+cautious $(0.97,0.80,1.19)$.
+All three score $\overline{K}{=}2$, $\overline{D}{=}1$, $\overline{M}{=}1$, $\overline{S}{=}2$ on the frozen 2-v-2 set (fitness $1.30$).
+On 4-v-4 re-eval the same genomes transfer unevenly: aggressive keeps $\overline{K}{=}2$, $\overline{D}{=}1$ (fitness $1.10$); balanced and cautious have $\overline{K}{=}2$, $\overline{D}{=}2$ (fitness $0.60$)---a transfer limitation, not a 4-v-4 tactics result.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.98\linewidth]{figures/fsm_search.pdf}
-\caption{FSM GA, 2-v-2. Left: frozen default-red fitness (solid) vs train fitness on the evolving pool (dashed). Right: last generation and distinct elites.}
+\caption{FSM GA, 2-v-2. Left: archived frozen champion on default red (solid). Train fitness is omitted when it matches the archive. Right: last generation and distinct elites.}
 \label{fig:fsm}
 \end{figure}
 
@@ -205,12 +208,12 @@ We train \textbf{IPPO (shared weights)}: one discrete actor-critic, independent 
 We do not report MAPPO, MADDPG, or BenchMARL numbers unless that path actually trains.
 
 \paragraph{Protocol.}
-Discrete map \texttt{MultiDiscrete}$[2,5,5]$ flattened to $50$ logits.
-Greedy eval decodes fire from \emph{marginal} $P(\mathrm{fire})$ so $25$ kinematic bins cannot hide the shot; kinematics take $\arg\max$ of the pooled $25$.
+Discrete map \texttt{MultiDiscrete}$[2,5,5]$ with \textbf{factored} fire / altitude / turn heads; the joint over Discrete(50) is the outer product, so $P(\mathrm{fire})$ is not buried in a 50-way softmax.
+Greedy eval still decodes fire from \emph{marginal} $P(\mathrm{fire})$; kinematics take $\arg\max$ of the pooled 25.
 Journal numbers are \textbf{greedy} 50-episode eval; stochastic eval is reported alongside.
 Baselines share the training spawn; \texttt{FireOnce} at default $\sim 60\,\mathrm{NM}$ is out of WEZ, so we also score \texttt{FireOnce} at the WEZ close cell (16~NM head-on).
 Failed seeds stay failed (no silent relabel).
-Ladder (3 seeds): 1-v-1 duck $\ge 2{\times}10^{5}$ steps; 1-v-1 FSM; 2-v-2 duck IPPO $\ge 10^{5}$.
+Ladder (3 seeds): 1-v-1 duck $\ge 2{\times}10^{5}$ steps; 1-v-1 FSM; 2-v-2 duck and 2-v-2 FSM $\ge 2{\times}10^{5}$.
 Train 2-v-2 FSM only if a 2-v-2 duck seed's greedy kill rate exceeds random; 4-v-4 remains gated.
 
 \Cref{tab:hp} lists hyperparameters.
@@ -228,12 +231,13 @@ Item & Value \\
 Algorithm & IPPO, shared weights, independent actions \\
 Optimizer / lr & Adam $3{\times}10^{-4}$ \\
 GAE $\lambda$ / $\gamma$ / clip $\epsilon$ & $0.95$ / $0.99$ / $0.2$ \\
-Entropy / VF coef & $0.01$ / $0.5$ \\
+Entropy / VF coef & $0.02$ / $0.5$ \\
 Hidden layers & $128{\times}128$ \\
 Parallel games & $8$ (\texttt{NativeVecEnv}) \\
 Update & 4 epochs, batch $256$ \\
 Reward preset & \texttt{rl} (\texttt{missile\_no\_fire}${}=0$, \texttt{detect\_loss}${}=-0.01$) \\
-Action & Discrete(50) flatten of MultiDiscrete$[2,5,5]$ \\
+Action & factored MultiDiscrete$[2,5,5]$ (outer-product Discrete(50)) \\
+Fire-head init & logit bias $+0.25$ on fire \\
 Eval & 50 episodes, greedy (journal) and stochastic \\
 \bottomrule
 \end{tabular}
@@ -244,22 +248,72 @@ Eval & 50 episodes, greedy (journal) and stochastic \\
 \texttt{FireOnce} on the training spawn is $0$ in every row (opening $\sim 60\,\mathrm{NM}$, outside the WEZ).
 \texttt{FireOnce} at $16\,\mathrm{NM}$ head-on scores $1.0$ kill / episode in 1-v-1 (the WEZ close cell) and $1.0$ in 2-v-2 (one of two ducks).
 
-\textbf{1-v-1 vs duck} is the learning unit test: all three seeds reach greedy kill rate $1.0$, one shot / one hit, above random ($0.52$--$0.62$).
+\textbf{1-v-1 vs duck} is the learning unit test: all three seeds reach greedy kill rate $1.0$, one shot / one hit, above random ($0.66$--$0.72$).
 Greedy and stochastic agree.
+That matches \texttt{FireOnce} at $16\,\mathrm{NM}$ on the same spawn family; it is not a tactics result.
 
 \textbf{1-v-1 vs FSM.}
-Seeds 0 and 2 match the duck unit test (greedy $K{=}1$).
-Seed 1 is a failed greedy seed: $0$ shots, $K{=}0$; stochastic still reaches $K{=}0.78$ above random $0.58$.
-The seed is reported as seed 1, not relabeled.
+All three seeds greedy-kill at $K{=}1$, one shot / one hit, above random ($0.46$--$0.52$).
+Seed 2 is the only seed where stochastic eval is lower ($K{=}0.72$) than greedy; both still beat random.
 
 \textbf{2-v-2 vs duck} uses independent IPPO (shared weights, different obs).
-Seeds 0 and 1 greedy-kill both ducks ($K{=}2$) above random ($1.62$, $1.76$).
-Seed 2 again never fires under greedy ($K{=}0$) while stochastic keeps $K{=}2$.
-Mean greedy $K{=}1.33$ is below mean random $K{=}1.71$; two of three seeds nevertheless beat random, so 2-v-2 FSM was trained.
+All three seeds greedy-kill both ducks ($K{=}2$, $D{=}0$) above random (mean $1.74$).
+Mean greedy $K{=}2$ is also above \texttt{FireOnce} at $16\,\mathrm{NM}$ ($K{=}1$ on that overlay).
+2-v-2 uses more shots ($7$--$12$) than the 1-shot 1-v-1 unit test.
 4-v-4 is still omitted.
 
-\textbf{2-v-2 vs FSM} is mixed: only seed 1 greedy-beats random ($K{=}2$ vs $1.46$); seeds 0 and 2 do not.
-That is not a 2-v-2 tactics claim.
+\textbf{2-v-2 vs FSM.}
+All three seeds greedy-kill both reds ($K{=}2$, $D{=}0$) above random (mean $1.65$).
+Seed 0 stochastic eval is close to random ($1.66$ vs $1.62$).
+That is a scripted-opponent check on the same 2-v-2 object, not a 2-v-2 tactics claim.
+
+\paragraph{Self-play.}
+Red can be \texttt{external} on the same obs/action API as blue (recipe \texttt{marl\_selfplay}).
+Naive simultaneous 2-v-2 IPPO ($10^{5}$ steps, 3 seeds, already on disk, not re-run) collapses to hold-fire: greedy $K{=}0$, $S{=}0$ vs self, vs duck, and vs FSM.
+Random still scores $K{\approx}0.08$--$0.18$.
+That is a no-shoot equilibrium, not a 2-v-2 tactics result.
+
+Mixed training interleaves a current-self collector with a scripted duck/FSM collector (same optimizer).
+PFSP trains blue only; red is a frozen snapshot from a pool of at most 8, sampled with probability $\propto \max(\mathrm{wins},\varepsilon)$, with a snapshot each epoch.
+MAPPO keeps the factored discrete actor and puts the critic on concatenated same-team observations.
+MADDPG uses continuous \texttt{Box(4)}, a shared actor, and Tianshou DDPG with $Q(\text{team-concat obs}, a_i)$ (own action, not teammates' actions).
+2-v-2 uses $10^{5}$ steps; 4-v-4 uses $5{\times}10^{4}$ only if that (algo, mode) pair's 2-v-2 greedy shots exceeded $0$ and vs-duck $K$ exceeded random.
+
+\Cref{tab:selfplay} is collapse vs recovery, not tactics.
+Mixed IPPO restores shooting vs duck/FSM on $2/3$ seeds (mean duck $K{=}1.67$ vs random $1.61$) while vs-self stays mostly hold-fire.
+IPPO PFSP never beat random vs duck.
+MAPPO PFSP recovered on $2/3$ seeds vs duck; MAPPO mixed and both MADDPG modes on $1/3$.
+Vs-self $K$ is $0$ except mixed IPPO seed~1 ($K{=}2$, $S{=}7$).
+4-v-4 ran for every pair except IPPO PFSP.
+Vs-self remained hold-fire ($K{=}0$).
+Vs duck, mixed IPPO mean $K{=}2.33$ of $4$ (seed~1 reached $3$); mixed MAPPO seed~0 killed all four ducks.
+Do not read 4-v-4 as a coordination result.
+
+\begin{table}[t]
+\centering
+\caption{Self-play greedy eval (50 episodes, mean of 3 seeds). Recover $=$ seeds with vs-duck $K$ above random and shots ${>}0$. Naive IPPO is the hold-fire baseline (not re-run). 4-v-4 is gated.}
+\label{tab:selfplay}
+\scriptsize
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Setting & $K$ duck & $K$ FSM & Shots duck & $K$ self (shots) & Recover \\
+\midrule
+Naive IPPO 2v2 & $0.00$ & $0.00$ & $0.0$ & $0.00$ ($0.0$) & $0/3$ \\
+IPPO mixed 2v2 & $1.67$ & $1.67$ & $3.0$ & $0.67$ ($2.3$) & $2/3$ \\
+IPPO PFSP 2v2 & $0.67$ & $1.00$ & $0.7$ & $0.00$ ($5.3$) & $0/3$ \\
+MAPPO mixed 2v2 & $0.67$ & $0.67$ & $4.0$ & $0.00$ ($0.0$) & $1/3$ \\
+MAPPO PFSP 2v2 & $1.33$ & $1.33$ & $5.0$ & $0.00$ ($0.0$) & $2/3$ \\
+MADDPG mixed 2v2 & $0.67$ & $0.67$ & $4.0$ & $0.00$ ($0.0$) & $1/3$ \\
+MADDPG PFSP 2v2 & $0.67$ & $0.67$ & $4.0$ & $0.00$ ($0.0$) & $1/3$ \\
+\midrule
+IPPO mixed 4v4 & $2.33$ & $2.33$ & $12.3$ & $0.00$ ($1.7$) & --- \\
+MAPPO mixed 4v4 & $2.33$ & $1.67$ & $10.7$ & $0.00$ ($5.7$) & --- \\
+MAPPO PFSP 4v4 & $0.67$ & $1.00$ & $2.7$ & $0.00$ ($2.7$) & --- \\
+MADDPG mixed 4v4 & $1.00$ & $1.00$ & $5.7$ & $0.00$ ($0.7$) & --- \\
+MADDPG PFSP 4v4 & $0.67$ & $0.67$ & $12.7$ & $0.00$ ($0.3$) & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{table}[t]
 \centering
@@ -270,18 +324,18 @@ That is not a 2-v-2 tactics claim.
 \toprule
 Setting (seed) & $K$ greedy (stoch.) & Random $K$ & $D$ & $M$ & Shots & FireOnce 16~NM \\
 \midrule
-1v1 duck 0 & $1.00$ ($1.00$) & $0.60$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
-1v1 duck 1 & $1.00$ ($1.00$) & $0.52$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
-1v1 duck 2 & $1.00$ ($1.00$) & $0.62$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
-1v1 FSM 0 & $1.00$ ($0.96$) & $0.46$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
-1v1 FSM 1 & $0.00$ ($0.78$) & $0.58$ & $0$ & $1.00$ & $0.0$ & $1.00$ \\
-1v1 FSM 2 & $1.00$ ($1.00$) & $0.48$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
-2v2 duck 0 & $2.00$ ($2.00$) & $1.62$ & $0$ & $1.00$ & $3.0$ & $1.00$ \\
-2v2 duck 1 & $2.00$ ($1.92$) & $1.76$ & $0$ & $1.00$ & $12.0$ & $1.00$ \\
-2v2 duck 2 & $0.00$ ($2.00$) & $1.76$ & $0$ & $1.00$ & $0.0$ & $1.00$ \\
-2v2 FSM 0 & $1.00$ ($2.00$) & $1.60$ & $2.0$ & $1.00$ & $4.0$ & $1.00$ \\
-2v2 FSM 1 & $2.00$ ($2.00$) & $1.46$ & $0$ & $1.00$ & $12.0$ & $1.00$ \\
-2v2 FSM 2 & $0.00$ ($1.96$) & $1.42$ & $0$ & $1.00$ & $0.0$ & $1.00$ \\
+1v1 duck 0 & $1.00$ ($1.00$) & $0.72$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 duck 1 & $1.00$ ($1.00$) & $0.66$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 duck 2 & $1.00$ ($1.00$) & $0.70$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 FSM 0 & $1.00$ ($1.00$) & $0.52$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 FSM 1 & $1.00$ ($1.00$) & $0.46$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+1v1 FSM 2 & $1.00$ ($0.72$) & $0.48$ & $0$ & $1.00$ & $1.0$ & $1.00$ \\
+2v2 duck 0 & $2.00$ ($2.00$) & $1.72$ & $0$ & $1.00$ & $7.0$ & $1.00$ \\
+2v2 duck 1 & $2.00$ ($1.96$) & $1.68$ & $0$ & $1.00$ & $10.0$ & $1.00$ \\
+2v2 duck 2 & $2.00$ ($2.00$) & $1.82$ & $0$ & $1.00$ & $12.0$ & $1.00$ \\
+2v2 FSM 0 & $2.00$ ($1.66$) & $1.62$ & $0$ & $1.00$ & $8.0$ & $1.00$ \\
+2v2 FSM 1 & $2.00$ ($2.00$) & $1.80$ & $0$ & $1.00$ & $12.0$ & $1.00$ \\
+2v2 FSM 2 & $2.00$ ($2.00$) & $1.54$ & $0$ & $1.00$ & $12.0$ & $1.00$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -330,7 +384,8 @@ pytest -q tests/python
 python -m bace.experiment wez --profile paper
 python -m bace.experiment fsm --profile paper
 python -m bace.experiment marl_core --profile paper
-# copy wez_*.json, fsm_*.json, marl_core_*.json into B_ACE_2_Paper/data/
+python -m bace.experiment marl_selfplay --profile paper
+# copy wez_*.json, fsm_*.json, marl_core_*.json, marl_selfplay_*.json into B_ACE_2_Paper/data/
 
 # in B_ACE_2_Paper (does not re-run MARL)
 python make_figures.py
@@ -341,13 +396,15 @@ Framework CI stays on \texttt{--smoke}.
 
 \section{Conclusions}
 
-B-ACE~2.0 is a shareable Rust/Python BVR environment: inspectable recipes, a corrected in-sim WEZ envelope (head $>$ beam $>$ tail), an honest frozen FSM curve, and IPPO on \texttt{NativeVecEnv}.
-1-v-1 vs duck is a unit test of learning (kill rate $1.0$ on three seeds), not a MARL coordination claim.
-Two of three 2-v-2 duck seeds greedy-beat random; one greedy seed never fires, so mean 2-v-2 duck kills do not beat random.
-2-v-2 vs FSM is mixed. 4-v-4 MARL is omitted.
+B-ACE~2.0 is a shareable Rust/Python BVR environment: inspectable recipes, a corrected in-sim WEZ envelope (head $>$ beam $>$ tail), an archived frozen FSM champion (flat at $1.30$), and IPPO on \texttt{NativeVecEnv}.
+1-v-1 vs duck is a unit test of learning (kill rate $1.0$ on three seeds), matching FireOnce at $16\,\mathrm{NM}$, not a MARL coordination claim.
+All three 2-v-2 duck seeds greedy-kill both targets above random; all three 2-v-2 FSM seeds do the same with $D{=}0$.
+That is still a scripted-opponent check.
+Naive 2-v-2 self-play collapses to hold-fire ($K{=}0$ on three seeds).
+Mixed/PFSP restore shooting vs duck/FSM on some seeds, not consistently vs self; 4-v-4 is gated and still $K{=}0$ vs self.
 Rayon \texttt{ParallelEnvs} reach $\sim 3{\times}10^{5}$ decisions/s at $n=32$.
 
-Out of scope: 8-v-8, red-as-learner, 3D Godot, and Torch on the dashboard.
+Out of scope: 8-v-8, 3D Godot, and Torch on the dashboard.
 
 \section*{Acknowledgements}
 

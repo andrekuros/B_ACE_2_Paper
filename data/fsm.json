@@ -50,26 +50,26 @@
     {
       "generation": 3,
       "best_fitness": 1.3,
-      "train_fitness": 1.175,
+      "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.9653558384496186,
-        "l_crank": 0.8039769749415626,
-        "l_break": 1.1870112679597091
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 4
+      "pool_size": 2
     },
     {
       "generation": 4,
       "best_fitness": 1.3,
-      "train_fitness": 1.175,
+      "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.9653558384496186,
-        "l_crank": 0.8039769749415626,
-        "l_break": 1.1870112679597091
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 4
+      "pool_size": 2
     },
     {
       "generation": 5,
@@ -77,23 +77,23 @@
       "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8761411835690804,
-        "l_crank": 0.7195326408233557,
-        "l_break": 1.3477684244365458
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 4
+      "pool_size": 2
     },
     {
       "generation": 6,
       "best_fitness": 1.3,
-      "train_fitness": 1.175,
+      "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8761411835690804,
-        "l_crank": 0.7195326408233557,
-        "l_break": 1.3477684244365458
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 7
+      "pool_size": 2
     },
     {
       "generation": 7,
@@ -101,11 +101,11 @@
       "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8395100475435353,
-        "l_crank": 0.5722135028337785,
-        "l_break": 1.4198070516904837
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 7
+      "pool_size": 2
     },
     {
       "generation": 8,
@@ -113,1022 +113,1022 @@
       "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8395100475435353,
-        "l_crank": 0.5722135028337785,
-        "l_break": 1.4198070516904837
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 7
+      "pool_size": 2
     },
     {
       "generation": 9,
       "best_fitness": 1.3,
-      "train_fitness": 1.25,
+      "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8395100475435353,
-        "l_crank": 0.5722135028337785,
-        "l_break": 1.4198070516904837
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 10,
       "best_fitness": 1.3,
-      "train_fitness": 1.25,
+      "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8395100475435353,
-        "l_crank": 0.5722135028337785,
-        "l_break": 1.4198070516904837
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 11,
       "best_fitness": 1.3,
-      "train_fitness": 1.25,
+      "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8395100475435353,
-        "l_crank": 0.5722135028337785,
-        "l_break": 1.4198070516904837
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 12,
-      "best_fitness": 0.8,
-      "train_fitness": 1.25,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8038482043481623,
-        "l_crank": 0.6386315696640612,
-        "l_break": 1.5198640995173591
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 13,
-      "best_fitness": 0.8,
-      "train_fitness": 1.25,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8038482043481623,
-        "l_crank": 0.6386315696640612,
-        "l_break": 1.5198640995173591
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 14,
-      "best_fitness": 0.8,
-      "train_fitness": 1.25,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.8038482043481623,
-        "l_crank": 0.6386315696640612,
-        "l_break": 1.5198640995173591
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 15,
       "best_fitness": 1.3,
-      "train_fitness": 1.225,
+      "train_fitness": 1.3,
       "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7450949973500474,
-        "l_crank": 0.6627238966896567,
-        "l_break": 1.5631246078065368
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 16,
-      "best_fitness": 0.8,
-      "train_fitness": 1.26,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 17,
-      "best_fitness": 0.8,
-      "train_fitness": 1.26,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 18,
-      "best_fitness": 0.8,
-      "train_fitness": 1.0999999999999999,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 19,
-      "best_fitness": 0.8,
-      "train_fitness": 1.0999999999999999,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 20,
-      "best_fitness": 0.8,
-      "train_fitness": 1.0999999999999999,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 21,
-      "best_fitness": 0.8,
-      "train_fitness": 0.9749999999999999,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 22,
-      "best_fitness": 0.8,
-      "train_fitness": 0.9749999999999999,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 23,
-      "best_fitness": 0.8,
-      "train_fitness": 0.9749999999999999,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 24,
-      "best_fitness": 0.9,
-      "train_fitness": 0.865,
-      "frozen_fitness": 0.9,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7163010683331366,
-        "l_crank": 0.7470821559708654,
-        "l_break": 1.5794475789216387
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 25,
-      "best_fitness": 0.9,
-      "train_fitness": 0.9400000000000001,
-      "frozen_fitness": 0.9,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7314630451143108,
-        "l_crank": 0.7502976958194885,
-        "l_break": 1.540895251562665
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 26,
-      "best_fitness": 0.9,
-      "train_fitness": 0.9400000000000001,
-      "frozen_fitness": 0.9,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7314630451143108,
-        "l_crank": 0.7502976958194885,
-        "l_break": 1.540895251562665
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 27,
-      "best_fitness": 0.8,
-      "train_fitness": 0.93,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 28,
-      "best_fitness": 0.8,
-      "train_fitness": 0.93,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 29,
-      "best_fitness": 0.8,
-      "train_fitness": 0.93,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 30,
-      "best_fitness": 0.8,
-      "train_fitness": 1.015,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 31,
-      "best_fitness": 0.8,
-      "train_fitness": 1.015,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 32,
-      "best_fitness": 0.8,
-      "train_fitness": 1.015,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 33,
-      "best_fitness": 0.8,
-      "train_fitness": 1.05,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 34,
-      "best_fitness": 0.8,
-      "train_fitness": 1.075,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7684552629499519,
-        "l_crank": 0.9634131244349974,
-        "l_break": 1.4994391108760723
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 35,
-      "best_fitness": 0.8,
-      "train_fitness": 1.075,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7684552629499519,
-        "l_crank": 0.9634131244349974,
-        "l_break": 1.4994391108760723
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 36,
-      "best_fitness": 0.8,
-      "train_fitness": 1.1,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 37,
-      "best_fitness": 0.8,
-      "train_fitness": 1.1,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 38,
-      "best_fitness": 0.8,
-      "train_fitness": 1.1,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     },
     {
       "generation": 39,
-      "best_fitness": 0.8,
-      "train_fitness": 1.175,
-      "frozen_fitness": 0.8,
+      "best_fitness": 1.3,
+      "train_fitness": 1.3,
+      "frozen_fitness": 1.3,
       "best": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "pool_size": 8
+      "pool_size": 2
     }
   ],
   "elites": [
     {
       "label": "aggressive",
       "genome": {
-        "d_shot": 0.7193347963449297,
-        "l_crank": 0.7687521863858118,
-        "l_break": 1.5829609828776263
+        "d_shot": 0.9482435552681283,
+        "l_crank": 1.0407730074277797,
+        "l_break": 1.1927361635904328
       },
-      "fitness": 1.085,
-      "mean_kills": 1.5,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 1.65,
-      "eval_4v4": {
-        "genome": {
-          "d_shot": 0.7193347963449297,
-          "l_crank": 0.7687521863858118,
-          "l_break": 1.5829609828776263
-        },
-        "fitness": 0.3,
-        "mean_kills": 1.0,
-        "mean_deaths": 2.0,
-        "mission_rate": 1.0,
-        "mean_shots": 2.0,
-        "mean_ally_nm": 2.3859973684066516,
-        "fsm_search": 0.06807727690892364,
-        "fsm_engage": 0.24931002759889603,
-        "fsm_support": 0.010119595216191352,
-        "fsm_evade": 0.672493100275989
-      }
-    },
-    {
-      "label": "balanced",
-      "genome": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
-      },
-      "fitness": 1.175,
-      "mean_kills": 1.75,
+      "fitness": 1.3,
+      "mean_kills": 2.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 2.0,
       "eval_4v4": {
         "genome": {
-          "d_shot": 0.7285508531894536,
-          "l_crank": 0.5514411973905746,
-          "l_break": 1.5835895306859866
+          "d_shot": 0.9482435552681283,
+          "l_crank": 1.0407730074277797,
+          "l_break": 1.1927361635904328
         },
-        "fitness": 0.09999999999999998,
-        "mean_kills": 1.0,
-        "mean_deaths": 2.0,
+        "fitness": 1.1,
+        "mean_kills": 2.0,
+        "mean_deaths": 1.0,
         "mission_rate": 1.0,
         "mean_shots": 4.0,
-        "mean_ally_nm": 1.490515256789727,
-        "fsm_search": 0.0625,
-        "fsm_engage": 0.24080882352941177,
-        "fsm_support": 0.02389705882352941,
-        "fsm_evade": 0.6727941176470589
+        "mean_ally_nm": 1.9281356957949574,
+        "fsm_search": 0.05078416728902166,
+        "fsm_engage": 0.13368185212845407,
+        "fsm_support": 0.0037341299477221808,
+        "fsm_evade": 0.8117998506348021
       }
     },
     {
-      "label": "cautious",
+      "label": "balanced",
       "genome": {
-        "d_shot": 0.7684552629499519,
-        "l_crank": 0.9634131244349974,
-        "l_break": 1.4994391108760723
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
       },
-      "fitness": 1.0850000000000002,
-      "mean_kills": 1.0,
-      "mean_deaths": 0.55,
+      "fitness": 1.3,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.0,
       "mission_rate": 1.0,
-      "mean_shots": 1.4,
+      "mean_shots": 2.0,
       "eval_4v4": {
         "genome": {
-          "d_shot": 0.7684552629499519,
-          "l_crank": 0.9634131244349974,
-          "l_break": 1.4994391108760723
+          "d_shot": 0.9997237215609796,
+          "l_crank": 0.5844912495593098,
+          "l_break": 1.0849890761070764
         },
         "fitness": 0.6,
         "mean_kills": 2.0,
         "mean_deaths": 2.0,
         "mission_rate": 1.0,
         "mean_shots": 4.0,
-        "mean_ally_nm": 1.8333089988540578,
-        "fsm_search": 0.41582336706531736,
-        "fsm_engage": 0.23919043238270468,
-        "fsm_support": 0.06071757129714812,
-        "fsm_evade": 0.2842686292548298
+        "mean_ally_nm": 2.7938976526034547,
+        "fsm_search": 0.465564738292011,
+        "fsm_engage": 0.13682277318640956,
+        "fsm_support": 0.023875114784205693,
+        "fsm_evade": 0.37373737373737376
+      }
+    },
+    {
+      "label": "cautious",
+      "genome": {
+        "d_shot": 0.9653558384496186,
+        "l_crank": 0.8039769749415626,
+        "l_break": 1.1870112679597091
+      },
+      "fitness": 1.3,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "eval_4v4": {
+        "genome": {
+          "d_shot": 0.9653558384496186,
+          "l_crank": 0.8039769749415626,
+          "l_break": 1.1870112679597091
+        },
+        "fitness": 0.6,
+        "mean_kills": 2.0,
+        "mean_deaths": 2.0,
+        "mission_rate": 1.0,
+        "mean_shots": 4.0,
+        "mean_ally_nm": 1.7991787247155788,
+        "fsm_search": 0.4656133828996282,
+        "fsm_engage": 0.15055762081784388,
+        "fsm_support": 0.02973977695167286,
+        "fsm_evade": 0.354089219330855
       }
     }
   ],
   "last_generation": [
     {
       "genome": {
-        "d_shot": 0.7285508531894536,
-        "l_crank": 0.5514411973905746,
-        "l_break": 1.5835895306859866
+        "d_shot": 0.9653558384496186,
+        "l_crank": 0.8039769749415626,
+        "l_break": 1.1870112679597091
       },
-      "fitness": 1.175,
-      "mean_kills": 1.75,
+      "fitness": 1.3,
+      "mean_kills": 2.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.787866457874828,
-      "fsm_search": 0.3473491773308958,
-      "fsm_engage": 0.29530773918342473,
-      "fsm_support": 0.04521633150517977,
-      "fsm_evade": 0.3121267519804997
+      "mean_ally_nm": 2.8389314818157643,
+      "fsm_search": 0.24345146379044685,
+      "fsm_engage": 0.21571648690292758,
+      "fsm_support": 0.03852080123266564,
+      "fsm_evade": 0.50231124807396
     },
     {
       "genome": {
-        "d_shot": 0.716455000799102,
-        "l_crank": 0.6916676095325364,
-        "l_break": 1.5811422444114653
+        "d_shot": 0.9348194546836978,
+        "l_crank": 0.663777049763691,
+        "l_break": 1.1538100573186882
       },
-      "fitness": 1.1,
-      "mean_kills": 1.5,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 1.5,
-      "mean_ally_nm": 2.816963887933318,
-      "fsm_search": 0.4349333622277603,
-      "fsm_engage": 0.26676779716112253,
-      "fsm_support": 0.0024921443276628022,
-      "fsm_evade": 0.29580669628345435
-    },
-    {
-      "genome": {
-        "d_shot": 0.7684552629499519,
-        "l_crank": 0.9634131244349974,
-        "l_break": 1.4994391108760723
-      },
-      "fitness": 1.0850000000000002,
-      "mean_kills": 1.0,
-      "mean_deaths": 0.55,
-      "mission_rate": 1.0,
-      "mean_shots": 1.4,
-      "mean_ally_nm": 1.9000894260449788,
-      "fsm_search": 0.5901713255184852,
-      "fsm_engage": 0.17583408476104598,
-      "fsm_support": 0.006462278328824767,
-      "fsm_evade": 0.22753231139164412
-    },
-    {
-      "genome": {
-        "d_shot": 0.7188601672604116,
-        "l_crank": 0.6906913344750728,
-        "l_break": 1.5874006656269264
-      },
-      "fitness": 1.085,
-      "mean_kills": 1.5,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 1.65,
-      "mean_ally_nm": 2.8227872506120755,
-      "fsm_search": 0.4347496206373293,
-      "fsm_engage": 0.26717970951658354,
-      "fsm_support": 0.004443962714068936,
-      "fsm_evade": 0.2936267071320182
-    },
-    {
-      "genome": {
-        "d_shot": 0.7193347963449297,
-        "l_crank": 0.7687521863858118,
-        "l_break": 1.5829609828776263
-      },
-      "fitness": 1.085,
-      "mean_kills": 1.5,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 1.65,
-      "mean_ally_nm": 2.8192765329100546,
-      "fsm_search": 0.4347496206373293,
-      "fsm_engage": 0.26717970951658354,
-      "fsm_support": 0.004443962714068936,
-      "fsm_evade": 0.2936267071320182
-    },
-    {
-      "genome": {
-        "d_shot": 0.7201637388015972,
-        "l_crank": 0.8691743575743563,
-        "l_break": 1.5848359847136744
-      },
-      "fitness": 1.02,
-      "mean_kills": 1.3,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 1.3,
-      "mean_ally_nm": 2.793634527850272,
-      "fsm_search": 0.4708718360787465,
-      "fsm_engage": 0.24568099638409,
-      "fsm_support": 0.00472077139413419,
-      "fsm_evade": 0.27872639614302935
-    },
-    {
-      "genome": {
-        "d_shot": 0.722565667583723,
-        "l_crank": 0.6887826973460559,
-        "l_break": 1.5922197186358786
-      },
-      "fitness": 0.96,
-      "mean_kills": 1.15,
-      "mean_deaths": 1.0,
-      "mission_rate": 1.0,
-      "mean_shots": 1.15,
-      "mean_ally_nm": 2.790888881211302,
-      "fsm_search": 0.4963898916967509,
-      "fsm_engage": 0.23494204826144785,
-      "fsm_support": 0.009595287858635759,
-      "fsm_evade": 0.2590727721831655
-    },
-    {
-      "genome": {
-        "d_shot": 0.7379300596825864,
-        "l_crank": 0.8849424726857205,
-        "l_break": 1.6
-      },
-      "fitness": 0.875,
-      "mean_kills": 1.15,
+      "fitness": 1.3,
+      "mean_kills": 2.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.5831560085516037,
-      "fsm_search": 0.4521881627144785,
-      "fsm_engage": 0.23048004626951996,
-      "fsm_support": 0.06111432427221901,
-      "fsm_evade": 0.25621746674378254
+      "mean_ally_nm": 3.079935637631178,
+      "fsm_search": 0.24153846153846154,
+      "fsm_engage": 0.23846153846153847,
+      "fsm_support": 0.010769230769230769,
+      "fsm_evade": 0.5092307692307693
     },
     {
       "genome": {
-        "d_shot": 0.8333818041660059,
-        "l_crank": 0.8957288764489059,
-        "l_break": 1.568648832595615
+        "d_shot": 1.0075988297441956,
+        "l_crank": 0.9885155774018245,
+        "l_break": 1.2590381344818016
       },
-      "fitness": 0.8500000000000001,
-      "mean_kills": 1.0,
-      "mean_deaths": 0.9,
+      "fitness": 1.3,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 2.0,
-      "mean_ally_nm": 3.052168632959691,
-      "fsm_search": 0.5244344672768089,
-      "fsm_engage": 0.16974615783111724,
-      "fsm_support": 0.06164738387152478,
-      "fsm_evade": 0.24417199102054912
+      "mean_ally_nm": 2.779259020435572,
+      "fsm_search": 0.24615384615384617,
+      "fsm_engage": 0.19230769230769232,
+      "fsm_support": 0.08615384615384615,
+      "fsm_evade": 0.4753846153846154
     },
     {
       "genome": {
-        "d_shot": 0.7055491090772118,
-        "l_crank": 0.6182011809765614,
-        "l_break": 1.6
+        "d_shot": 1.0068055505325424,
+        "l_crank": 0.9954068436191533,
+        "l_break": 1.354308961206954
       },
-      "fitness": 0.8400000000000001,
-      "mean_kills": 0.85,
+      "fitness": 1.3,
+      "mean_kills": 2.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
-      "mean_shots": 0.85,
-      "mean_ally_nm": 2.7734149919830946,
-      "fsm_search": 0.5196545830709723,
-      "fsm_engage": 0.22847890617972474,
-      "fsm_support": 0.001079427903211298,
-      "fsm_evade": 0.2507870828460916
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.748064145518037,
+      "fsm_search": 0.24461538461538462,
+      "fsm_engage": 0.19384615384615383,
+      "fsm_support": 0.12461538461538461,
+      "fsm_evade": 0.4369230769230769
     },
     {
       "genome": {
-        "d_shot": 0.7171668974784304,
-        "l_crank": 0.6252286713587893,
-        "l_break": 1.6
+        "d_shot": 0.8956905128098258,
+        "l_crank": 0.6863060354797299,
+        "l_break": 1.2885567962129971
       },
-      "fitness": 0.825,
-      "mean_kills": 1.0,
+      "fitness": 1.3,
+      "mean_kills": 2.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
-      "mean_shots": 1.75,
-      "mean_ally_nm": 2.781407126395969,
-      "fsm_search": 0.5199244400467752,
-      "fsm_engage": 0.22299181433840065,
-      "fsm_support": 0.010974183682648197,
-      "fsm_evade": 0.24610956193217595
+      "mean_shots": 2.0,
+      "mean_ally_nm": 3.1211275445806974,
+      "fsm_search": 0.23846153846153847,
+      "fsm_engage": 0.2723076923076923,
+      "fsm_support": 0.015384615384615385,
+      "fsm_evade": 0.47384615384615386
     },
     {
       "genome": {
-        "d_shot": 0.7816099364298664,
-        "l_crank": 0.9676700692079341,
-        "l_break": 1.6
+        "d_shot": 1.025623232843746,
+        "l_crank": 0.7457049446601884,
+        "l_break": 1.2460259126724502
+      },
+      "fitness": 1.3,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.954982066303231,
+      "fsm_search": 0.24617737003058104,
+      "fsm_engage": 0.17737003058103976,
+      "fsm_support": 0.09938837920489296,
+      "fsm_evade": 0.47706422018348627
+    },
+    {
+      "genome": {
+        "d_shot": 1.014218424763765,
+        "l_crank": 0.6822210376781689,
+        "l_break": 1.0953523086458634
+      },
+      "fitness": 1.3,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.6752232858632246,
+      "fsm_search": 0.24923076923076923,
+      "fsm_engage": 0.18461538461538463,
+      "fsm_support": 0.04461538461538461,
+      "fsm_evade": 0.5215384615384615
+    },
+    {
+      "genome": {
+        "d_shot": 0.9482435552681283,
+        "l_crank": 1.0407730074277797,
+        "l_break": 1.1927361635904328
+      },
+      "fitness": 1.3,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.8779372874885416,
+      "fsm_search": 0.24307692307692308,
+      "fsm_engage": 0.23076923076923078,
+      "fsm_support": 0.023076923076923078,
+      "fsm_evade": 0.5030769230769231
+    },
+    {
+      "genome": {
+        "d_shot": 1.0249167127285177,
+        "l_crank": 0.8047857447371055,
+        "l_break": 1.115315879131418
+      },
+      "fitness": 1.3,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.662244036009774,
+      "fsm_search": 0.24961479198767333,
+      "fsm_engage": 0.17873651771956856,
+      "fsm_support": 0.05546995377503852,
+      "fsm_evade": 0.5161787365177196
+    },
+    {
+      "genome": {
+        "d_shot": 0.9997237215609796,
+        "l_crank": 0.5844912495593098,
+        "l_break": 1.0849890761070764
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.886941880213876,
+      "fsm_search": 0.4178082191780822,
+      "fsm_engage": 0.1415525114155251,
+      "fsm_support": 0.021689497716894976,
+      "fsm_evade": 0.4189497716894977
+    },
+    {
+      "genome": {
+        "d_shot": 0.9984513930761258,
+        "l_crank": 0.7659417951002716,
+        "l_break": 1.2530553533158524
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 3.0079597808442813,
+      "fsm_search": 0.41924398625429554,
+      "fsm_engage": 0.1420389461626575,
+      "fsm_support": 0.061855670103092786,
+      "fsm_evade": 0.3768613974799542
+    },
+    {
+      "genome": {
+        "d_shot": 1.0291518183499375,
+        "l_crank": 0.669732145648968,
+        "l_break": 1.242297012749381
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.7473194014030926,
+      "fsm_search": 0.4232081911262799,
+      "fsm_engage": 0.12741751990898748,
+      "fsm_support": 0.07622298065984073,
+      "fsm_evade": 0.3731513083048919
+    },
+    {
+      "genome": {
+        "d_shot": 1.014231468483437,
+        "l_crank": 0.9100566682665144,
+        "l_break": 1.3662427475522358
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.6149824198000244,
+      "fsm_search": 0.4243458475540387,
+      "fsm_engage": 0.13196814562002276,
+      "fsm_support": 0.09897610921501707,
+      "fsm_evade": 0.3447098976109215
+    },
+    {
+      "genome": {
+        "d_shot": 0.9701895303221582,
+        "l_crank": 0.6551176427078059,
+        "l_break": 1.3595174285733578
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.769475303717129,
+      "fsm_search": 0.41924398625429554,
+      "fsm_engage": 0.15463917525773196,
+      "fsm_support": 0.08247422680412371,
+      "fsm_evade": 0.3436426116838488
+    },
+    {
+      "genome": {
+        "d_shot": 0.9877993615970957,
+        "l_crank": 0.6005606407907639,
+        "l_break": 1.093298825564824
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.9882866906939505,
+      "fsm_search": 0.42201834862385323,
+      "fsm_engage": 0.14564220183486237,
+      "fsm_support": 0.02981651376146789,
+      "fsm_evade": 0.4025229357798165
+    },
+    {
+      "genome": {
+        "d_shot": 1.009551715817592,
+        "l_crank": 0.5003542375636847,
+        "l_break": 1.1843369773338244
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.9208308811527846,
+      "fsm_search": 0.4215349369988545,
+      "fsm_engage": 0.13745704467353953,
+      "fsm_support": 0.0572737686139748,
+      "fsm_evade": 0.3837342497136312
+    },
+    {
+      "genome": {
+        "d_shot": 0.9546241366821573,
+        "l_crank": 0.6898244291699881,
+        "l_break": 1.2897982981281053
+      },
+      "fitness": 1.05,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.8463837406384234,
+      "fsm_search": 0.417995444191344,
+      "fsm_engage": 0.1662870159453303,
+      "fsm_support": 0.05239179954441914,
+      "fsm_evade": 0.36332574031890663
+    },
+    {
+      "genome": {
+        "d_shot": 1.042923752061558,
+        "l_crank": 0.9802485407499001,
+        "l_break": 1.2844237610283487
       },
       "fitness": 0.8,
       "mean_kills": 1.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.634760902206778,
-      "fsm_search": 0.5045970795024337,
-      "fsm_engage": 0.19830539030106364,
-      "fsm_support": 0.05092842978186407,
-      "fsm_evade": 0.24616910041463855
+      "mean_ally_nm": 2.8764755367252812,
+      "fsm_search": 0.5140781108083561,
+      "fsm_engage": 0.09990917347865577,
+      "fsm_support": 0.07811080835603997,
+      "fsm_evade": 0.3079019073569482
     },
     {
       "genome": {
-        "d_shot": 0.8007403443482937,
-        "l_crank": 0.5158802430972744,
-        "l_break": 1.5467864002596698
+        "d_shot": 1.032634151203532,
+        "l_crank": 0.8439251971806856,
+        "l_break": 1.3160480544416002
       },
       "fitness": 0.8,
       "mean_kills": 1.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.7356792588019596,
-      "fsm_search": 0.48628901316976364,
-      "fsm_engage": 0.19123218473750678,
-      "fsm_support": 0.06837452642973119,
-      "fsm_evade": 0.25410427566299837
+      "mean_ally_nm": 2.706727297572514,
+      "fsm_search": 0.5250227479526842,
+      "fsm_engage": 0.09827115559599636,
+      "fsm_support": 0.07825295723384895,
+      "fsm_evade": 0.2984531392174704
     },
     {
       "genome": {
-        "d_shot": 0.7964622943300065,
-        "l_crank": 0.5799652575480978,
-        "l_break": 1.6
+        "d_shot": 0.9314903137849991,
+        "l_crank": 1.0510589682266933,
+        "l_break": 1.4097190133540998
       },
-      "fitness": 0.575,
+      "fitness": 0.8,
       "mean_kills": 1.0,
-      "mean_deaths": 1.15,
-      "mission_rate": 0.85,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.8344034120494745,
-      "fsm_search": 0.48908634344214796,
-      "fsm_engage": 0.20504152984353874,
-      "fsm_support": 0.04606915201854356,
-      "fsm_evade": 0.25980297469576974
+      "mean_ally_nm": 2.878457559360244,
+      "fsm_search": 0.5236363636363637,
+      "fsm_engage": 0.14181818181818182,
+      "fsm_support": 0.05454545454545454,
+      "fsm_evade": 0.28
     },
     {
       "genome": {
-        "d_shot": 0.8073683576287746,
-        "l_crank": 0.7747510142011355,
-        "l_break": 1.6
+        "d_shot": 0.9866703208257821,
+        "l_crank": 0.9825357533683892,
+        "l_break": 1.2884899322767343
       },
-      "fitness": 0.575,
-      "mean_kills": 1.0,
-      "mean_deaths": 1.15,
-      "mission_rate": 0.85,
+      "fitness": 0.55,
+      "mean_kills": 2.0,
+      "mean_deaths": 1.5,
+      "mission_rate": 0.5,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.692823877441524,
-      "fsm_search": 0.44445517774343124,
-      "fsm_engage": 0.20121715610510046,
-      "fsm_support": 0.09814528593508501,
-      "fsm_evade": 0.2561823802163833
+      "mean_ally_nm": 2.6876828632212684,
+      "fsm_search": 0.21348314606741572,
+      "fsm_engage": 0.20545746388443017,
+      "fsm_support": 0.10593900481540931,
+      "fsm_evade": 0.4751203852327448
     },
     {
       "genome": {
-        "d_shot": 0.8159467793469409,
-        "l_crank": 0.7130113825896555,
-        "l_break": 1.5085556268621287
-      },
-      "fitness": 0.575,
-      "mean_kills": 1.0,
-      "mean_deaths": 1.15,
-      "mission_rate": 0.85,
-      "mean_shots": 2.0,
-      "mean_ally_nm": 2.77022728716744,
-      "fsm_search": 0.4495271183169272,
-      "fsm_engage": 0.19745222929936307,
-      "fsm_support": 0.07315190117737888,
-      "fsm_evade": 0.2798687512063308
-    },
-    {
-      "genome": {
-        "d_shot": 0.6228740590366509,
-        "l_crank": 0.7364878746073384,
-        "l_break": 1.593814083219536
+        "d_shot": 0.8860302741976189,
+        "l_crank": 0.5916819742289208,
+        "l_break": 1.2275223833450684
       },
       "fitness": 0.5,
       "mean_kills": 0.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 0.0,
-      "mean_ally_nm": 2.785897256067142,
-      "fsm_search": 0.5193847260951696,
-      "fsm_engage": 0.22847890617972474,
+      "mean_ally_nm": 3.141916406563563,
+      "fsm_search": 0.5240690281562216,
+      "fsm_engage": 0.16439600363306087,
       "fsm_support": 0.0,
-      "fsm_evade": 0.25213636772510567
+      "fsm_evade": 0.3115349682107175
     },
     {
       "genome": {
-        "d_shot": 0.6612800387808762,
-        "l_crank": 0.6151654343290833,
-        "l_break": 1.6
+        "d_shot": 0.8747151765634168,
+        "l_crank": 0.6657797097884228,
+        "l_break": 1.1688639156809484
       },
       "fitness": 0.5,
       "mean_kills": 0.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 0.0,
-      "mean_ally_nm": 2.766015666200067,
-      "fsm_search": 0.5196545830709723,
-      "fsm_engage": 0.23063776198614735,
+      "mean_ally_nm": 3.117063860406756,
+      "fsm_search": 0.5241128298453139,
+      "fsm_engage": 0.15468607825295724,
       "fsm_support": 0.0,
-      "fsm_evade": 0.24970765494288027
+      "fsm_evade": 0.32120109190172885
     },
     {
       "genome": {
-        "d_shot": 0.6254100857271345,
-        "l_crank": 0.7485816276532317,
-        "l_break": 1.5917511741779051
+        "d_shot": 0.9393261143016631,
+        "l_crank": 0.5439680071395612,
+        "l_break": 1.1197128570700565
       },
       "fitness": 0.5,
       "mean_kills": 0.0,
       "mean_deaths": 1.0,
       "mission_rate": 1.0,
       "mean_shots": 0.0,
-      "mean_ally_nm": 2.7739545635781075,
-      "fsm_search": 0.5196545830709723,
-      "fsm_engage": 0.22955833408293605,
+      "mean_ally_nm": 3.0150231172568094,
+      "fsm_search": 0.522252497729337,
+      "fsm_engage": 0.14168937329700274,
       "fsm_support": 0.0,
-      "fsm_evade": 0.2507870828460916
+      "fsm_evade": 0.33605812897366033
     },
     {
       "genome": {
-        "d_shot": 0.7247213459191204,
-        "l_crank": 0.9844513901034603,
-        "l_break": 1.4236414409982359
+        "d_shot": 0.9437107409583243,
+        "l_crank": 0.6470801979943659,
+        "l_break": 1.0260121265633275
       },
-      "fitness": 0.32499999999999996,
+      "fitness": 0.5,
       "mean_kills": 0.0,
-      "mean_deaths": 1.05,
-      "mission_rate": 0.85,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
       "mean_shots": 0.0,
-      "mean_ally_nm": 2.5112374936609774,
-      "fsm_search": 0.5106402579456472,
-      "fsm_engage": 0.2053431598341778,
+      "mean_ally_nm": 2.6412952292012153,
+      "fsm_search": 0.5241128298453139,
+      "fsm_engage": 0.12192902638762511,
       "fsm_support": 0.0,
-      "fsm_evade": 0.28401658222017506
+      "fsm_evade": 0.353958143767061
     },
     {
       "genome": {
-        "d_shot": 0.7687469165846924,
-        "l_crank": 0.7709545680706668,
-        "l_break": 1.593833485615356
+        "d_shot": 0.8964759518864774,
+        "l_crank": 0.8804729291021304,
+        "l_break": 1.180900601175088
       },
-      "fitness": 0.27499999999999997,
-      "mean_kills": 1.15,
-      "mean_deaths": 1.4,
-      "mission_rate": 0.6,
+      "fitness": 0.5,
+      "mean_kills": 0.0,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 0.0,
+      "mean_ally_nm": 2.821863105513397,
+      "fsm_search": 0.5250227479526842,
+      "fsm_engage": 0.15741583257506825,
+      "fsm_support": 0.0,
+      "fsm_evade": 0.3175614194722475
+    },
+    {
+      "genome": {
+        "d_shot": 0.9020475633317293,
+        "l_crank": 0.8491889360061368,
+        "l_break": 1.1515376488037246
+      },
+      "fitness": 0.5,
+      "mean_kills": 0.0,
+      "mean_deaths": 1.0,
+      "mission_rate": 1.0,
+      "mean_shots": 0.0,
+      "mean_ally_nm": 2.871742235010284,
+      "fsm_search": 0.5250227479526842,
+      "fsm_engage": 0.1492265696087352,
+      "fsm_support": 0.0,
+      "fsm_evade": 0.3257506824385805
+    },
+    {
+      "genome": {
+        "d_shot": 1.1100884035256302,
+        "l_crank": 0.7221436484024082,
+        "l_break": 1.1485713326462257
+      },
+      "fitness": 0.3,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.5,
+      "mission_rate": 0.5,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.7175977513507403,
-      "fsm_search": 0.35070702348954075,
-      "fsm_engage": 0.26679911183826105,
-      "fsm_support": 0.07152039266097932,
-      "fsm_evade": 0.3109734720112189
+      "mean_ally_nm": 2.793947079592587,
+      "fsm_search": 0.4080188679245283,
+      "fsm_engage": 0.08962264150943396,
+      "fsm_support": 0.09669811320754718,
+      "fsm_evade": 0.4056603773584906
     },
     {
       "genome": {
-        "d_shot": 0.7150388325991102,
-        "l_crank": 0.9676996887881428,
-        "l_break": 1.6
+        "d_shot": 1.097150238636323,
+        "l_crank": 0.8179881117759001,
+        "l_break": 1.220859079280264
       },
-      "fitness": 0.15000000000000005,
-      "mean_kills": 1.0,
-      "mean_deaths": 1.45,
-      "mission_rate": 0.55,
-      "mean_shots": 1.75,
-      "mean_ally_nm": 2.7691924169769275,
-      "fsm_search": 0.38291671337294025,
-      "fsm_engage": 0.2782199305010649,
-      "fsm_support": 0.042259836341217355,
-      "fsm_evade": 0.2966035197847775
+      "fitness": 0.3,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.5,
+      "mission_rate": 0.5,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.698464697390073,
+      "fsm_search": 0.40212264150943394,
+      "fsm_engage": 0.09669811320754718,
+      "fsm_support": 0.11674528301886793,
+      "fsm_evade": 0.38443396226415094
     },
     {
       "genome": {
-        "d_shot": 0.6504522989813722,
-        "l_crank": 0.5030136539347482,
-        "l_break": 1.4898346102120321
+        "d_shot": 1.0768577474386016,
+        "l_crank": 0.6524653082887104,
+        "l_break": 1.0564076726983758
       },
-      "fitness": 0.125,
-      "mean_kills": 0.0,
-      "mean_deaths": 1.25,
-      "mission_rate": 0.75,
-      "mean_shots": 0.0,
-      "mean_ally_nm": 2.6304969080352203,
-      "fsm_search": 0.4638718129597904,
-      "fsm_engage": 0.24024992441801873,
-      "fsm_support": 0.0,
-      "fsm_evade": 0.29587826262219086
+      "fitness": 0.3,
+      "mean_kills": 1.5,
+      "mean_deaths": 1.5,
+      "mission_rate": 0.5,
+      "mean_shots": 2.0,
+      "mean_ally_nm": 2.6026019765602553,
+      "fsm_search": 0.4056603773584906,
+      "fsm_engage": 0.10613207547169812,
+      "fsm_support": 0.05660377358490566,
+      "fsm_evade": 0.43160377358490565
     },
     {
       "genome": {
-        "d_shot": 0.7794310708698396,
-        "l_crank": 0.7855146439538983,
-        "l_break": 1.5639625928105498
+        "d_shot": 1.0328073150709005,
+        "l_crank": 0.6932938172203832,
+        "l_break": 1.0501511878599417
       },
       "fitness": 0.04999999999999999,
       "mean_kills": 1.0,
       "mean_deaths": 1.5,
       "mission_rate": 0.5,
       "mean_shots": 2.0,
-      "mean_ally_nm": 2.7416055948781004,
-      "fsm_search": 0.37124364308830327,
-      "fsm_engage": 0.25462320850670367,
-      "fsm_support": 0.06206657420249653,
-      "fsm_evade": 0.3120665742024965
+      "mean_ally_nm": 2.801104268889496,
+      "fsm_search": 0.40636042402826855,
+      "fsm_engage": 0.127208480565371,
+      "fsm_support": 0.038869257950530034,
+      "fsm_evade": 0.4275618374558304
     },
     {
       "genome": {
-        "d_shot": 0.730977140787313,
-        "l_crank": 0.7568482378518865,
-        "l_break": 1.5503850531802843
+        "d_shot": 1.0603953530292893,
+        "l_crank": 1.0642484484671035,
+        "l_break": 1.2669952527503563
       },
-      "fitness": -0.04000000000000002,
-      "mean_kills": 0.9,
-      "mean_deaths": 1.6,
-      "mission_rate": 0.4,
-      "mean_shots": 0.9,
-      "mean_ally_nm": 2.850805942927649,
-      "fsm_search": 0.36253813300793164,
-      "fsm_engage": 0.29969493593654667,
-      "fsm_support": 0.0010982306284319707,
-      "fsm_evade": 0.3366687004270897
-    },
-    {
-      "genome": {
-        "d_shot": 0.7268812314466294,
-        "l_crank": 0.8608944649147712,
-        "l_break": 1.5226811117037282
-      },
-      "fitness": -0.09999999999999998,
-      "mean_kills": 0.0,
-      "mean_deaths": 1.4,
-      "mission_rate": 0.6,
-      "mean_shots": 0.0,
-      "mean_ally_nm": 2.5712078680839516,
-      "fsm_search": 0.4279776878486274,
-      "fsm_engage": 0.26698020343432133,
-      "fsm_support": 0.0,
-      "fsm_evade": 0.3050421087170513
-    },
-    {
-      "genome": {
-        "d_shot": 0.7919450867302706,
-        "l_crank": 0.7399145237700668,
-        "l_break": 1.5130585873598408
-      },
-      "fitness": -0.17500000000000004,
+      "fitness": 0.04999999999999999,
       "mean_kills": 1.0,
-      "mean_deaths": 1.55,
-      "mission_rate": 0.3,
+      "mean_deaths": 1.5,
+      "mission_rate": 0.5,
       "mean_shots": 2.0,
-      "mean_ally_nm": 3.558412380952125,
-      "fsm_search": 0.36915776986951365,
-      "fsm_engage": 0.25622775800711745,
-      "fsm_support": 0.04151838671411625,
-      "fsm_evade": 0.3330960854092527
-    },
-    {
-      "genome": {
-        "d_shot": 0.6203117659249786,
-        "l_crank": 0.7987963614808412,
-        "l_break": 1.5364869220467272
-      },
-      "fitness": -0.4,
-      "mean_kills": 0.0,
-      "mean_deaths": 1.6,
-      "mission_rate": 0.4,
-      "mean_shots": 0.0,
-      "mean_ally_nm": 2.6100439320128457,
-      "fsm_search": 0.3654623392529088,
-      "fsm_engage": 0.30361298224127375,
-      "fsm_support": 0.0,
-      "fsm_evade": 0.3309246785058175
-    },
-    {
-      "genome": {
-        "d_shot": 0.6873984119726252,
-        "l_crank": 0.9053475284234113,
-        "l_break": 1.5439524686118202
-      },
-      "fitness": -0.4,
-      "mean_kills": 0.0,
-      "mean_deaths": 1.6,
-      "mission_rate": 0.4,
-      "mean_shots": 0.0,
-      "mean_ally_nm": 2.6020083995328416,
-      "fsm_search": 0.3654175851089885,
-      "fsm_engage": 0.304800391868724,
-      "fsm_support": 0.0,
-      "fsm_evade": 0.32978202302228754
-    },
-    {
-      "genome": {
-        "d_shot": 0.7623410610708629,
-        "l_crank": 0.6232230696321579,
-        "l_break": 1.6
-      },
-      "fitness": -0.47500000000000003,
-      "mean_kills": 1.0,
-      "mean_deaths": 1.85,
-      "mission_rate": 0.15,
-      "mean_shots": 2.0,
-      "mean_ally_nm": 2.8135174838938575,
-      "fsm_search": 0.261332565836811,
-      "fsm_engage": 0.32767304648150813,
-      "fsm_support": 0.05583537199597064,
-      "fsm_evade": 0.3551590156857102
-    },
-    {
-      "genome": {
-        "d_shot": 0.7480825428572828,
-        "l_crank": 0.7087612640073736,
-        "l_break": 1.6
-      },
-      "fitness": -0.47500000000000003,
-      "mean_kills": 1.0,
-      "mean_deaths": 1.85,
-      "mission_rate": 0.15,
-      "mean_shots": 2.0,
-      "mean_ally_nm": 2.773964682777149,
-      "fsm_search": 0.26229271809661137,
-      "fsm_engage": 0.34030281182408073,
-      "fsm_support": 0.038644556596971885,
-      "fsm_evade": 0.358759913482336
-    },
-    {
-      "genome": {
-        "d_shot": 0.7208331693650962,
-        "l_crank": 0.9129113977682646,
-        "l_break": 1.5014405628075795
-      },
-      "fitness": -0.775,
-      "mean_kills": 0.0,
-      "mean_deaths": 1.85,
-      "mission_rate": 0.15,
-      "mean_shots": 0.0,
-      "mean_ally_nm": 2.61505589490334,
-      "fsm_search": 0.26058257999713014,
-      "fsm_engage": 0.34969149088821927,
-      "fsm_support": 0.0,
-      "fsm_evade": 0.3897259291146506
+      "mean_ally_nm": 2.610288886621923,
+      "fsm_search": 0.3955399061032864,
+      "fsm_engage": 0.11737089201877934,
+      "fsm_support": 0.09976525821596244,
+      "fsm_evade": 0.3873239436619718
     }
   ],
-  "summary": "FSM search agents=2 gen=40 frozen_fit=0.800 train_fit=1.175 K=1.75 D=1.00 mission=1.00 shots=2.00 elites=aggressive,balanced,cautious"
+  "summary": "FSM search agents=2 gen=40 frozen_fit=1.300 train_fit=1.300 K=2.00 D=1.00 mission=1.00 shots=2.00 elites=aggressive,balanced,cautious"
 }
