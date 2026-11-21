@@ -1,0 +1,1241 @@
+{
+ "missile_peak_mach_10k": 3.1264190605370334,
+ "missile_tof_10k": 59.60999999999671,
+ "missile_end_10k": "energy",
+ "missile_peak_mach_25k": 3.6093350968539046,
+ "missile_tof_25k": 50.81999999999846,
+ "missile_end_25k": "hit",
+ "missile_peak_mach_40k": 3.958060926802325,
+ "missile_tof_40k": 44.62999999999969,
+ "missile_end_40k": "hit",
+ "missile_cold_20nm": "energy",
+ "missile_cold_12nm": "hit",
+ "wez_head_rmax": {
+  "5k": 24.375,
+  "15k": 36.0,
+  "25k": 49.5,
+  "35k": 58.875,
+  "45k": 67.875
+ },
+ "wez_tail_rmax": {
+  "5k": 7.125,
+  "15k": 9.375,
+  "25k": 12.75,
+  "35k": 18.75,
+  "45k": 27.375
+ },
+ "wez_head_rnez_25k": 16.5,
+ "wez_axes": {
+  "shooter_alt": 5,
+  "target_alt": 5,
+  "aspect": 7,
+  "off_boresight": 3
+ },
+ "wez_validation": {
+  "generic_mraam|10000|head": {
+   "p50": 31.0,
+   "rmax": 30.46875,
+   "ratio": 1.0174358974358975
+  },
+  "generic_mraam|10000|beam": {
+   "p50": 13.0,
+   "rmax": 12.468749999999998,
+   "ratio": 1.042606516290727
+  },
+  "generic_mraam|10000|tail": {
+   "p50": 9.0,
+   "rmax": 8.15625,
+   "ratio": 1.103448275862069
+  },
+  "generic_mraam|25000|beam": {
+   "p50": 21.0,
+   "rmax": 20.249999999999996,
+   "ratio": 1.0370370370370372
+  },
+  "generic_mraam|25000|tail": {
+   "p50": 13.0,
+   "rmax": 12.749999999999998,
+   "ratio": 1.019607843137255
+  },
+  "generic_mraam|40000|beam": {
+   "p50": 37.0,
+   "rmax": 36.84374999999999,
+   "ratio": 1.0042408821034776
+  },
+  "generic_mraam|40000|tail": {
+   "p50": 23.0,
+   "rmax": 23.15625,
+   "ratio": 0.9932523616734144
+  },
+  "legacy|10000|beam": {
+   "p50": 17.0,
+   "rmax": 12.73,
+   "ratio": 1.3354281225451687
+  },
+  "legacy|10000|tail": {
+   "p50": 11.0,
+   "rmax": 6.84,
+   "ratio": 1.608187134502924
+  },
+  "legacy|25000|beam": {
+   "p50": 15.0,
+   "rmax": 16.75,
+   "ratio": 0.8955223880597015
+  },
+  "legacy|25000|tail": {
+   "p50": 9.0,
+   "rmax": 9.0,
+   "ratio": 1.0
+  },
+  "legacy|40000|beam": {
+   "p50": 11.0,
+   "rmax": 20.1,
+   "ratio": 0.5472636815920398
+  },
+  "legacy|40000|tail": {
+   "p50": 5.0,
+   "rmax": 10.8,
+   "ratio": 0.4629629629629629
+  }
+ },
+ "wez_ratio_generic": [
+  0.9932523616734144,
+  1.103448275862069
+ ],
+ "pk_bins": {
+  "0.35": 0.778672032193159,
+  "0.45": 0.6,
+  "0.55": 0.3250283125707814,
+  "0.65": 0.11130536130536131,
+  "0.75": 0.025711662075298437,
+  "0.85": 0.0,
+  "0.95": 0.0,
+  "1.05": 0.0
+ },
+ "pk_n_shots": 9939,
+ "pilot_shot_ref_aggressive": {
+  "range_over_rmax_median": 0.3910523130334991,
+  "hit_rate": 0.7610921501706485,
+  "n": 298
+ },
+ "pilot_shot_ref_balanced": {
+  "range_over_rmax_median": 0.6069970832237904,
+  "hit_rate": 0.23851851851851852,
+  "n": 1434
+ },
+ "pilot_shot_ref_conservative": {
+  "range_over_rmax_median": 0.7689545934530094,
+  "hit_rate": 0.02389425521098119,
+  "n": 2215
+ },
+ "pilot_shot_fsm_b1": {
+  "range_over_rmax_median": 1.0085836909871244,
+  "hit_rate": 0.0,
+  "n": 984
+ },
+ "ablation_hit": {
+  "full": 0.19431256925474077,
+  "no_datalink": 0.19352967173387864,
+  "no_warning": 0.5632682143816321,
+  "constant_speed": 0.08770685237750504,
+  "legacy_missile": 0.23184200181777276,
+  "bace_2_0": 0.8353087415218294
+ },
+ "ablation_losses_per_side": {
+  "full": 0.20124999999999998,
+  "no_datalink": 0.2009375,
+  "no_warning": 0.5571875,
+  "constant_speed": 0.09828125,
+  "legacy_missile": 0.08156250000000001,
+  "bace_2_0": 0.6621874999999999
+ },
+ "crossplay_1v1": {
+  "ref_aggressive|ref_aggressive": {
+   "net": [
+    0.03,
+    -0.035,
+    0.095
+   ],
+   "win": [
+    0.12,
+    0.075,
+    0.17
+   ],
+   "lose": [
+    0.09,
+    0.05,
+    0.13012499999999988
+   ],
+   "draw": 0.79
+  },
+  "ref_aggressive|ref_balanced": {
+   "net": [
+    -0.235,
+    -0.29,
+    -0.175
+   ],
+   "win": [
+    0.005,
+    0.0,
+    0.015
+   ],
+   "lose": [
+    0.24,
+    0.185,
+    0.3
+   ],
+   "draw": 0.755
+  },
+  "ref_aggressive|ref_conservative": {
+   "net": [
+    -0.095,
+    -0.15,
+    -0.04
+   ],
+   "win": [
+    0.045,
+    0.02,
+    0.075
+   ],
+   "lose": [
+    0.14,
+    0.095,
+    0.19
+   ],
+   "draw": 0.815
+  },
+  "ref_aggressive|fsm_b1": {
+   "net": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 1.0
+  },
+  "ref_balanced|ref_aggressive": {
+   "net": [
+    0.19,
+    0.125,
+    0.255
+   ],
+   "win": [
+    0.23,
+    0.17,
+    0.29
+   ],
+   "lose": [
+    0.04,
+    0.015,
+    0.07
+   ],
+   "draw": 0.73
+  },
+  "ref_balanced|ref_balanced": {
+   "net": [
+    0.015,
+    -0.04,
+    0.075
+   ],
+   "win": [
+    0.09,
+    0.055,
+    0.13012499999999988
+   ],
+   "lose": [
+    0.075,
+    0.04,
+    0.11
+   ],
+   "draw": 0.8350000000000001
+  },
+  "ref_balanced|ref_conservative": {
+   "net": [
+    0.2,
+    0.14,
+    0.27
+   ],
+   "win": [
+    0.235,
+    0.18,
+    0.29512499999999986
+   ],
+   "lose": [
+    0.035,
+    0.01,
+    0.06
+   ],
+   "draw": 0.73
+  },
+  "ref_balanced|fsm_b1": {
+   "net": [
+    0.23,
+    0.175,
+    0.28
+   ],
+   "win": [
+    0.23,
+    0.175,
+    0.28
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 0.77
+  },
+  "ref_conservative|ref_aggressive": {
+   "net": [
+    0.105,
+    0.05,
+    0.16012499999999988
+   ],
+   "win": [
+    0.135,
+    0.085,
+    0.185
+   ],
+   "lose": [
+    0.03,
+    0.01,
+    0.055
+   ],
+   "draw": 0.835
+  },
+  "ref_conservative|ref_balanced": {
+   "net": [
+    -0.285,
+    -0.36,
+    -0.21
+   ],
+   "win": [
+    0.055,
+    0.025,
+    0.09
+   ],
+   "lose": [
+    0.34,
+    0.275,
+    0.405
+   ],
+   "draw": 0.605
+  },
+  "ref_conservative|ref_conservative": {
+   "net": [
+    -0.035,
+    -0.065,
+    -0.01
+   ],
+   "win": [
+    0.005,
+    0.0,
+    0.015
+   ],
+   "lose": [
+    0.04,
+    0.015,
+    0.07
+   ],
+   "draw": 0.955
+  },
+  "ref_conservative|fsm_b1": {
+   "net": [
+    0.015,
+    0.0,
+    0.035
+   ],
+   "win": [
+    0.015,
+    0.0,
+    0.035
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 0.985
+  },
+  "fsm_b1|ref_aggressive": {
+   "net": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 1.0
+  },
+  "fsm_b1|ref_balanced": {
+   "net": [
+    -0.25,
+    -0.31,
+    -0.19
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.25,
+    0.19,
+    0.31
+   ],
+   "draw": 0.75
+  },
+  "fsm_b1|ref_conservative": {
+   "net": [
+    -0.015,
+    -0.035,
+    0.0
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.015,
+    0.0,
+    0.035
+   ],
+   "draw": 0.985
+  },
+  "fsm_b1|fsm_b1": {
+   "net": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 1.0
+  }
+ },
+ "crossplay_1v1_row_mean": {
+  "ref_aggressive": -0.075,
+  "ref_balanced": 0.15875,
+  "ref_conservative": -0.05,
+  "fsm_b1": -0.06625
+ },
+ "crossplay_1v1_draw": 0.84625,
+ "crossplay_2v2": {
+  "ref_aggressive|ref_aggressive": {
+   "net": [
+    -0.015,
+    -0.1,
+    0.07
+   ],
+   "win": [
+    0.13,
+    0.09,
+    0.175
+   ],
+   "lose": [
+    0.135,
+    0.09,
+    0.18
+   ],
+   "draw": 0.735
+  },
+  "ref_aggressive|ref_balanced": {
+   "net": [
+    -0.245,
+    -0.375125,
+    -0.105
+   ],
+   "win": [
+    0.105,
+    0.065,
+    0.15
+   ],
+   "lose": [
+    0.28,
+    0.22,
+    0.345
+   ],
+   "draw": 0.615
+  },
+  "ref_aggressive|ref_conservative": {
+   "net": [
+    -0.31,
+    -0.43,
+    -0.195
+   ],
+   "win": [
+    0.075,
+    0.04,
+    0.115
+   ],
+   "lose": [
+    0.245,
+    0.185,
+    0.305
+   ],
+   "draw": 0.68
+  },
+  "ref_aggressive|fsm_b1": {
+   "net": [
+    0.01,
+    -0.015,
+    0.035
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 1.0
+  },
+  "ref_balanced|ref_aggressive": {
+   "net": [
+    0.41,
+    0.265,
+    0.55
+   ],
+   "win": [
+    0.335,
+    0.26987500000000003,
+    0.4
+   ],
+   "lose": [
+    0.11,
+    0.07,
+    0.155
+   ],
+   "draw": 0.555
+  },
+  "ref_balanced|ref_balanced": {
+   "net": [
+    0.125,
+    -0.005,
+    0.255
+   ],
+   "win": [
+    0.15,
+    0.1,
+    0.2
+   ],
+   "lose": [
+    0.125,
+    0.08,
+    0.17
+   ],
+   "draw": 0.725
+  },
+  "ref_balanced|ref_conservative": {
+   "net": [
+    -0.5,
+    -0.65,
+    -0.3548750000000001
+   ],
+   "win": [
+    0.075,
+    0.03987500000000001,
+    0.115
+   ],
+   "lose": [
+    0.31,
+    0.249875,
+    0.37
+   ],
+   "draw": 0.615
+  },
+  "ref_balanced|fsm_b1": {
+   "net": [
+    0.75,
+    0.65,
+    0.86
+   ],
+   "win": [
+    0.185,
+    0.13487500000000002,
+    0.245
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 0.815
+  },
+  "ref_conservative|ref_aggressive": {
+   "net": [
+    0.355,
+    0.22,
+    0.48512499999999986
+   ],
+   "win": [
+    0.285,
+    0.22487500000000002,
+    0.35
+   ],
+   "lose": [
+    0.055,
+    0.025,
+    0.09
+   ],
+   "draw": 0.66
+  },
+  "ref_conservative|ref_balanced": {
+   "net": [
+    0.245,
+    0.09,
+    0.3951249999999999
+   ],
+   "win": [
+    0.265,
+    0.205,
+    0.33
+   ],
+   "lose": [
+    0.14,
+    0.095,
+    0.19
+   ],
+   "draw": 0.595
+  },
+  "ref_conservative|ref_conservative": {
+   "net": [
+    -0.02,
+    -0.105,
+    0.07
+   ],
+   "win": [
+    0.025,
+    0.005,
+    0.05
+   ],
+   "lose": [
+    0.035,
+    0.01,
+    0.06
+   ],
+   "draw": 0.94
+  },
+  "ref_conservative|fsm_b1": {
+   "net": [
+    0.42,
+    0.325,
+    0.52
+   ],
+   "win": [
+    0.11,
+    0.06987500000000002,
+    0.155
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 0.89
+  },
+  "fsm_b1|ref_aggressive": {
+   "net": [
+    -0.005,
+    -0.025,
+    0.015
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 1.0
+  },
+  "fsm_b1|ref_balanced": {
+   "net": [
+    -0.73,
+    -0.83,
+    -0.6348750000000001
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.175,
+    0.125,
+    0.225
+   ],
+   "draw": 0.825
+  },
+  "fsm_b1|ref_conservative": {
+   "net": [
+    -0.41,
+    -0.5201250000000001,
+    -0.315
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.125,
+    0.085,
+    0.18
+   ],
+   "draw": 0.875
+  },
+  "fsm_b1|fsm_b1": {
+   "net": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "win": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "lose": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "draw": 1.0
+  }
+ },
+ "crossplay_2v2_row_mean": {
+  "ref_aggressive": -0.14,
+  "ref_balanced": 0.19624999999999998,
+  "ref_conservative": 0.25,
+  "fsm_b1": -0.28625
+ },
+ "crossplay_2v2_draw": 0.7828125,
+ "ablation_rank": {
+  "full": [
+   "ref_balanced",
+   "ref_conservative",
+   "fsm_b1",
+   "ref_aggressive"
+  ],
+  "no_datalink": [
+   "ref_balanced",
+   "ref_conservative",
+   "fsm_b1",
+   "ref_aggressive"
+  ],
+  "no_warning": [
+   "ref_balanced",
+   "ref_conservative",
+   "ref_aggressive",
+   "fsm_b1"
+  ],
+  "constant_speed": [
+   "ref_balanced",
+   "ref_conservative",
+   "ref_aggressive",
+   "fsm_b1"
+  ],
+  "legacy_missile": [
+   "ref_balanced",
+   "fsm_b1",
+   "ref_conservative",
+   "ref_aggressive"
+  ],
+  "bace_2_0": [
+   "fsm_b1",
+   "ref_conservative",
+   "ref_balanced",
+   "ref_aggressive"
+  ]
+ },
+ "ablation_score": {
+  "full": {
+   "ref_aggressive": -0.07625,
+   "ref_balanced": 0.16,
+   "ref_conservative": -0.043750000000000004,
+   "fsm_b1": -0.065
+  },
+  "no_datalink": {
+   "ref_aggressive": -0.0775,
+   "ref_balanced": 0.16,
+   "ref_conservative": -0.0475,
+   "fsm_b1": -0.065
+  },
+  "no_warning": {
+   "ref_aggressive": -0.35375,
+   "ref_balanced": 0.4325,
+   "ref_conservative": 0.29874999999999996,
+   "fsm_b1": -0.4025
+  },
+  "constant_speed": {
+   "ref_aggressive": -0.005,
+   "ref_balanced": 0.06625,
+   "ref_conservative": -0.0012499999999999996,
+   "fsm_b1": -0.04875
+  },
+  "legacy_missile": {
+   "ref_aggressive": -0.0325,
+   "ref_balanced": 0.045,
+   "ref_conservative": -0.0024999999999999988,
+   "fsm_b1": 0.0025000000000000022
+  },
+  "bace_2_0": {
+   "ref_aggressive": -0.60375,
+   "ref_balanced": -0.07874999999999999,
+   "ref_conservative": 0.27249999999999996,
+   "fsm_b1": 0.4050000000000001
+  }
+ },
+ "ablation_draw": {
+  "full": 0.850625,
+  "no_datalink": 0.8518749999999999,
+  "no_warning": 0.60625,
+  "constant_speed": 0.9015624999999999,
+  "legacy_missile": 0.85375,
+  "bace_2_0": 0.42874999999999996
+ },
+ "landscape_bace_2_0": {
+  "best": {
+   "d_shot": 1.0,
+   "l_break": 1.0,
+   "net": 1.0
+  },
+  "mean_hit": 0.6791664516664928,
+  "positive_cells": 6,
+  "cells": 63
+ },
+ "landscape_full": {
+  "best": {
+   "d_shot": 1.0,
+   "l_break": 1.6,
+   "net": 0.0
+  },
+  "mean_hit": 0.08678501432719057,
+  "positive_cells": 0,
+  "cells": 63
+ },
+ "rl_train": [
+  {
+   "name": "ippo_1v1_s0",
+   "agents": 1,
+   "seed": 0,
+   "env_steps": 3983586,
+   "train_time_s": 770.1059257984161,
+   "selected_steps": 3570264
+  },
+  {
+   "name": "ippo_1v1_s1",
+   "agents": 1,
+   "seed": 1,
+   "env_steps": 3982481,
+   "train_time_s": 347.64347100257874,
+   "selected_steps": 2651932
+  },
+  {
+   "name": "ippo_1v1_s2",
+   "agents": 1,
+   "seed": 2,
+   "env_steps": 3984052,
+   "train_time_s": 336.3448688983917,
+   "selected_steps": 2039805
+  },
+  {
+   "name": "ippo_2v2_s0",
+   "agents": 2,
+   "seed": 0,
+   "env_steps": 3810927,
+   "train_time_s": 318.7604706287384,
+   "selected_steps": 600925
+  },
+  {
+   "name": "ippo_2v2_s1",
+   "agents": 2,
+   "seed": 1,
+   "env_steps": 3799098,
+   "train_time_s": 319.78071331977844,
+   "selected_steps": 1556882
+  },
+  {
+   "name": "ippo_2v2_s2",
+   "agents": 2,
+   "seed": 2,
+   "env_steps": 3849267,
+   "train_time_s": 310.62331557273865,
+   "selected_steps": 1954369
+  }
+ ],
+ "rl_eval_1v1": {
+  "ref_aggressive": {
+   "win_mean": 0.8483333333333333,
+   "lose_mean": 0.0,
+   "net_mean": 0.8483333333333333,
+   "per_seed_win": [
+    0.6,
+    0.995,
+    0.95
+   ],
+   "per_seed_lose": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "ref_balanced": {
+   "win_mean": 0.9083333333333333,
+   "lose_mean": 0.02,
+   "net_mean": 0.8883333333333333,
+   "per_seed_win": [
+    0.905,
+    0.905,
+    0.915
+   ],
+   "per_seed_lose": [
+    0.0,
+    0.04,
+    0.02
+   ]
+  },
+  "ref_conservative": {
+   "win_mean": 0.9116666666666666,
+   "lose_mean": 0.005,
+   "net_mean": 0.9066666666666666,
+   "per_seed_win": [
+    0.845,
+    0.97,
+    0.92
+   ],
+   "per_seed_lose": [
+    0.0,
+    0.0,
+    0.015
+   ]
+  },
+  "duck": {
+   "win_mean": 1.0,
+   "lose_mean": 0.0,
+   "net_mean": 1.0,
+   "per_seed_win": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "per_seed_lose": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "defend_1v1_ref_aggressive": {
+  "ref_aggressive": {
+   "win": 0.08,
+   "lose": 0.165
+  },
+  "ref_balanced": {
+   "win": 0.005,
+   "lose": 0.275
+  },
+  "ref_conservative": {
+   "win": 0.03,
+   "lose": 0.315
+  },
+  "duck": {
+   "win": 0.985,
+   "lose": 0.015
+  }
+ },
+ "defend_1v1_ref_balanced": {
+  "ref_aggressive": {
+   "win": 0.21,
+   "lose": 0.015
+  },
+  "ref_balanced": {
+   "win": 0.04,
+   "lose": 0.02
+  },
+  "ref_conservative": {
+   "win": 0.26,
+   "lose": 0.035
+  },
+  "duck": {
+   "win": 1.0,
+   "lose": 0.0
+  }
+ },
+ "defend_1v1_ref_conservative": {
+  "ref_aggressive": {
+   "win": 0.05,
+   "lose": 0.015
+  },
+  "ref_balanced": {
+   "win": 0.045,
+   "lose": 0.24
+  },
+  "ref_conservative": {
+   "win": 0.02,
+   "lose": 0.035
+  },
+  "duck": {
+   "win": 1.0,
+   "lose": 0.0
+  }
+ },
+ "defend_1v1_fsm_b1": {
+  "ref_aggressive": {
+   "win": 0.0,
+   "lose": 0.005
+  },
+  "ref_balanced": {
+   "win": 0.0,
+   "lose": 0.115
+  },
+  "ref_conservative": {
+   "win": 0.0,
+   "lose": 0.0
+  },
+  "duck": {
+   "win": 0.605,
+   "lose": 0.395
+  }
+ },
+ "rl_eval_2v2": {
+  "ref_aggressive": {
+   "win_mean": 0.5766666666666667,
+   "lose_mean": 0.0033333333333333335,
+   "net_mean": 1.4316666666666666,
+   "per_seed_win": [
+    0.325,
+    0.56,
+    0.845
+   ],
+   "per_seed_lose": [
+    0.005,
+    0.005,
+    0.0
+   ]
+  },
+  "ref_balanced": {
+   "win_mean": 0.5983333333333333,
+   "lose_mean": 0.03833333333333334,
+   "net_mean": 1.1666666666666667,
+   "per_seed_win": [
+    0.345,
+    0.61,
+    0.84
+   ],
+   "per_seed_lose": [
+    0.075,
+    0.025,
+    0.015
+   ]
+  },
+  "ref_conservative": {
+   "win_mean": 0.6083333333333334,
+   "lose_mean": 0.011666666666666667,
+   "net_mean": 1.4016666666666666,
+   "per_seed_win": [
+    0.335,
+    0.64,
+    0.85
+   ],
+   "per_seed_lose": [
+    0.005,
+    0.015,
+    0.015
+   ]
+  },
+  "duck": {
+   "win_mean": 0.995,
+   "lose_mean": 0.005,
+   "net_mean": 1.995,
+   "per_seed_win": [
+    1.0,
+    0.985,
+    1.0
+   ],
+   "per_seed_lose": [
+    0.0,
+    0.015,
+    0.0
+   ]
+  }
+ },
+ "defend_2v2_ref_aggressive": {
+  "ref_aggressive": {
+   "win": 0.1,
+   "lose": 0.365
+  },
+  "ref_balanced": {
+   "win": 0.075,
+   "lose": 0.32
+  },
+  "ref_conservative": {
+   "win": 0.045,
+   "lose": 0.18
+  },
+  "duck": {
+   "win": 0.88,
+   "lose": 0.12
+  }
+ },
+ "defend_2v2_ref_balanced": {
+  "ref_aggressive": {
+   "win": 0.215,
+   "lose": 0.14
+  },
+  "ref_balanced": {
+   "win": 0.035,
+   "lose": 0.02
+  },
+  "ref_conservative": {
+   "win": 0.025,
+   "lose": 0.07
+  },
+  "duck": {
+   "win": 1.0,
+   "lose": 0.0
+  }
+ },
+ "defend_2v2_ref_conservative": {
+  "ref_aggressive": {
+   "win": 0.17,
+   "lose": 0.055
+  },
+  "ref_balanced": {
+   "win": 0.1,
+   "lose": 0.03
+  },
+  "ref_conservative": {
+   "win": 0.015,
+   "lose": 0.005
+  },
+  "duck": {
+   "win": 1.0,
+   "lose": 0.0
+  }
+ },
+ "defend_2v2_fsm_b1": {
+  "ref_aggressive": {
+   "win": 0.0,
+   "lose": 0.0
+  },
+  "ref_balanced": {
+   "win": 0.0,
+   "lose": 0.005
+  },
+  "ref_conservative": {
+   "win": 0.0,
+   "lose": 0.005
+  },
+  "duck": {
+   "win": 0.02,
+   "lose": 0.98
+  }
+ },
+ "tactics_rl_s0": {
+  "shots_per_episode": 1.4916666666666667,
+  "hit_rate": 0.6154838709677419,
+  "range_over_rmax_median": 0.5759113982464236,
+  "first_shot_range_over_rmax": 0.44648252379948217,
+  "first_shot_hit": 0.775,
+  "hit_target_aspect": 65.50964360587004,
+  "hit_tof_s": 53.112997903563944,
+  "enemy_shots_per_episode": 0.685
+ },
+ "tactics_rl_s1": {
+  "shots_per_episode": 2.425,
+  "hit_rate": 0.4030365769496204,
+  "range_over_rmax_median": 0.9119692532942899,
+  "first_shot_range_over_rmax": 0.8783403656821378,
+  "first_shot_hit": 0.021666666666666667,
+  "hit_target_aspect": 159.19092465753425,
+  "hit_tof_s": 71.23407534246574,
+  "enemy_shots_per_episode": 0.6433333333333333
+ },
+ "tactics_rl_s2": {
+  "shots_per_episode": 2.8733333333333335,
+  "hit_rate": 0.33490011750881316,
+  "range_over_rmax_median": 0.9439358870434567,
+  "first_shot_range_over_rmax": 0.9281439377072054,
+  "first_shot_hit": 0.008333333333333333,
+  "hit_target_aspect": 159.86912280701753,
+  "hit_tof_s": 72.32192982456141,
+  "enemy_shots_per_episode": 0.2
+ },
+ "tactics_ref_aggressive": {
+  "shots_per_episode": 0.495,
+  "hit_rate": 0.743859649122807,
+  "range_over_rmax_median": 0.38898756660746003,
+  "first_shot_range_over_rmax": 0.38922413793103444,
+  "first_shot_hit": 0.7320754716981132,
+  "hit_target_aspect": 23.42783018867925,
+  "hit_tof_s": 52.284433962264146,
+  "enemy_shots_per_episode": 1.7733333333333334
+ },
+ "tactics_ref_balanced": {
+  "shots_per_episode": 1.595,
+  "hit_rate": 0.2549019607843137,
+  "range_over_rmax_median": 0.609695603156708,
+  "first_shot_range_over_rmax": 0.6118008694990231,
+  "first_shot_hit": 0.13917525773195877,
+  "hit_target_aspect": 49.198290598290605,
+  "hit_tof_s": 53.55897435897435,
+  "enemy_shots_per_episode": 1.4916666666666667
+ },
+ "tactics_ref_conservative": {
+  "shots_per_episode": 2.3033333333333332,
+  "hit_rate": 0.0231980115990058,
+  "range_over_rmax_median": 0.7753496908565723,
+  "first_shot_range_over_rmax": 0.7890121538614374,
+  "first_shot_hit": 0.0033333333333333335,
+  "hit_target_aspect": 57.975,
+  "hit_tof_s": 65.28214285714286,
+  "enemy_shots_per_episode": 1.195
+ },
+ "bench_bace_2_0": {
+  "1": 146401.3662116934,
+  "2": 94061.19153166623,
+  "4": 145056.7839286367,
+  "8": 162838.67444490836
+ },
+ "bench_full": {
+  "1": 95827.6543469676,
+  "2": 48522.63985767524,
+  "4": 65049.23489585916,
+  "8": 78741.80478057147
+ },
+ "bench_threads": 2
+}

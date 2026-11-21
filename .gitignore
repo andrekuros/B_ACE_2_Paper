@@ -10,3 +10,5 @@ data/fsm_*.json
 data/marl_*.json
 data/*.csv
 data/*.png
+*.fdb_latexmk
+*.fls
