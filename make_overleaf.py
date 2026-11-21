@@ -4,7 +4,8 @@
     python make_overleaf.py          # (re)write the zip
     python make_overleaf.py --check  # exit 1 if the committed zip is out of date (CI)
 
-The zip is deterministic (sorted entries, fixed timestamps), so --check compares bytes.
+The zip is deterministic (sorted entries, fixed timestamps); --check compares the file
+list and every file's contents, so zlib differences between machines do not matter.
 Open it in Overleaf with the badge in README.md, or upload it via New Project -> Upload.
 """
 
@@ -41,13 +42,18 @@ def build() -> bytes:
 
 
 def main() -> None:
-    data = build()
     if "--check" in sys.argv:
-        if not OUT.is_file() or OUT.read_bytes() != data:
+        want = {str(p.relative_to(ROOT)): p.read_bytes() for p in sources()}
+        have = {}
+        if OUT.is_file():
+            with zipfile.ZipFile(OUT) as z:
+                have = {n: z.read(n) for n in z.namelist()}
+        if have != want:
             print("overleaf/bace20-overleaf.zip is out of date: run python make_overleaf.py")
             sys.exit(1)
         print("overleaf zip up to date")
         return
+    data = build()
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_bytes(data)
     print(f"wrote {OUT.relative_to(ROOT)} ({len(data) / 1024:.0f} KB, {len(sources())} files)")
