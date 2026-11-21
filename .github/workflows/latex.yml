@@ -1,0 +1,21 @@
+name: latex
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Overleaf zip is up to date
+        run: python3 make_overleaf.py --check
+      - name: Compile the paper
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: bace20.tex
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bace20-pdf
+          path: bace20.pdf

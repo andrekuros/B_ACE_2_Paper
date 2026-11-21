@@ -1,7 +1,22 @@
 # B-ACE 2.0 paper
 
+[![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141?logo=overleaf&logoColor=white)](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fraw.githubusercontent.com%2Fandrekuros%2FB_ACE_2_Paper%2Fmain%2Foverleaf%2Fbace20-overleaf.zip&engine=pdflatex)
+[![latex](https://github.com/andrekuros/B_ACE_2_Paper/actions/workflows/latex.yml/badge.svg)](https://github.com/andrekuros/B_ACE_2_Paper/actions/workflows/latex.yml)
+
 LaTeX draft for *B-ACE 2.0: An Open, Physically Grounded Framework for Beyond-Visual-Range
 Air Combat Research*. The simulator lives in [B-ACE-2.0](https://github.com/andrekuros/B-ACE-2.0).
+
+## Open in Overleaf
+
+Click **Open in Overleaf** above: Overleaf creates a new project in your account from
+`overleaf/bace20-overleaf.zip` (sources, bibliography, `numbers.tex` and figures) and
+compiles it with pdfLaTeX. Without the badge: Overleaf, New Project, Upload Project, and
+choose that zip. Overleaf projects made this way are copies; to sync edits with this
+repository use Overleaf's GitHub integration (Menu, GitHub) or download the project and
+commit the changed files here.
+
+After changing figures or numbers, rebuild the zip with `python make_overleaf.py`; CI
+fails if it is stale.
 
 ## Build the PDF
 
@@ -43,6 +58,7 @@ from the data. `make_figures.py` runs no simulation.
 | `data/*.json` | Study outputs from `bace.studies` |
 | `data/numbers.json` | Every number used in the text |
 | `make_figures.py` | Figures and numbers from `data/` |
+| `make_overleaf.py`, `overleaf/` | Flat zip of the LaTeX project for Overleaf |
 
 ## License
 
