@@ -1,52 +1,49 @@
-# B-ACE 2.0 working paper
+# B-ACE 2.0 paper
 
-Shareable LaTeX draft for B-ACE 2.0 (not a camera-ready I/ITSEC template).
-
-The simulator lives in a separate repository: [B-ACE-2.0](https://github.com/andrekuros/B-ACE-2.0).
-This repo holds the draft, figures, and the script that regenerates them.
+LaTeX draft for *B-ACE 2.0: An Open, Physically Grounded Framework for Beyond-Visual-Range
+Air Combat Research*. The simulator lives in [B-ACE-2.0](https://github.com/andrekuros/B-ACE-2.0).
 
 ## Build the PDF
 
 ```bash
-pdflatex bace20
-bibtex bace20
-pdflatex bace20
-pdflatex bace20
+pdflatex bace20 && bibtex bace20 && pdflatex bace20 && pdflatex bace20
 ```
 
-Output: [`bace20.pdf`](bace20.pdf).
+## Regenerate the data, figures and numbers
 
-## Regenerate figures from the sim
-
-Install the framework first (from a clone of B-ACE-2.0):
+In a clone of B-ACE-2.0 (with `pip install maturin numpy pettingzoo gymnasium torch` and
+`maturin develop --release -m crates/bace-py/Cargo.toml`):
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install maturin pytest pettingzoo gymnasium numpy matplotlib
-maturin develop -m crates/bace-py/Cargo.toml
+python -m bace.studies all --out runs/paper
+for A in 1 2; do for S in 0 1 2; do
+  python -m bace.ppo --agents $A --seed $S --steps 4000000 --out runs/paper/rl/ippo_${A}v${A}_s$S
+  python -c "from pathlib import Path; from bace.ppo import select_checkpoint; select_checkpoint(Path('runs/paper/rl/ippo_${A}v${A}_s$S'))"
+done; done
+python -m bace.studies rl_eval --policies runs/paper/rl/*/best.pt --out runs/paper
+python -m bace.studies rl_train --runs runs/paper/rl/* --out runs/paper
 ```
 
-Then, in this paper repo (with that environment active):
+Copy `runs/paper/*.json` into `data/` (the WEZ file without its `outcomes` lists), then:
 
 ```bash
-# expects data/bench.json, data/marl_ppo_1v1.json, data/marl_core.json
-# copied from B-ACE-2.0 runs/experiments/
-python make_figures.py
+pip install matplotlib
+python make_figures.py      # figures/*.pdf, data/numbers.json, numbers.tex
 ```
 
-`make_figures.py` reads those artifacts plus cached WEZ/FSM numbers in `data/paper_results.json`. It does **not** re-run the old 36-job numpy MARL grid.
+`numbers.tex` defines every number quoted in the text as a macro, so the draft cannot drift
+from the data. `make_figures.py` runs no simulation.
 
 ## Contents
 
 | File | Role |
 |------|------|
-| `bace20.tex` | Draft |
-| `refs.bib` | Bibliography |
-| `bace20.pdf` | Compiled draft |
-| `figures/*.pdf` | WEZ, FSM, MARL kill curves, eval vs random, bench scaling, tactical |
-| `data/paper_results.json` | Numbers used in the text |
-| `make_figures.py` | Regenerates figures (requires `bace`) |
+| `bace20.tex`, `refs.bib`, `numbers.tex` | Draft, bibliography, generated numbers |
+| `figures/` | Figures (PDF for the paper, PNG previews); `lab_*.png` are Lab screenshots |
+| `data/*.json` | Study outputs from `bace.studies` |
+| `data/numbers.json` | Every number used in the text |
+| `make_figures.py` | Figures and numbers from `data/` |
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Same authors as B-ACE 2.0.
+MIT, see [LICENSE](LICENSE). Same authors as B-ACE 2.0.
